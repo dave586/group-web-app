@@ -5,7 +5,7 @@ using System.Web;
 //using SnapFramework.EFModel;
 //using SnapFramework.Signals;
 
-namespace Questionnaire.Models
+namespace WebApplication1.Models
 {
     public class ClientTestDisplay
     {

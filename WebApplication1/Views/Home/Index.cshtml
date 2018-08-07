@@ -13,7 +13,7 @@
             <div class="col-sm-8">
                 @*<h2>@WebApplication1.Resources.Home.Views.Resource.PageTitleLanguageSelect</h2>
     <p>@WebApplication1.Resources.Home.Views.Resource.PageDescriptionLanguageSelect</p>*@
-                <h2>Welcome to our Online Questionnaire</h2>
+                <h2>Welcome to our Online Group Questionnaire</h2>
                 <p>
                     In an effort to replace the current paper questionnaires and improve our processes, we are currently piloting a new, online process. Please read and follow all instructions carefully.  If you encounter any issues or have any questions, please return to the front desk.
                 </p>
@@ -52,3 +52,15 @@
 
     </div>
 </div>
+
+<script>
+    $(document).ready(function() {
+        Utilities.setup.setupPageDropDownStyling($('#form-LanguageSelect'));
+
+        var w = $('select').width();
+
+        $('option').width(w);
+
+    });
+
+</script>

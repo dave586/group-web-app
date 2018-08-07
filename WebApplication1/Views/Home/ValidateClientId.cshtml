@@ -1,0 +1,48 @@
+﻿@using WebApplication1.Helpers
+@{
+    ViewBag.Title = WebApplication1.Resources.Home.Views.Resource.PageTitleClientOverride;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="row section">
+    <div class="col-sm-12">
+        <div class="row paragraph">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+                <h2>@WebApplication1.Resources.Home.Views.Resource.PageTitleClientOverride</h2>
+                <p>@WebApplication1.Resources.Home.Views.Resource.PageDescriptionClientOverride</p>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+
+        @using (Html.BeginForm("SelectTest", "Test", FormMethod.Post))
+        {
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        @Html.ValidationMessage("ClientID")
+                    </div>                    
+                    <div class="form-group">
+                        @Html.TextBox("ClientID", null, new { @class = "required", type = "number", pattern = "\\d*", placeholder = WebApplication1.Resources.Home.Models.Resource.ClientID, data_jvfloat = true,  data_errorSelector = "Override", @autocomplete="off" })   
+                    </div>
+                    <div class="form-group">
+                        @Html.ValidationMessage("IntakeFileID")
+                    </div>
+                    <div class="form-group">
+                        @Html.TextBox("IntakeFileID", null, new { @class = "required", type = "number", pattern = "\\d*", placeholder = WebApplication1.Resources.Home.Models.Resource.IntakeID, data_jvfloat = true, data_errorSelector = "Override", @autocomplete="off" })
+                    </div>
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    <button class="btn" id="ValidateClientSubmit" title="@WebApplication1.Resources.Home.Views.Resource.BtnNext" type="submit" value="Next">@WebApplication1.Resources.Home.Views.Resource.BtnNext</button>
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+        }
+    </div>
+</div>
