@@ -1,0 +1,111 @@
+﻿@model Questionnaire.Models.ClientTestDisplay
+
+@{
+    ViewBag.Title = Questionnaire.Resources.Test.Views.Resource.PageTitleCompleteTest;
+    Layout = "~/Views/Shared/_layout.cshtml";
+}
+@*<h2>@Questionnaire.Resources.Test.Views.Resource.PageTitleCompleteTest</h2>
+
+Test ID: @Html.DisplayFor(m => m.TestID) <br />
+Resp ID: @Html.DisplayFor(m => m.ResponseID) <br/>*@
+
+@*<a href="#" onclick="populateAnswers(); return false;">Populate Answers</a>*@
+
+@*<button data-bind="click:testAnswers">test validation</button>*@
+
+@using (Html.BeginForm("SubmitTest", "Test", FormMethod.Post))
+{
+    if (Model.TestID == 1)
+    {
+        if (Model.RightToLeftLanguage)
+        {
+            @Html.Partial("~/Views/Test/TestOQ_RightToLeft.cshtml", Model)
+        }
+        else
+        {
+            @Html.Partial("~/Views/Test/TestOQ.cshtml", Model)
+        }
+    }
+    else if (Model.TestID == 2)
+    {
+        @Html.Partial("~/Views/Test/TestUrica.cshtml", Model)
+    }
+    else if (Model.TestID == 3)
+    {
+        @Html.Partial("~/Views/Test/TestYOQP.cshtml", Model)
+    }
+    else if (Model.TestID == 4)
+    {
+        @Html.Partial("~/Views/Test/TestYOQSR.cshtml", Model)
+    }
+    else if (Model.TestID == 5)
+    {
+        @Html.Partial("~/Views/Test/TestSRS.cshtml", Model)
+    }
+    else if(Model.TestID == 6)
+    {
+        @Html.Partial("~/Views/Test/TestACE.cshtml", Model)
+    }
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <button class="btn" id="submitTest" title="@Questionnaire.Resources.Test.Views.Resource.BtnNext" type="button" value="Next">@Questionnaire.Resources.Test.Views.Resource.BtnNext<i class="fa fa-caret-right"></i></button>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>    
+
+    @Html.Hidden("data")
+}
+
+<script type="text/javascript">
+
+    $(document).ready(function() {
+        $("#submitTest").click(function () {
+            
+            if(model.testAnswers()) {
+                $("#data").val(JSON.stringify(model.viewModel));
+                $("form").submit();
+            }
+        });
+
+        var data = @Html.Raw(Json.Encode(Model));
+
+        var model =
+        {
+            viewModel: data,
+            testAnswers:function () {
+                var allAnswered = true;
+                for(var q=0; q < this.viewModel.Questions.length; q++) {
+                    if(ul.utils.isNullOrEmpty(this.viewModel.Questions[q].Answer)) {
+                        allAnswered = false;
+                        break;
+                    }
+                }
+                
+                if(!allAnswered) {
+                    if(confirm('Some questions have not been answered. Are you sure you want to continue?')) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                }
+                return true;
+            }
+        };
+
+        ko.applyBindings(model);
+
+    });
+
+    //function populateAnswers() {//doesnt update values
+        
+    //    $('input[value="1"]').click();
+    //    $('input[value="1"]').val("1");
+    //    //$('input[value="1"]').prop('checked', 'checked');
+    //    $('input[value="1"]').blur();
+    //}
+
+
+</script>
+    
+

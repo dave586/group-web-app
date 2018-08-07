@@ -1,0 +1,108 @@
+﻿@model Questionnaire.Models.ValidateChallenge
+@{
+    ViewBag.Title = Questionnaire.Resources.Home.Views.Resource.PageTitleSecondaryValidation;
+    Layout = "~/Views/Shared/_layout.cshtml";
+}
+
+<div class="row section">
+    <div class="col-sm-12">
+        @using (Html.BeginForm("ValidateChallenge", "Home", FormMethod.Post))
+        {        
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                @*<div class="row">
+                    <div class="col-sm-6">
+                        <div class="entityIdentifier-group">
+                            @Html.TextBoxFor(m => m.ClientFirstName, new { placeholder = Questionnaire.Resources.Home.Models.Resource.ClientFirstName, data_jvfloat = true, disabled = "disabled", @class = "entityIdentifier-input" })
+                        </div>
+                        <div class="entityIdentifier-group">
+                            @Html.TextBoxFor(m => m.ClientLastName, new { placeholder = Questionnaire.Resources.Home.Models.Resource.ClientLastName, data_jvfloat = true, disabled = "disabled", @class = "entityIdentifier-input" })
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="entityIdentifier-group">
+                            @Html.TextBoxFor(m => m.ClientBirthDate, new { placeholder = Questionnaire.Resources.Home.Models.Resource.ClientBirthDate, data_jvfloat = true, disabled = "disabled", @class = "entityIdentifier-input" })
+                        </div>
+                        <div class="entityIdentifier-group">
+                            @Html.TextBoxFor(m => m.Results, new { placeholder = Questionnaire.Resources.Home.Models.Resource.Results, data_jvfloat = true, disabled = "disabled", @class = "entityIdentifier-input" })
+                        </div>
+                    </div>
+                </div>*@
+                
+                @if (@Model.Results == SnapFramework.Signals.ClientValidation.ValidationResults.ValidateEmail)
+                {
+                    <div class="margin-bottom35">
+                        <h2>@Questionnaire.Resources.Home.Views.Resource.ValidateEmail</h2>
+                        <p>@Questionnaire.Resources.Home.Views.Resource.ValidateEmailDescription</p>
+                    </div>
+                            
+                    <div class="form-group">
+                        @Html.ValidationMessageFor(m => m.ChallengeResponse)
+                        @Html.TextBoxFor(m => m.ChallengeResponse, new { @class = "required", type="email", placeholder = Questionnaire.Resources.Home.Views.Resource.Email, data_jvfloat = true, @autocomplete="off" })
+                    </div>
+                }
+                else if (@Model.Results == SnapFramework.Signals.ClientValidation.ValidationResults.ValidatePhone)
+                {
+                    <div class="margin-bottom35">
+                        <h2>@Questionnaire.Resources.Home.Views.Resource.ValidatePhoneNumber</h2>
+                         <p>@Questionnaire.Resources.Home.Views.Resource.ValidatePhoneNumberDescription</p>
+                    </div>
+                    <div class="form-group">
+                        @Html.ValidationMessageFor(m => m.ChallengeResponse)
+                        @Html.TextBoxFor(m => m.ChallengeResponse, new { @class = "required", placeholder = Questionnaire.Resources.Home.Views.Resource.PhoneNumber, data_jvfloat = true, @autocomplete="off" })
+                    </div>                            
+                }
+                else if (@Model.Results == SnapFramework.Signals.ClientValidation.ValidationResults.ValidatePostalCode)
+                {
+                    <div class="margin-bottom35">
+                        <h2>@Questionnaire.Resources.Home.Views.Resource.ValidatePostalCode</h2>
+                         <p>@Questionnaire.Resources.Home.Views.Resource.ValidatePostalCodeDescription</p>
+                    </div>
+                    <div class="form-group">
+                        @Html.ValidationMessageFor(m => m.ChallengeResponse)
+                        @Html.TextBoxFor(m => m.ChallengeResponse, new { @class = "required", placeholder = Questionnaire.Resources.Home.Views.Resource.PostalCode, data_jvfloat = true, @autocomplete="off" })
+                    </div>                            
+                }
+    
+                @Html.HiddenFor(m=>m.ClientBD_Day)
+                @Html.HiddenFor(m=>m.ClientBD_Month)
+                @Html.HiddenFor(m=>m.ClientBD_Year)
+                @Html.HiddenFor(m=>m.ClientFirstName)
+                @Html.HiddenFor(m=>m.ClientLastName)
+                @Html.HiddenFor(m=>m.ClientBirthDate)
+                @Html.Hidden("Results")
+        
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <button class="btn" id="SubmitChallengeResponse" title="@Questionnaire.Resources.Home.Views.Resource.BtnNext" type="submit" value="@Questionnaire.Resources.Home.Views.Resource.BtnNext">@Questionnaire.Resources.Home.Views.Resource.BtnNext<i class="fa fa-caret-right"></i></button>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+        }
+        
+        @using (Html.BeginForm("ReValidateClient", "Home", FormMethod.Post, new { id = "form-ReValidateClient" }))
+        {
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    @Html.HiddenFor(m => m.SessionTimeStamp)
+                    @Html.HiddenFor(m=>m.ClientFirstName)
+                    @Html.HiddenFor(m=>m.ClientLastName)
+                    @*Html.HiddenFor(m=>m.ClientBirthDate)*@
+                    @Html.HiddenFor(m=>m.ClientBD_Day)
+                    @Html.HiddenFor(m=>m.ClientBD_Month)
+                    @Html.HiddenFor(m=>m.ClientBD_Year)
+                    <button class="back" type="submit" title="@Questionnaire.Resources.Home.Views.Resource.BtnBack">@Questionnaire.Resources.Home.Views.Resource.BtnBack</button>
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+        }
+    </div>
+</div>
+
+

@@ -1,0 +1,13 @@
+﻿<tr>
+    <!-- ko foreach: $data.Options -->
+    <td class="answercol"> 
+        <div class="radiocontainer" dir="rtl">
+            <input type="radio" data-bind="value: $data.Value, checked: $parent.Answer, attr: { name: $parent.QuestionID, id: $data.Value + $parent.QuestionID } "/> 
+            <label data-bind="attr: { for: $data.Value + $parent.QuestionID }"><span></span></label>
+        </div>
+    </td>
+    <!-- /ko -->
+
+    <td dir="rtl" data-bind="text: $data.QuestionText"></td>
+    <td dir="rtl" class="qnumber" data-bind="text: $data.QuestionNumber"></td>
+</tr>

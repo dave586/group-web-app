@@ -1,0 +1,57 @@
+﻿@using Questionnaire.Models
+@model Questionnaire.Models.ClientTestDisplay
+
+
+<div class="row section">
+    <div class="col-sm-12">
+        <div class="row paragraph">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+                <h2>@Questionnaire.Resources.Test.Views.Resource.OutcomeQuestionnaireTitle</h2>
+                <p>@Html.Raw(Questionnaire.Resources.Test.Views.Resource.OQDescription)</p>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="table-responsive">
+                <table class="table">
+                    @*<thead>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th>@Questionnaire.Resources.Test.Views.Resource.Tbl_Never</th>
+                            <th>@Questionnaire.Resources.Test.Views.Resource.Tbl_Rarely</th>
+                            <th>@Questionnaire.Resources.Test.Views.Resource.Tbl_Sometimes</th>
+                            <th>@Questionnaire.Resources.Test.Views.Resource.Tbl_Frequently</th>
+                            <th>@Questionnaire.Resources.Test.Views.Resource.Tbl_AlmostAlways</th>
+                        </tr>
+                    </thead>*@
+                    <tbody>
+                        <!-- ko foreach: viewModel.Questions -->
+                            <!-- ko if: $data.QuestionType == "SingleChoiceQuestion" -->
+    
+                                <!--ko if:$index() % 10 == 0 -->
+                                    <tr>
+                                        <th></th>
+                                        <th></th>
+                                        <th>@Questionnaire.Resources.Test.Views.Resource.Tbl_Never</th>
+                                        <th>@Questionnaire.Resources.Test.Views.Resource.Tbl_Rarely</th>
+                                        <th>@Questionnaire.Resources.Test.Views.Resource.Tbl_Sometimes</th>
+                                        <th>@Questionnaire.Resources.Test.Views.Resource.Tbl_Frequently</th>
+                                        <th>@Questionnaire.Resources.Test.Views.Resource.Tbl_AlmostAlways</th>
+                                    </tr>
+                                <!-- /ko -->
+                              
+                                @Html.Partial("SingleChoice")
+
+                            <!-- /ko -->
+                        <!-- /ko -->
+                  
+                    </tbody>
+                </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

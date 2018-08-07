@@ -1,0 +1,456 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+body {
+  background-repeat: no-repeat;
+  background-position: right;
+}
+h3 {
+  padding-bottom: 15px;
+}
+#header {
+  padding: 20px;
+}
+#footer {
+  padding-top: 50px;
+  text-align: center;
+  font-size: 11px;
+}
+.container-fluid {
+  padding-bottom: 50px;
+}
+.paragraph {
+  margin-bottom: 30px;
+}
+.section {
+  margin-top: 15px;
+}
+/*#region General Classes*/
+.margin-bottom20 {
+  margin-bottom: 20px;
+}
+.margin-bottom35 {
+  margin-bottom: 35px;
+}
+/*#endregion General Classes*/
+/*#region Inputs, Selects, Buttons, etc*/
+input,
+input.btn,
+select {
+  min-height: 60px;
+  height: 60px;
+  width: 100%;
+  margin-bottom: 30px;
+  font-size: 38px;
+  padding-left: 15px;
+  border: 1px solid #b1b1b1;
+}
+button.btn {
+  font-size: 36px !important;
+}
+button.btn:hover {
+  color: #ffffff;
+}
+input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"] + label span {
+  display: inline-block;
+  width: 67px;
+  height: 60px;
+  margin: -1px 4px 0 0;
+  vertical-align: middle;
+  background: url(Images/checkbox.jpg) left top no-repeat;
+  cursor: pointer;
+  border-left: 2px solid #787878;
+  border-top: 1px solid #787878;
+}
+input[type="checkbox"]:checked + label span {
+  background: url(Images/checkbox.jpg) -65px top no-repeat;
+}
+input[type="radio"] {
+  display: none;
+}
+input[type="radio"] + label span {
+  display: inline-block;
+  width: 29px;
+  height: 29px;
+  margin: -1px 4px 0 0;
+  vertical-align: middle;
+  background: url(Images/radio.jpg) left top no-repeat;
+  cursor: pointer;
+}
+input[type="radio"]:checked + label span {
+  background: url(Images/radio.jpg) -29px top no-repeat;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/* hides the spin-button for chrome*/
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.checkboxlabel {
+  border-right: 2px solid #787878;
+  border-top: 2px solid #787878;
+  border-bottom: 2px solid #787878;
+  width: 100%;
+  cursor: pointer;
+  font-size: 28px;
+  font-weight: normal;
+}
+.checkboxlabel .padder {
+  background-color: #ffffff;
+  width: 10px;
+  height: inherit;
+  border: none;
+}
+.checkboxcontainer {
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+}
+.checkboxcontainer.wide {
+  width: 70%;
+}
+button,
+a.btn {
+  background-color: #22b8c6;
+  color: #ffffff;
+  border: 0;
+  min-height: 60px;
+  width: 100%;
+  font-size: 38px;
+  text-transform: uppercase;
+  margin-top: 30px;
+  outline: none;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important;
+}
+button:hover,
+a.btn:hover {
+  background-color: #13737c;
+  color: #ffffff;
+}
+button.back,
+a.btn.back {
+  min-height: 30px;
+  background-color: #b1b1b1;
+  color: #ffffff;
+  font-size: 14px;
+  width: 30%;
+  display: block;
+  margin: 30px auto;
+}
+button.back:hover,
+a.btn.back:hover {
+  background-color: #787878;
+  color: #ffffff;
+}
+.btn .fa {
+  padding-left: 10px;
+}
+input[disabled] {
+  padding: 0px;
+  cursor: default;
+  border-radius: 0px;
+  width: 100%;
+  background-color: transparent;
+}
+input[type="date"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+input.entityIdentifier-input {
+  border: none;
+  background-color: #fff;
+  font-size: 14px;
+  min-height: 1px;
+  height: auto;
+}
+.Safari input {
+  line-height: 44px;
+}
+/*#region Placeholder text*/
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #b1b1b1;
+}
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #b1b1b1;
+  opacity: 1;
+}
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #b1b1b1;
+  opacity: 1;
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #b1b1b1;
+}
+/*#endregion Placeholder text*/
+/* #region Custom Select Lists*/
+/*Select lists with first option grayed out like float labels*/
+select > option[data-disable] {
+  color: #b1b1b1;
+  font-style: italic !important;
+}
+select.not_chosen {
+  color: #b1b1b1;
+}
+select option {
+  color: black;
+  font-style: normal;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+select option:first-child {
+  color: #b1b1b1;
+  font-style: italic;
+}
+select.notnull option:first-child {
+  color: black;
+  font-style: normal;
+}
+.councellorselect select,
+.councellorselect a,
+.councellorselect button {
+  overflow: hidden;
+  text-transform: none;
+}
+/* #endregion Custom Select Lists*/
+.entityIdentifier-group .jvFloat .placeHolder {
+  margin-top: -8px;
+}
+.Firefox .jvFloat .placeHolder {
+  margin-top: 0px !important;
+}
+.form-group {
+  margin-bottom: 0px;
+}
+.jvFloat {
+  position: relative;
+}
+.jvFloat .placeHolder.required {
+  color: #ffffff;
+}
+/* Start CSS3 Animations on supported browser */
+.jvFloat .placeHolder.active {
+  display: block;
+  visibility: visible;
+  margin-top: -10px;
+  opacity: 1;
+  -webkit-transition: margin-top 100ms, opacity 120ms, visibility 120ms;
+  transition: margin-top 100ms, opacity 120ms, visibility 120ms;
+}
+.ellipses {
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+/*#endregion Inputs, Selects, Buttons, etc*/
+/*#region Tables*/
+table.table {
+  width: 100%;
+}
+.table-responsive {
+  overflow-x: auto;
+  border: none;
+}
+table th {
+  background-color: #ffffff;
+  text-align: center;
+}
+table tbody tr {
+  max-height: 20px !important;
+}
+table tbody tr td.answercol {
+  width: 10%;
+  text-align: center;
+}
+table tbody tr .qnumber {
+  font-size: 18px;
+  font-weight: bold;
+}
+table tbody tr.srs td {
+  width: 25%;
+  vertical-align: bottom;
+}
+table tbody tr.srs td.qnumber {
+  width: 15%;
+}
+table tbody tr.srs td.answercol {
+  width: 7%;
+}
+table tbody tr.srs td.rtq {
+  width: 25%;
+}
+tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+tr:nth-child(even) {
+  background-color: #ffffff;
+}
+/*#endregion Tables*/
+/*#region Validation*/
+.field-validation-error {
+  float: left;
+  border-color: #f57272;
+  width: 100%;
+}
+.field-validation-error .input-validation-error,
+.field-validation-error .error {
+  padding: 10px 10px 10px 10px;
+  background-color: #f2dede;
+  color: inherit;
+  margin-bottom: 20px;
+  width: 100%;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+}
+/*#endregion Validation*/
+/*#region Birth Date*/
+.BirthDateLabel {
+  margin-bottom: 30px;
+  width: 100%;
+  display: block;
+  font-weight: bold;
+}
+.BirthDateLabel div {
+  color: #888888;
+}
+.Firefox .form-group.BirthDateBlock .month .jvFloat .placeHolder {
+  margin-top: 2px !important;
+}
+.BirthDateBlock input {
+  width: 100%;
+}
+/*#endregion Birth Date*/
+/*#region Responsive Design*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  input[type="radio"] + label span {
+    width: 58px;
+    height: 58px;
+    background: url(Images/radio@2x.jpg) left top no-repeat;
+  }
+  input[type="radio"]:checked + label span {
+    background: url(Images/radio@2x.jpg) -58px top no-repeat;
+  }
+  input[type="checkbox"] + label span {
+    width: 132px;
+    height: 120px;
+    background: url(Images/checkbox@2x.jpg) left top no-repeat;
+  }
+  input[type="checkbox"]:checked + label span {
+    background: url(Images/checkbox@2x.jpg) -130px top no-repeat;
+  }
+  .checkboxcontainer {
+    width: 100%;
+  }
+  .client .col-sm-6 {
+    width: 80%;
+  }
+  .client .col-sm-3 {
+    width: 10%;
+  }
+  .client .BirthDateBlock .col-sm-3 {
+    width: 25%;
+  }
+}
+@media (max-width: 1600px) {
+  .councellorselect select,
+  .councellorselect a,
+  .councellorselect button {
+    font-size: 30px !important;
+  }
+  button.btn {
+    font-size: 30px !important;
+  }
+}
+@media (max-width: 1360px) {
+  .councellorselect select,
+  .councellorselect a,
+  .councellorselect button {
+    font-size: 24px !important;
+  }
+  button.btn {
+    font-size: 26px !important;
+  }
+}
+@media (max-width: 1280px) {
+  .councellorselect select,
+  .councellorselect a,
+  .councellorselect button {
+    font-size: 18px !important;
+  }
+  button.btn {
+    font-size: 18px !important;
+  }
+}
+@media only screen and (max-device-width: 1024px) {
+  .ui-datepicker {
+    display: none !important;
+  }
+  input {
+    font-size: 28px;
+  }
+}
+@media (max-width: 845px) {
+  button.btn {
+    font-size: 16px !important;
+  }
+}
+@media (max-width: 767px) {
+  #header {
+    display: block;
+    margin: 0 auto;
+    padding: 15px;
+  }
+  button.back,
+  a.btn.back {
+    width: 50%;
+    margin: 30px auto;
+    display: block;
+  }
+  .checkboxcontainer {
+    width: 100%;
+  }
+  button,
+  a.btn {
+    font-size: 28px;
+  }
+  button.btn {
+    font-size: 14px !important;
+  }
+}
+/*#endregion Responsive Design*/
+.inner-container {
+  position: relative;
+  height: 750px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.inner-container .trv-content {
+  top: 0.5em!important;
+}
+.inner-container .trv-nav {
+  display: none;
+}
+#reportViewer1 {
+  position: absolute;
+  overflow: hidden;
+  height: 750px;
+}

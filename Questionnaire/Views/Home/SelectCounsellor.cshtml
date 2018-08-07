@@ -1,0 +1,76 @@
+﻿@using Questionnaire.Models
+@model Questionnaire.Models.SelectCounsellorModel 
+@{
+    ViewBag.Title = Questionnaire.Resources.Home.Views.Resource.PageTitleSelectCounsellor;
+    Layout = "~/Views/Shared/_layout.cshtml";
+}
+
+<div class="row section">
+    <div class="col-sm-12">
+        <div class="row paragraph">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+                <h2>@Questionnaire.Resources.Home.Views.Resource.PageTitleSelectCounsellor</h2>
+                <p>@Questionnaire.Resources.Home.Views.Resource.PageDescriptionSelectCounsellor</p>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6 councellorselect">
+                @using (Html.BeginForm("SelectPrePostSession", "Home", FormMethod.Post))
+                {
+                    foreach (SelectIntakeDetails intake in @Model.Intakes)
+                    {
+                        <button id="@intake.IntakeFileID" class="counsellor btn ellipses" title="@Questionnaire.Resources.Home.Views.Resource.PageTitleSelectCounsellor" type="submit" value="@intake.IntakeFileID">@intake.CounsellorName, @intake.CounsellingType</button>
+                    }
+     
+                    <a class="btn" href="@Url.Action("Restart", "Home")" title="@Questionnaire.Resources.Home.Views.Resource.BtnNotSure">@Questionnaire.Resources.Home.Views.Resource.BtnNotSure</a>
+                    @Html.HiddenFor(m => m.ClientID)
+                    @Html.Hidden("IntakeID")
+                    @Html.HiddenFor(m => m.SessionTimeStamp)
+                    @Html.HiddenFor(m => m.ClientFirstName)
+                    @Html.HiddenFor(m => m.ClientLastName)
+                    @*Html.HiddenFor(m=>m.ClientBirthDate)*@
+                    @Html.HiddenFor(m => m.ClientBD_Day)
+                    @Html.HiddenFor(m => m.ClientBD_Month)
+                    @Html.HiddenFor(m => m.ClientBD_Year)
+                }
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                @using (Html.BeginForm("ReValidateClient", "Home", FormMethod.Post, new { id = "form-ReValidateClient" }))
+                {
+                    @Html.HiddenFor(m => m.SessionTimeStamp)
+                    @Html.HiddenFor(m => m.ClientFirstName)
+                    @Html.HiddenFor(m => m.ClientLastName)
+                    @*Html.HiddenFor(m=>m.ClientBirthDate)*@
+                    @Html.HiddenFor(m => m.ClientBD_Day)
+                    @Html.HiddenFor(m => m.ClientBD_Month)
+                    @Html.HiddenFor(m => m.ClientBD_Year)
+                    <button class="back" type="submit" title="@Questionnaire.Resources.Home.Views.Resource.BtnBack">@Questionnaire.Resources.Home.Views.Resource.BtnBack</button>
+                }
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+    </div>
+</div>                        
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".counsellor").click(function () {
+            var value = $(this).val();
+
+            $("#IntakeID").val(
+                value
+            );
+
+            $("form").submit();
+        });
+    })
+
+</script>

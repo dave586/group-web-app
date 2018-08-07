@@ -1,0 +1,187 @@
+﻿@using Questionnaire.Helpers
+@model Questionnaire.Models.ValidateClient
+@{
+    ViewBag.Title = Questionnaire.Resources.Home.Views.Resource.PageTitleValidateClient;
+    Layout = "~/Views/Shared/_layout.cshtml";
+}
+
+<div class="row section client">
+    <div class="col-sm-12">
+        <div class="row paragraph">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+                <h2>@Questionnaire.Resources.Home.Views.Resource.PageTitleValidateClient</h2>
+                <p>@Html.Raw(Questionnaire.Resources.Home.Views.Resource.PageDescriptionValidateClient)</p>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+        @using (Html.BeginForm("ValidateClient", "Home", FormMethod.Post, new { id = "form-ValidateClient" }))
+        {
+            @Html.HiddenFor(m=>m.SessionTimeStamp)
+            @*Html.ValidationMessageFor(m => m.ClientBD_Day)
+            @Html.ValidationMessageFor(m => m.ClientBD_Month)
+            @Html.ValidationMessageFor(m => m.ClientBD_Year)*@
+            @Html.AntiForgeryToken()
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    @Html.ValidationMessageFor(m => m.ClientFirstName)
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        @Html.TextBoxFor(m => m.ClientFirstName, new { placeholder = Html.DisplayNameFor(m => m.ClientFirstName), data_jvfloat = true, @autocomplete="off" })
+                    </div>
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    @Html.ValidationMessageFor(m => m.ClientLastName)
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        @Html.TextBoxFor(m => m.ClientLastName, new { placeholder = Html.DisplayNameFor(m => m.ClientLastName), data_jvfloat = true, @autocomplete="off" })
+                    </div>
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+                    
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    <div class="form-group BirthDateLabel">
+                        @Html.ValidationMessageFor(m => m.ClientBirthDate)
+                        <div>@Html.DisplayNameFor(m => m.ClientBirthDate)</div>
+                        @Html.HiddenFor(m => m.ClientBirthDate, new { data_bind = "value:ClientBirthDate" })
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group BirthDateBlock" id="birthDate">
+                        <div class="row">
+                            <div class="day col-sm-3">
+                                @Html.TextBoxFor(m => m.ClientBD_Day, new{ placeholder=Html.DisplayNameFor(m=>m.ClientBD_Day), data_jvfloat=true, @type="number", data_bind="value:Day", @min=1, @max=31})
+                            </div>
+                            <div class="month col-sm-5">
+                                @Html.DropDownListFor(m => m.ClientBD_Month, Model.MonthSelectList.ToList(),Questionnaire.Resources.Home.Models.Resource.Month,new{placeholder=Html.DisplayNameFor(m=>m.ClientBD_Month), data_jvfloat=true, data_bind="value:Month"})
+                            </div>
+                            <div class="year col-sm-4">
+                                @Html.TextBoxFor(m => m.ClientBD_Year, new{ placeholder=Html.DisplayNameFor(m=>m.ClientBD_Year), data_jvfloat=true, @type="number", data_bind="value:Year", @min=1900, @max=DateTime.Now.Year})
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="clearfix"></div>
+                    <button class="btn" title="Next" type="submit" value="Next">@Questionnaire.Resources.Home.Views.Resource.BtnNext<i class="fa fa-caret-right"></i></button>
+                    <a class="btn back" href="@Url.Action("Index", "Home")" title="@Questionnaire.Resources.Home.Views.Resource.BtnBack">@Questionnaire.Resources.Home.Views.Resource.BtnBack</a>
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+        }
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    (function () {
+        $.validator.addMethod("validbirthdate",
+            function (value, element) {
+                if (value == '')
+                    return false;
+
+                if (!moment(value, "YYYY/MM/DD").isValid())
+                    return false;
+
+                return true;
+            });
+        
+        $.validator.addMethod("validbirthyear",
+            function (value, element) {
+                if (value == '')
+                    return true;
+                
+                if (value >= new Date().getFullYear())
+                    return false;
+
+                return true;
+            });
+
+        Utilities.validation.ValidateForm($("#form-ValidateClient"),
+            {
+            ClientFirstName: {
+                required: true,
+                maxlength:100
+            },
+            ClientLastName: {
+                required: true,
+                maxlength: 100
+            },
+            ClientBirthDate: {
+                validbirthdate: true
+            },
+            ClientBD_Year: {
+                validbirthyear:true,
+                min:1901
+            }
+            },
+            {
+                ClientFirstName: { required: '@Questionnaire.Resources.Home.Views.Resource.FirstNameRequired', maxlength: '@Questionnaire.Resources.Home.Views.Resource.MaxLength' },
+                ClientLastName: { required: '@Questionnaire.Resources.Home.Views.Resource.LastNameRequired', maxlength: '@Questionnaire.Resources.Home.Views.Resource.MaxLength' },
+                ClientBirthDate: { validbirthdate:'@Questionnaire.Resources.Home.Views.Resource.BirthDateInvalid' },
+                ClientBD_Year: { validbirthyear: '@Questionnaire.Resources.Home.Views.Resource.BirthYearInvalid', min: '@Questionnaire.Resources.Home.Views.Resource.BirthYearInvalid2' }
+            },true);
+
+        //Change DropDown Month Option Color
+        Utilities.setup.setupPageDropDownStyling($('#form-ValidateClient'));
+    })();
+
+
+    var birthDateVM = function () {
+        var self = this;
+
+        self.model = @Html.Raw(Json.Encode(Model));
+
+        self.Day = ko.observable();
+        if (self.model.ClientBD_Day > 0)
+            self.Day(self.model.ClientBD_Day);
+        
+        self.Month = ko.observable();
+        if (self.model.ClientBD_Month > 0)
+            self.Month(self.model.ClientBD_Month);
+        
+        self.Year = ko.observable();
+        if (self.model.ClientBD_Year > 0)
+            self.Year(self.model.ClientBD_Year);
+        
+        self.ClientBirthDate = ko.computed(function () {
+
+            if (self.Day() !== undefined && self.Day() !== '' &&
+                self.Month() !== undefined && self.Month() !== '' &&
+                self.Year() !== undefined && self.Year() !== '') {
+                try {
+                    var bdate = self.Year() + '/' + self.Month() + '/' + self.Day();
+                    if (moment(bdate, "YYYY/MM/DD").isValid()) {
+                        return bdate;
+                    }
+                }
+                catch (e) {
+                }
+            }
+            return "";
+        }, this);
+
+        self.ClientBirthDate.subscribe(function() {
+            setTimeout(function () {
+                $('#ClientBirthDate').valid();
+            }, 300);
+        });
+    };
+    ko.applyBindings(new birthDateVM(), document.getElementById('#birthDate'));
+</script>

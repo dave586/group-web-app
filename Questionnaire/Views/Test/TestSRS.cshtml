@@ -1,0 +1,404 @@
+﻿
+
+<div class="row section">
+    <div class="col-sm-12">
+        <div class="row paragraph">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+                <h2>@Questionnaire.Resources.Test.Views.Resource.SRSQuestionnaireTitle</h2>
+                <p>@Questionnaire.Resources.Test.Views.Resource.SRSDescription</p>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>@Questionnaire.Resources.Test.Views.Resource.SRSAnswerAgreeWithLeft</th>
+                                <th>@Questionnaire.Resources.Test.Views.Resource.SRSAnswerAgreeSomewhatWithLeft</th>
+                                <th>@Questionnaire.Resources.Test.Views.Resource.SRSAnswerNeutral</th>
+                                <th>@Questionnaire.Resources.Test.Views.Resource.SRSAnswerAgreeSomewhatWithRight</th>
+                                <th>@Questionnaire.Resources.Test.Views.Resource.SRSAnswerAgreeWithRight</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!--Question 1-->
+                            <tr class="srs">
+                                <td><span class="qnumber">1. @Questionnaire.Resources.Test.Views.Resource.SRSQuestion1Heading</span>@Questionnaire.Resources.Test.Views.Resource.SRSQuestion1Left</td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[0].Options[0].Value, checked: viewModel.Questions[0].Answer, attr: { name: viewModel.Questions[0].QuestionID, id: viewModel.Questions[0].Options[0].Value + viewModel.Questions[0].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[0].Options[0].Value + viewModel.Questions[0].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[0].Options[1].Value, checked: viewModel.Questions[0].Answer, attr: { name: viewModel.Questions[0].QuestionID, id: viewModel.Questions[0].Options[1].Value + viewModel.Questions[0].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[0].Options[1].Value + viewModel.Questions[0].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[0].Options[2].Value, checked: viewModel.Questions[0].Answer, attr: { name: viewModel.Questions[0].QuestionID, id: viewModel.Questions[0].Options[2].Value + viewModel.Questions[0].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[0].Options[2].Value + viewModel.Questions[0].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[0].Options[3].Value, checked: viewModel.Questions[0].Answer, attr: { name: viewModel.Questions[0].QuestionID, id: viewModel.Questions[0].Options[3].Value + viewModel.Questions[0].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[0].Options[3].Value + viewModel.Questions[0].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[0].Options[4].Value, checked: viewModel.Questions[0].Answer, attr: { name: viewModel.Questions[0].QuestionID, id: viewModel.Questions[0].Options[4].Value + viewModel.Questions[0].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[0].Options[4].Value + viewModel.Questions[0].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="rtq"><span class="qnumber">&nbsp;</span>@Questionnaire.Resources.Test.Views.Resource.SRSQuestion1Right</td>
+                            </tr>
+                            <!--End Question-->
+                            
+                            <!--Question 2-->
+                            <tr class="srs">
+                                <td><span class="qnumber">2. @Questionnaire.Resources.Test.Views.Resource.SRSQuestion2Heading</span>@Questionnaire.Resources.Test.Views.Resource.SRSQuestion2Left</td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[1].Options[0].Value, checked: viewModel.Questions[1].Answer, attr: { name: viewModel.Questions[1].QuestionID, id: viewModel.Questions[1].Options[0].Value + viewModel.Questions[1].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[1].Options[0].Value + viewModel.Questions[1].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[1].Options[1].Value, checked: viewModel.Questions[1].Answer, attr: { name: viewModel.Questions[1].QuestionID, id: viewModel.Questions[1].Options[1].Value + viewModel.Questions[1].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[1].Options[1].Value + viewModel.Questions[1].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[1].Options[2].Value, checked: viewModel.Questions[1].Answer, attr: { name: viewModel.Questions[1].QuestionID, id: viewModel.Questions[1].Options[2].Value + viewModel.Questions[1].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[1].Options[2].Value + viewModel.Questions[1].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[1].Options[3].Value, checked: viewModel.Questions[1].Answer, attr: { name: viewModel.Questions[1].QuestionID, id: viewModel.Questions[1].Options[3].Value + viewModel.Questions[1].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[1].Options[3].Value + viewModel.Questions[1].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[1].Options[4].Value, checked: viewModel.Questions[1].Answer, attr: { name: viewModel.Questions[1].QuestionID, id: viewModel.Questions[1].Options[4].Value + viewModel.Questions[1].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[1].Options[4].Value + viewModel.Questions[1].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="rtq"><span class="qnumber">&nbsp;</span>@Questionnaire.Resources.Test.Views.Resource.SRSQuestion2Right</td>
+                            </tr>
+                            <!--End Question-->
+                            
+                            <!--Question 3-->
+                            <tr class="srs">
+                                <td><span class="qnumber">3. @Questionnaire.Resources.Test.Views.Resource.SRSQuestion3Heading</span>@Questionnaire.Resources.Test.Views.Resource.SRSQuestion3Left</td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[2].Options[0].Value, checked: viewModel.Questions[2].Answer, attr: { name: viewModel.Questions[2].QuestionID, id: viewModel.Questions[2].Options[0].Value + viewModel.Questions[2].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[2].Options[0].Value + viewModel.Questions[2].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[2].Options[1].Value, checked: viewModel.Questions[2].Answer, attr: { name: viewModel.Questions[2].QuestionID, id: viewModel.Questions[2].Options[1].Value + viewModel.Questions[2].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[2].Options[1].Value + viewModel.Questions[2].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[2].Options[2].Value, checked: viewModel.Questions[2].Answer, attr: { name: viewModel.Questions[2].QuestionID, id: viewModel.Questions[2].Options[2].Value + viewModel.Questions[2].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[2].Options[2].Value + viewModel.Questions[2].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[2].Options[3].Value, checked: viewModel.Questions[2].Answer, attr: { name: viewModel.Questions[2].QuestionID, id: viewModel.Questions[2].Options[3].Value + viewModel.Questions[2].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[2].Options[3].Value + viewModel.Questions[2].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[2].Options[4].Value, checked: viewModel.Questions[2].Answer, attr: { name: viewModel.Questions[2].QuestionID, id: viewModel.Questions[2].Options[4].Value + viewModel.Questions[2].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[2].Options[4].Value + viewModel.Questions[2].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="rtq"><span class="qnumber">&nbsp;</span>@Questionnaire.Resources.Test.Views.Resource.SRSQuestion3Right</td>
+                            </tr>
+                            <!--End Question-->
+                            
+                            <!--Question 4-->
+                            <tr class="srs">
+                                <td><span class="qnumber">4. @Questionnaire.Resources.Test.Views.Resource.SRSQuestion4Heading</span>@Questionnaire.Resources.Test.Views.Resource.SRSQuestion4Left</td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[3].Options[0].Value, checked: viewModel.Questions[3].Answer, attr: { name: viewModel.Questions[3].QuestionID, id: viewModel.Questions[3].Options[0].Value + viewModel.Questions[3].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[3].Options[0].Value + viewModel.Questions[3].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[3].Options[1].Value, checked: viewModel.Questions[3].Answer, attr: { name: viewModel.Questions[3].QuestionID, id: viewModel.Questions[3].Options[1].Value + viewModel.Questions[3].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[3].Options[1].Value + viewModel.Questions[3].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[3].Options[2].Value, checked: viewModel.Questions[3].Answer, attr: { name: viewModel.Questions[3].QuestionID, id: viewModel.Questions[3].Options[2].Value + viewModel.Questions[3].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[3].Options[2].Value + viewModel.Questions[3].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[3].Options[3].Value, checked: viewModel.Questions[3].Answer, attr: { name: viewModel.Questions[3].QuestionID, id: viewModel.Questions[3].Options[3].Value + viewModel.Questions[3].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[3].Options[3].Value + viewModel.Questions[3].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[3].Options[4].Value, checked: viewModel.Questions[3].Answer, attr: { name: viewModel.Questions[3].QuestionID, id: viewModel.Questions[3].Options[4].Value + viewModel.Questions[3].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[3].Options[4].Value + viewModel.Questions[3].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="rtq"><span class="qnumber">&nbsp;</span>@Questionnaire.Resources.Test.Views.Resource.SRSQuestion4Right</td>
+                            </tr>
+                            <!--End Question-->
+                            
+                            <!--Question 5-->
+                            <tr class="srs">
+                                <td><span class="qnumber">5. @Questionnaire.Resources.Test.Views.Resource.SRSQuestion5Heading</span>@Questionnaire.Resources.Test.Views.Resource.SRSQuestion5Left</td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[4].Options[0].Value, checked: viewModel.Questions[4].Answer, attr: { name: viewModel.Questions[4].QuestionID, id: viewModel.Questions[4].Options[0].Value + viewModel.Questions[4].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[4].Options[0].Value + viewModel.Questions[4].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[4].Options[1].Value, checked: viewModel.Questions[4].Answer, attr: { name: viewModel.Questions[4].QuestionID, id: viewModel.Questions[4].Options[1].Value + viewModel.Questions[4].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[4].Options[1].Value + viewModel.Questions[4].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[4].Options[2].Value, checked: viewModel.Questions[4].Answer, attr: { name: viewModel.Questions[4].QuestionID, id: viewModel.Questions[4].Options[2].Value + viewModel.Questions[4].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[4].Options[2].Value + viewModel.Questions[4].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[4].Options[3].Value, checked: viewModel.Questions[4].Answer, attr: { name: viewModel.Questions[4].QuestionID, id: viewModel.Questions[4].Options[3].Value + viewModel.Questions[4].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[4].Options[3].Value + viewModel.Questions[4].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[4].Options[4].Value, checked: viewModel.Questions[4].Answer, attr: { name: viewModel.Questions[4].QuestionID, id: viewModel.Questions[4].Options[4].Value + viewModel.Questions[4].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[4].Options[4].Value + viewModel.Questions[4].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="rtq"><span class="qnumber">&nbsp;</span>@Questionnaire.Resources.Test.Views.Resource.SRSQuestion5Right</td>
+                            </tr>
+                            <!--End Question-->
+
+                            <!--Question 6-->
+                            <tr class="srs">
+                                <td><span class="qnumber">6. @Questionnaire.Resources.Test.Views.Resource.SRSQuestion6Heading</span>@Questionnaire.Resources.Test.Views.Resource.SRSQuestion6Left</td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[5].Options[0].Value, checked: viewModel.Questions[5].Answer, attr: { name: viewModel.Questions[5].QuestionID, id: viewModel.Questions[5].Options[0].Value + viewModel.Questions[5].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[5].Options[0].Value + viewModel.Questions[5].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[5].Options[1].Value, checked: viewModel.Questions[5].Answer, attr: { name: viewModel.Questions[5].QuestionID, id: viewModel.Questions[5].Options[1].Value + viewModel.Questions[5].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[5].Options[1].Value + viewModel.Questions[5].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[5].Options[2].Value, checked: viewModel.Questions[5].Answer, attr: { name: viewModel.Questions[5].QuestionID, id: viewModel.Questions[5].Options[2].Value + viewModel.Questions[5].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[5].Options[2].Value + viewModel.Questions[5].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[5].Options[3].Value, checked: viewModel.Questions[5].Answer, attr: { name: viewModel.Questions[5].QuestionID, id: viewModel.Questions[5].Options[3].Value + viewModel.Questions[5].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[5].Options[3].Value + viewModel.Questions[5].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[5].Options[4].Value, checked: viewModel.Questions[5].Answer, attr: { name: viewModel.Questions[5].QuestionID, id: viewModel.Questions[5].Options[4].Value + viewModel.Questions[5].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[5].Options[4].Value + viewModel.Questions[5].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="rtq"><span class="qnumber">&nbsp;</span>@Questionnaire.Resources.Test.Views.Resource.SRSQuestion6Right</td>
+                            </tr>
+                            <!--End Question-->
+                            
+                            <!--Question 7-->
+                            <tr class="srs">
+                                <td><span class="qnumber">7. @Questionnaire.Resources.Test.Views.Resource.SRSQuestion7Heading</span>@Questionnaire.Resources.Test.Views.Resource.SRSQuestion7Left</td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[6].Options[0].Value, checked: viewModel.Questions[6].Answer, attr: { name: viewModel.Questions[6].QuestionID, id: viewModel.Questions[6].Options[0].Value + viewModel.Questions[6].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[6].Options[0].Value + viewModel.Questions[6].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[6].Options[1].Value, checked: viewModel.Questions[6].Answer, attr: { name: viewModel.Questions[6].QuestionID, id: viewModel.Questions[6].Options[1].Value + viewModel.Questions[6].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[6].Options[1].Value + viewModel.Questions[6].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[6].Options[2].Value, checked: viewModel.Questions[6].Answer, attr: { name: viewModel.Questions[6].QuestionID, id: viewModel.Questions[6].Options[2].Value + viewModel.Questions[6].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[6].Options[2].Value + viewModel.Questions[6].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[6].Options[3].Value, checked: viewModel.Questions[6].Answer, attr: { name: viewModel.Questions[6].QuestionID, id: viewModel.Questions[6].Options[3].Value + viewModel.Questions[6].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[6].Options[3].Value + viewModel.Questions[6].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[6].Options[4].Value, checked: viewModel.Questions[6].Answer, attr: { name: viewModel.Questions[6].QuestionID, id: viewModel.Questions[6].Options[4].Value + viewModel.Questions[6].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[6].Options[4].Value + viewModel.Questions[6].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="rtq"><span class="qnumber">&nbsp;</span>@Questionnaire.Resources.Test.Views.Resource.SRSQuestion7Right</td>
+                            </tr>
+                            <!--End Question-->
+                            
+                            <!--Question 8-->
+                            <tr class="srs">
+                                <td><span class="qnumber">8. @Questionnaire.Resources.Test.Views.Resource.SRSQuestion8Heading</span>@Questionnaire.Resources.Test.Views.Resource.SRSQuestion8Left</td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[7].Options[0].Value, checked: viewModel.Questions[7].Answer, attr: { name: viewModel.Questions[7].QuestionID, id: viewModel.Questions[7].Options[0].Value + viewModel.Questions[7].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[7].Options[0].Value + viewModel.Questions[7].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[7].Options[1].Value, checked: viewModel.Questions[7].Answer, attr: { name: viewModel.Questions[7].QuestionID, id: viewModel.Questions[7].Options[1].Value + viewModel.Questions[7].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[7].Options[1].Value + viewModel.Questions[7].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[7].Options[2].Value, checked: viewModel.Questions[7].Answer, attr: { name: viewModel.Questions[7].QuestionID, id: viewModel.Questions[7].Options[2].Value + viewModel.Questions[7].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[7].Options[2].Value + viewModel.Questions[7].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[7].Options[3].Value, checked: viewModel.Questions[7].Answer, attr: { name: viewModel.Questions[7].QuestionID, id: viewModel.Questions[7].Options[3].Value + viewModel.Questions[7].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[7].Options[3].Value + viewModel.Questions[7].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[7].Options[4].Value, checked: viewModel.Questions[7].Answer, attr: { name: viewModel.Questions[7].QuestionID, id: viewModel.Questions[7].Options[4].Value + viewModel.Questions[7].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[7].Options[4].Value + viewModel.Questions[7].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="rtq"><span class="qnumber">&nbsp;</span>@Questionnaire.Resources.Test.Views.Resource.SRSQuestion8Right</td>
+                            </tr>
+                            <!--End Question-->
+                            
+                            <!--Question 9-->
+                            <tr class="srs">
+                                <td><span class="qnumber">9. @Questionnaire.Resources.Test.Views.Resource.SRSQuestion9Heading</span>@Questionnaire.Resources.Test.Views.Resource.SRSQuestion9Left</td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[8].Options[0].Value, checked: viewModel.Questions[8].Answer, attr: { name: viewModel.Questions[8].QuestionID, id: viewModel.Questions[8].Options[0].Value + viewModel.Questions[8].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[8].Options[0].Value + viewModel.Questions[8].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[8].Options[1].Value, checked: viewModel.Questions[8].Answer, attr: { name: viewModel.Questions[8].QuestionID, id: viewModel.Questions[8].Options[1].Value + viewModel.Questions[8].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[8].Options[1].Value + viewModel.Questions[8].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[8].Options[2].Value, checked: viewModel.Questions[8].Answer, attr: { name: viewModel.Questions[8].QuestionID, id: viewModel.Questions[8].Options[2].Value + viewModel.Questions[8].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[8].Options[2].Value + viewModel.Questions[8].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[8].Options[3].Value, checked: viewModel.Questions[8].Answer, attr: { name: viewModel.Questions[8].QuestionID, id: viewModel.Questions[8].Options[3].Value + viewModel.Questions[8].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[8].Options[3].Value + viewModel.Questions[8].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[8].Options[4].Value, checked: viewModel.Questions[8].Answer, attr: { name: viewModel.Questions[8].QuestionID, id: viewModel.Questions[8].Options[4].Value + viewModel.Questions[8].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[8].Options[4].Value + viewModel.Questions[8].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="rtq"><span class="qnumber">&nbsp;</span>@Questionnaire.Resources.Test.Views.Resource.SRSQuestion9Right</td>
+                            </tr>
+                            <!--End Question-->
+                            
+                            <!--Question 10-->
+                            <tr class="srs">
+                                <td><span class="qnumber">10. @Questionnaire.Resources.Test.Views.Resource.SRSQuestion10Heading</span>@Questionnaire.Resources.Test.Views.Resource.SRSQuestion10Left</td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[9].Options[0].Value, checked: viewModel.Questions[9].Answer, attr: { name: viewModel.Questions[9].QuestionID, id: viewModel.Questions[9].Options[0].Value + viewModel.Questions[9].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[9].Options[0].Value + viewModel.Questions[9].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[9].Options[1].Value, checked: viewModel.Questions[9].Answer, attr: { name: viewModel.Questions[9].QuestionID, id: viewModel.Questions[9].Options[1].Value + viewModel.Questions[9].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[9].Options[1].Value + viewModel.Questions[9].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[9].Options[2].Value, checked: viewModel.Questions[9].Answer, attr: { name: viewModel.Questions[9].QuestionID, id: viewModel.Questions[9].Options[2].Value + viewModel.Questions[9].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[9].Options[2].Value + viewModel.Questions[9].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[9].Options[3].Value, checked: viewModel.Questions[9].Answer, attr: { name: viewModel.Questions[9].QuestionID, id: viewModel.Questions[9].Options[3].Value + viewModel.Questions[9].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[9].Options[3].Value + viewModel.Questions[9].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="answercol"> 
+                                    <div class="radiocontainer">
+                                        <input type="radio" data-bind="value: viewModel.Questions[9].Options[4].Value, checked: viewModel.Questions[9].Answer, attr: { name: viewModel.Questions[9].QuestionID, id: viewModel.Questions[9].Options[4].Value + viewModel.Questions[9].QuestionID }"/> 
+                                        <label data-bind="attr: { for: viewModel.Questions[9].Options[4].Value + viewModel.Questions[9].QuestionID }"><span></span></label>
+                                    </div>
+                                </td>
+                                <td class="rtq"><span class="qnumber">&nbsp;</span>@Questionnaire.Resources.Test.Views.Resource.SRSQuestion10Right</td>
+                            </tr>
+                            <!--End Question-->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
