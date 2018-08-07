@@ -1,42 +1,45 @@
-﻿<!DOCTYPE html>
+﻿@using System.Web.Optimization
+@using WebApplication1.Helpers
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="BaseURL" content='@Url.FullyQualifiedApplicationPath()' />
+    <title>@ViewBag.Title</title>
+
     @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/Less")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/knockout")
+    @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/signals")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/moment")
+    @Scripts.Render("~/bundles/utilities")
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("[data-jvfloat='True']").jvFloat();
+            Utilities.setup.fixPlaceholderNumberInputs();
+        });
+    </script>
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-            </div>
+    <div class="container-fluid">
+        <div class="row" id="header">
+            <a href="@Url.Action("Index","Home")">
+                <img src="~/Content/Images/logo.jpg" />
+            </a>
+        </div>
+        @RenderBody()
+        <div class="row" id="footer">
+            <div class="col-sm-12"><a class="" href="@Url.Action("ValidateClientID", "Home")" title="@WebApplication1.Resources.Home.Views.Resource.BtnClientOverride">@WebApplication1.Resources.Home.Views.Resource.BtnClientOverride</a></div>
+            <div class="col-sm-12">&copy; @DateTime.Now.Year @WebApplication1.Resources.Shared.Views.Resource.CopyrightText</div>
         </div>
     </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
-
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
 </body>
 </html>

@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BtnFinish" xml:space="preserve">
+    <value>Finish</value>
+  </data>
+  <data name="BtnNext" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="BtnOpenChart" xml:space="preserve">
+    <value>View Chart</value>
+  </data>
+  <data name="OQDescription" xml:space="preserve">
+    <value>Para ayudarnos a entender como se ha estado sintiendo, bàsese en los ÚLTIMOS SIETE DIAS, incluyendo el día de hoy. Lea cuidadosamente las frases y seleccione la categoría que mejor describa como se siente esta semana. En el cuestionario el término "TRABAJO" se refiere al empleo, la escuela, el trabajo voluntario, ser dueña de casa, cuidar los niños, ect. Por favor no escriba en las áreas oscuras. Marque con una "X" en el cuadro que corresponda.</value>
+  </data>
+  <data name="OutcomeQuestionnaireTitle" xml:space="preserve">
+    <value>OQ - 45.2</value>
+  </data>
+  <data name="PageDescriptionResponseComplete" xml:space="preserve">
+    <value>Thank you for completing your questionnaires.  Please click the "finish" button below to complete the process.  Once you are done, please return the device to the front desk. </value>
+  </data>
+  <data name="PageDescriptionSelectTest" xml:space="preserve">
+    <value>Your counsellor or the front desk staff should have informed you what questionnaires you should complete before your counselling session today.  If you are unsure, please contact the front desk for assistance.  </value>
+  </data>
+  <data name="PageTitleCompleteTest" xml:space="preserve">
+    <value>Complete Test</value>
+  </data>
+  <data name="PageTitleResponseComplete" xml:space="preserve">
+    <value>Response Complete</value>
+  </data>
+  <data name="PageTitleSelectTest" xml:space="preserve">
+    <value>Select Questionnaires</value>
+  </data>
+  <data name="SelectTestError" xml:space="preserve">
+    <value>You must select at least one test</value>
+  </data>
+  <data name="SRSAnswerAgreeSomewhatWithLeft" xml:space="preserve">
+    <value>Somewhat Agree</value>
+  </data>
+  <data name="SRSAnswerAgreeSomewhatWithRight" xml:space="preserve">
+    <value>Somewhat Agree</value>
+  </data>
+  <data name="SRSAnswerAgreeWithLeft" xml:space="preserve">
+    <value>Agree with this side</value>
+  </data>
+  <data name="SRSAnswerAgreeWithRight" xml:space="preserve">
+    <value>Agree with this side</value>
+  </data>
+  <data name="SRSAnswerNeutral" xml:space="preserve">
+    <value>Neutral</value>
+  </data>
+  <data name="SRSDescription" xml:space="preserve">
+    <value>Please rate today's session according to the following descriptions. Check the square that best describes your reaction using the following rating system.</value>
+  </data>
+  <data name="SRSQuestion10Heading" xml:space="preserve">
+    <value>Hope</value>
+  </data>
+  <data name="SRSQuestion10Left" xml:space="preserve">
+    <value>I felt hopeful after the session</value>
+  </data>
+  <data name="SRSQuestion10Right" xml:space="preserve">
+    <value>I felt hopeless after the session</value>
+  </data>
+  <data name="SRSQuestion1Heading" xml:space="preserve">
+    <value>Acceptance</value>
+  </data>
+  <data name="SRSQuestion1Left" xml:space="preserve">
+    <value>I felt accepted</value>
+  </data>
+  <data name="SRSQuestion1Right" xml:space="preserve">
+    <value>I felt criticized or judged</value>
+  </data>
+  <data name="SRSQuestion2Heading" xml:space="preserve">
+    <value>Respect</value>
+  </data>
+  <data name="SRSQuestion2Left" xml:space="preserve">
+    <value>I felt my therapist was respectful</value>
+  </data>
+  <data name="SRSQuestion2Right" xml:space="preserve">
+    <value>The therapist pretended to respect or seemed not to respect me</value>
+  </data>
+  <data name="SRSQuestion3Heading" xml:space="preserve">
+    <value>Understanding</value>
+  </data>
+  <data name="SRSQuestion3Left" xml:space="preserve">
+    <value>My therapist understood me and my feelings</value>
+  </data>
+  <data name="SRSQuestion3Right" xml:space="preserve">
+    <value>My therapist did not understand my feelings</value>
+  </data>
+  <data name="SRSQuestion4Heading" xml:space="preserve">
+    <value>Honesty and Sincerity</value>
+  </data>
+  <data name="SRSQuestion4Left" xml:space="preserve">
+    <value>We worked on my goals; my goals were important</value>
+  </data>
+  <data name="SRSQuestion4Right" xml:space="preserve">
+    <value>My therapist was not sincere, was pretending</value>
+  </data>
+  <data name="SRSQuestion5Heading" xml:space="preserve">
+    <value>Agreement on Goals</value>
+  </data>
+  <data name="SRSQuestion5Left" xml:space="preserve">
+    <value>My therapist was honest and sincere</value>
+  </data>
+  <data name="SRSQuestion5Right" xml:space="preserve">
+    <value>We worked on my therapist's goals; my goals didn't seem important</value>
+  </data>
+  <data name="SRSQuestion6Heading" xml:space="preserve">
+    <value>Agreement on Tasks</value>
+  </data>
+  <data name="SRSQuestion6Left" xml:space="preserve">
+    <value>I approve of the things we did in the session or what I was asked to do as a homework assignment</value>
+  </data>
+  <data name="SRSQuestion6Right" xml:space="preserve">
+    <value>I didn't like what we did in today's session or what I was asked to do as a homework assignment</value>
+  </data>
+  <data name="SRSQuestion7Heading" xml:space="preserve">
+    <value>Agreement on Treatment</value>
+  </data>
+  <data name="SRSQuestion7Left" xml:space="preserve">
+    <value>The treatment I received was right for me</value>
+  </data>
+  <data name="SRSQuestion7Right" xml:space="preserve">
+    <value>There was something wrong with the treatment I received</value>
+  </data>
+  <data name="SRSQuestion8Heading" xml:space="preserve">
+    <value>Ideas about Change</value>
+  </data>
+  <data name="SRSQuestion8Left" xml:space="preserve">
+    <value>My ideas about change were important and a focus of the session</value>
+  </data>
+  <data name="SRSQuestion8Right" xml:space="preserve">
+    <value>My ideas were not important</value>
+  </data>
+  <data name="SRSQuestion9Heading" xml:space="preserve">
+    <value>Helpfulness, Usefulness</value>
+  </data>
+  <data name="SRSQuestion9Left" xml:space="preserve">
+    <value>I found the session helpful</value>
+  </data>
+  <data name="SRSQuestion9Right" xml:space="preserve">
+    <value>The session was not helpful</value>
+  </data>
+  <data name="SRSQuestionnaireTitle" xml:space="preserve">
+    <value>Session Rating Scale</value>
+  </data>
+  <data name="Tbl_Agree" xml:space="preserve">
+    <value>Agree</value>
+  </data>
+  <data name="Tbl_AlmostAlways" xml:space="preserve">
+    <value>Casi Siempre</value>
+  </data>
+  <data name="Tbl_Disagree" xml:space="preserve">
+    <value>Disagree</value>
+  </data>
+  <data name="Tbl_Frequently" xml:space="preserve">
+    <value>Con Frecuencia</value>
+  </data>
+  <data name="Tbl_Never" xml:space="preserve">
+    <value>Nunca</value>
+  </data>
+  <data name="Tbl_NoOpinion" xml:space="preserve">
+    <value>No Opinion</value>
+  </data>
+  <data name="Tbl_Rarely" xml:space="preserve">
+    <value>Casi Nunca</value>
+  </data>
+  <data name="Tbl_Sometimes" xml:space="preserve">
+    <value>A Veces</value>
+  </data>
+  <data name="Tbl_StronglyAgree" xml:space="preserve">
+    <value>Strongly Agree</value>
+  </data>
+  <data name="Tbl_StronglyDisagree" xml:space="preserve">
+    <value>Strongly Disagree</value>
+  </data>
+  <data name="UricaDescription" xml:space="preserve">
+    <value>When answering the questions below, think about the problem you have come to the Centre to work through. Please indicate how much you disagree or agree with each of the following statements. Base your responses on how you are feeling and acting NOW.</value>
+  </data>
+  <data name="UricaQuestionnaireTitle" xml:space="preserve">
+    <value>URICA</value>
+  </data>
+  <data name="YOQPDescription" xml:space="preserve">
+    <value>The Y-OQ® 2.01 is designed to describe a wide range of troublesome situations, behaviors, and moods that are common in children and adolescents. You may discover that some of the items do not apply to your child’s current situation. If so, &lt;strong&gt;please do not leave these items blank&lt;/strong&gt; but check the “Never or almost never” category. When you begin the Y-OQ® 2.01 you will see that you can easily make your child look as healthy or unhealthy as you wish. &lt;strong&gt;Please do not do that.&lt;/strong&gt; If you are as accurate as possible it is more likely that you will be able to receive the help that you are seeking for your child.</value>
+  </data>
+  <data name="YOQPTitle" xml:space="preserve">
+    <value>Youth Outcome Questionnaire (Parent)</value>
+  </data>
+  <data name="YOQSRDescription" xml:space="preserve">
+    <value>The Y-OQ® -SR 2.0 is designed to describe a wide range of troublesome situations, behaviors, and moods that are common in children and adolescents. You may discover that some of the items do not apply to your situation. If so, &lt;strong&gt;please do not leave these items blank&lt;/strong&gt; but check the “Never or almost never” category. When you begin the Y-OQ® -SR 2.0 you will see that you can easily make yourself look as healthy or unhealthy as you wish. &lt;strong&gt;Please do not do that.&lt;/strong&gt; If you are as accurate as possible it is more likely that you will be able to receive the help that you are seeking.</value>
+  </data>
+  <data name="YOQSRTitle" xml:space="preserve">
+    <value>Youth Outcome Questionnaire - Self Report</value>
+  </data>
+  <data name="ACEDescription" xml:space="preserve">
+    <value>When you were growing up, during your first 18 years of life:</value>
+  </data>
+  <data name="ACEQuestionnaireTitle" xml:space="preserve">
+    <value>What's my ACE Score?</value>
+  </data>
+  <data name="Tbl_No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Tbl_Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+</root>
