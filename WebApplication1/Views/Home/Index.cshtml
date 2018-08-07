@@ -1,31 +1,54 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿@using WebApplication1.Helpers
+
+@{
+    //ViewBag.Title = WebApplication1.Resources.Home.Views.Resource.PageTitleLanguageSelect;
+    ViewBag.Title = "Welcome";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+<div class="row section">
+    <div class="col-sm-12">
+        <div class="row paragraph">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+                @*<h2>@WebApplication1.Resources.Home.Views.Resource.PageTitleLanguageSelect</h2>
+    <p>@WebApplication1.Resources.Home.Views.Resource.PageDescriptionLanguageSelect</p>*@
+                <h2>Welcome to our Online Questionnaire</h2>
+                <p>
+                    In an effort to replace the current paper questionnaires and improve our processes, we are currently piloting a new, online process. Please read and follow all instructions carefully.  If you encounter any issues or have any questions, please return to the front desk.
+                </p>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+        @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { id = "form-LanguageSelect" }))
+        {
+            @Html.AntiForgeryToken()
+            @*<div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-6">
+                        @Html.ValidationMessage("SelectLanguageError")
+                        @Html.ValidationMessageFor(m=>m.Language)
+                    </div>
+                    <div class="col-sm-3"></div>
+                </div>*@
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        @*@Html.DropDownListFor(m=>m.Language, Model.LanguageSelectList.ToList(),Questionnaire.Resources.Home.Views.Resource.SelectLanguage,new{placeholder=Html.DisplayNameFor(m=>m.Language), data_jvfloat=true})*@
+                        @Html.Hidden("Language", "en-CA")
+                    </div>
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    <button type="submit" class="btn" title="">@WebApplication1.Resources.Home.Views.Resource.BtnNext<i class="fa fa-caret-right"></i></button>
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+        }
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
     </div>
 </div>
