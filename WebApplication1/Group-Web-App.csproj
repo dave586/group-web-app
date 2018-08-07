@@ -151,6 +151,13 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\bg.jpg" />
+    <Content Include="Content\Images\checkbox%402x.jpg" />
+    <Content Include="Content\Images\checkbox.jpg" />
+    <Content Include="Content\Images\check_radio_sheet.png" />
+    <Content Include="Content\Images\logo.jpg" />
+    <Content Include="Content\Images\radio%402x.jpg" />
+    <Content Include="Content\Images\radio.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
