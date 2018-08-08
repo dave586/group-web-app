@@ -148,6 +148,7 @@
     <Compile Include="Helpers\Extensions.cs" />
     <Compile Include="Helpers\Html.cs" />
     <Compile Include="Models\GroupTestDisplay.cs" />
+    <Compile Include="Models\SelectPrePostSessionModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\Error\Models\Resource.Designer.cs" />
     <Compile Include="Resources\Error\Views\Resource.Designer.cs" />
@@ -602,11 +603,10 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\GroupTest\ViewPage1.cshtml" />
     <Content Include="Views\Home\ValidateClientId.cshtml" />
+    <Content Include="Views\Home\SelectPrePostSession.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -662,6 +662,12 @@
     <EmbeddedResource Include="Resources\Test\Views\Resource.sk-SK.resx" />
     <EmbeddedResource Include="Resources\Test\Views\Resource.sv-SE.resx" />
     <EmbeddedResource Include="Resources\Test\Views\Resource.zh-CHT.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Documents\CCCSnap\SnapFramework\SnapFramework.csproj">
+      <Project>{110da810-6b17-46fd-b5f3-9a649e3ca4a8}</Project>
+      <Name>SnapFramework</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
