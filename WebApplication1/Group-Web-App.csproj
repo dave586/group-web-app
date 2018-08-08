@@ -670,7 +670,7 @@
     <EmbeddedResource Include="Resources\Test\Views\Resource.zh-CHT.resx" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Documents\CCCSnap\SnapFramework\SnapFramework.csproj">
+    <ProjectReference Include="..\..\..\..\..\Desktop\CCCSnap\SnapFramework\SnapFramework.csproj">
       <Project>{110da810-6b17-46fd-b5f3-9a649e3ca4a8}</Project>
       <Name>SnapFramework</Name>
     </ProjectReference>
