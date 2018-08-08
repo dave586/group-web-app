@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Group-Web-App", "WebApplica
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnapFramework", "..\..\..\Documents\CCCSnap\SnapFramework\SnapFramework.csproj", "{110DA810-6B17-46FD-B5F3-9A649E3CA4A8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{FE8B3866-7464-4525-92D9-50820494AE8A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +26,10 @@ Global
 		{110DA810-6B17-46FD-B5F3-9A649E3CA4A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{110DA810-6B17-46FD-B5F3-9A649E3CA4A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{110DA810-6B17-46FD-B5F3-9A649E3CA4A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE8B3866-7464-4525-92D9-50820494AE8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE8B3866-7464-4525-92D9-50820494AE8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE8B3866-7464-4525-92D9-50820494AE8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE8B3866-7464-4525-92D9-50820494AE8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

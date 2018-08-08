@@ -147,7 +147,12 @@
     </Compile>
     <Compile Include="Helpers\Extensions.cs" />
     <Compile Include="Helpers\Html.cs" />
-    <Compile Include="Models\GroupTestDisplay.cs" />
+    <Compile Include="Models\GroupActivityOptionModel.cs" />
+    <Compile Include="Models\GroupPackageNameModel.cs" />
+    <Compile Include="Models\GroupActivityTextModel.cs" />
+    <Compile Include="Models\GroupActivityTypeModel.cs" />
+    <Compile Include="Models\GroupActivityQuestionModel.cs" />
+    <Compile Include="Models\GroupPackageActivityModel.cs" />
     <Compile Include="Models\SelectPrePostSessionModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\Error\Models\Resource.Designer.cs" />
@@ -607,6 +612,7 @@
     <Content Include="Views\GroupTest\ViewPage1.cshtml" />
     <Content Include="Views\Home\ValidateClientId.cshtml" />
     <Content Include="Views\Home\SelectPrePostSession.cshtml" />
+    <Content Include="Views\Home\SelectTest.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

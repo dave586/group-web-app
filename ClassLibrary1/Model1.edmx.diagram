@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="612c7557c29b439180b34ca60f335f7b" Name="Diagram1">
+        <EntityTypeShape EntityType="OQDevSNAPModel.GroupActivityQuestion" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OQDevSNAPModel.GroupActivityAnswer" Width="1.5" PointX="12.125" PointY="8.125" />
+        <EntityTypeShape EntityType="OQDevSNAPModel.GroupActivityOption" Width="1.5" PointX="5.25" PointY="7.875" />
+        <EntityTypeShape EntityType="OQDevSNAPModel.GroupActivityTestScore" Width="1.5" PointX="12.125" PointY="5.125" />
+        <EntityTypeShape EntityType="OQDevSNAPModel.GroupActivityText" Width="1.5" PointX="5.25" PointY="5" />
+        <EntityTypeShape EntityType="OQDevSNAPModel.GroupActivityType" Width="1.5" PointX="0.75" PointY="1" />
+        <EntityTypeShape EntityType="OQDevSNAPModel.GroupCompletedActivity" Width="1.5" PointX="9.875" PointY="6.625" />
+        <EntityTypeShape EntityType="OQDevSNAPModel.GroupCompletedPackage" Width="1.5" PointX="7.625" PointY="6.5" />
+        <EntityTypeShape EntityType="OQDevSNAPModel.GroupPackageActivity" Width="1.5" PointX="6" PointY="0.75" />
+        <EntityTypeShape EntityType="OQDevSNAPModel.GroupPackageName" Width="1.5" PointX="3.75" PointY="11.625" />
+        <EntityTypeShape EntityType="OQDevSNAPModel.GroupProgram" Width="1.5" PointX="3.75" PointY="14.125" />
+        <AssociationConnector Association="OQDevSNAPModel.FK_ActivityAnswer_CompletedActivity" />
+        <AssociationConnector Association="OQDevSNAPModel.FK_ActivityOption_ActivityQuestion" />
+        <AssociationConnector Association="OQDevSNAPModel.FK_ActivityQuestion_ActivityType" />
+        <AssociationConnector Association="OQDevSNAPModel.FK_ActivityText_ActivityQuestion" />
+        <AssociationConnector Association="OQDevSNAPModel.FK_TestScore_CompletedActivity" />
+        <AssociationConnector Association="OQDevSNAPModel.FK_ActivityType_PackageActivity" />
+        <AssociationConnector Association="OQDevSNAPModel.FK_CompletedActivity_CompletedPackage" />
+        <AssociationConnector Association="OQDevSNAPModel.FK__GroupPack__Packa__48517AE8" />
+        <AssociationConnector Association="OQDevSNAPModel.FK__GroupPack__Progr__49459F21" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
