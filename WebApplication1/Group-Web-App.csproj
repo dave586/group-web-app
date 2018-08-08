@@ -669,12 +669,6 @@
     <EmbeddedResource Include="Resources\Test\Views\Resource.sv-SE.resx" />
     <EmbeddedResource Include="Resources\Test\Views\Resource.zh-CHT.resx" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\Desktop\CCCSnap\SnapFramework\SnapFramework.csproj">
-      <Project>{110da810-6b17-46fd-b5f3-9a649e3ca4a8}</Project>
-      <Name>SnapFramework</Name>
-    </ProjectReference>
-  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
