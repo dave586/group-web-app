@@ -4,6 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Group-Web-App", "WebApplication1\Group-Web-App.csproj", "{AB28BB54-28E2-4109-84BD-E00D62486386}"
+	ProjectSection(ProjectDependencies) = postProject
+		{110DA810-6B17-46FD-B5F3-9A649E3CA4A8} = {110DA810-6B17-46FD-B5F3-9A649E3CA4A8}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnapFramework", "..\..\..\Documents\CCCSnap\SnapFramework\SnapFramework.csproj", "{110DA810-6B17-46FD-B5F3-9A649E3CA4A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +20,10 @@ Global
 		{AB28BB54-28E2-4109-84BD-E00D62486386}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB28BB54-28E2-4109-84BD-E00D62486386}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB28BB54-28E2-4109-84BD-E00D62486386}.Release|Any CPU.Build.0 = Release|Any CPU
+		{110DA810-6B17-46FD-B5F3-9A649E3CA4A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{110DA810-6B17-46FD-B5F3-9A649E3CA4A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{110DA810-6B17-46FD-B5F3-9A649E3CA4A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{110DA810-6B17-46FD-B5F3-9A649E3CA4A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
