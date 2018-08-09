@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ClassLibrary1.EFModel
+namespace GroupQuestionnaireApp.EFModel
 {
     using System;
     using System.Collections.Generic;

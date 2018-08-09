@@ -282,68 +282,6 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="OQDevSNAPModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="GroupActivityQuestion">
-          <Key>
-            <PropertyRef Name="QuestionnaireType" />
-            <PropertyRef Name="QuestionID" />
-          </Key>
-          <Property Name="QuestionnaireType" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="QuestionID" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="DisplayOrder" Type="Int32" Nullable="false" />
-          <Property Name="QuestionType" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="GroupActivityOptions" Relationship="OQDevSNAPModel.FK_ActivityOption_ActivityQuestion" FromRole="GroupActivityQuestion" ToRole="GroupActivityOption" />
-          <NavigationProperty Name="GroupActivityType" Relationship="OQDevSNAPModel.FK_ActivityQuestion_ActivityType" FromRole="GroupActivityQuestion" ToRole="GroupActivityType" />
-          <NavigationProperty Name="GroupActivityTexts" Relationship="OQDevSNAPModel.FK_ActivityText_ActivityQuestion" FromRole="GroupActivityQuestion" ToRole="GroupActivityText" />
-        </EntityType>
-        <EntityContainer Name="OQDevSNAPEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="GroupActivityQuestions" EntityType="Self.GroupActivityQuestion" />
-          <EntitySet Name="GroupActivityAnswers" EntityType="OQDevSNAPModel.GroupActivityAnswer" />
-          <EntitySet Name="GroupActivityOptions" EntityType="OQDevSNAPModel.GroupActivityOption" />
-          <EntitySet Name="GroupActivityTestScores" EntityType="OQDevSNAPModel.GroupActivityTestScore" />
-          <EntitySet Name="GroupActivityTexts" EntityType="OQDevSNAPModel.GroupActivityText" />
-          <EntitySet Name="GroupActivityTypes" EntityType="OQDevSNAPModel.GroupActivityType" />
-          <EntitySet Name="GroupCompletedActivities" EntityType="OQDevSNAPModel.GroupCompletedActivity" />
-          <EntitySet Name="GroupCompletedPackages" EntityType="OQDevSNAPModel.GroupCompletedPackage" />
-          <EntitySet Name="GroupPackageActivities" EntityType="OQDevSNAPModel.GroupPackageActivity" />
-          <EntitySet Name="GroupPackageNames" EntityType="OQDevSNAPModel.GroupPackageName" />
-          <EntitySet Name="GroupPrograms" EntityType="OQDevSNAPModel.GroupProgram" />
-          <AssociationSet Name="FK_ActivityAnswer_CompletedActivity" Association="OQDevSNAPModel.FK_ActivityAnswer_CompletedActivity">
-            <End Role="GroupCompletedActivity" EntitySet="GroupCompletedActivities" />
-            <End Role="GroupActivityAnswer" EntitySet="GroupActivityAnswers" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ActivityOption_ActivityQuestion" Association="OQDevSNAPModel.FK_ActivityOption_ActivityQuestion">
-            <End Role="GroupActivityQuestion" EntitySet="GroupActivityQuestions" />
-            <End Role="GroupActivityOption" EntitySet="GroupActivityOptions" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ActivityQuestion_ActivityType" Association="OQDevSNAPModel.FK_ActivityQuestion_ActivityType">
-            <End Role="GroupActivityType" EntitySet="GroupActivityTypes" />
-            <End Role="GroupActivityQuestion" EntitySet="GroupActivityQuestions" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ActivityText_ActivityQuestion" Association="OQDevSNAPModel.FK_ActivityText_ActivityQuestion">
-            <End Role="GroupActivityQuestion" EntitySet="GroupActivityQuestions" />
-            <End Role="GroupActivityText" EntitySet="GroupActivityTexts" />
-          </AssociationSet>
-          <AssociationSet Name="FK_TestScore_CompletedActivity" Association="OQDevSNAPModel.FK_TestScore_CompletedActivity">
-            <End Role="GroupCompletedActivity" EntitySet="GroupCompletedActivities" />
-            <End Role="GroupActivityTestScore" EntitySet="GroupActivityTestScores" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ActivityType_PackageActivity" Association="OQDevSNAPModel.FK_ActivityType_PackageActivity">
-            <End Role="GroupActivityType" EntitySet="GroupActivityTypes" />
-            <End Role="GroupPackageActivity" EntitySet="GroupPackageActivities" />
-          </AssociationSet>
-          <AssociationSet Name="FK_CompletedActivity_CompletedPackage" Association="OQDevSNAPModel.FK_CompletedActivity_CompletedPackage">
-            <End Role="GroupCompletedPackage" EntitySet="GroupCompletedPackages" />
-            <End Role="GroupCompletedActivity" EntitySet="GroupCompletedActivities" />
-          </AssociationSet>
-          <AssociationSet Name="FK__GroupPack__Packa__48517AE8" Association="OQDevSNAPModel.FK__GroupPack__Packa__48517AE8">
-            <End Role="GroupPackageName" EntitySet="GroupPackageNames" />
-            <End Role="GroupPackageActivity" EntitySet="GroupPackageActivities" />
-          </AssociationSet>
-          <AssociationSet Name="FK__GroupPack__Progr__49459F21" Association="OQDevSNAPModel.FK__GroupPack__Progr__49459F21">
-            <End Role="GroupProgram" EntitySet="GroupPrograms" />
-            <End Role="GroupPackageActivity" EntitySet="GroupPackageActivities" />
-          </AssociationSet>
-        </EntityContainer>
         <EntityType Name="GroupActivityAnswer">
           <Key>
             <PropertyRef Name="ID" />
@@ -353,7 +291,7 @@
           <Property Name="GroupActivityAnswerID" Type="Guid" />
           <Property Name="QuestionValue" Type="Int32" />
           <Property Name="QuestionID" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="GroupCompletedActivity" Relationship="OQDevSNAPModel.FK_ActivityAnswer_CompletedActivity" FromRole="GroupActivityAnswer" ToRole="GroupCompletedActivity" />
+          <NavigationProperty Name="GroupCompletedActivity" Relationship="Self.FK_ActivityAnswer_CompletedActivity" FromRole="GroupActivityAnswer" ToRole="GroupCompletedActivity" />
         </EntityType>
         <EntityType Name="GroupActivityOption">
           <Key>
@@ -361,12 +299,25 @@
             <PropertyRef Name="QuestionID" />
             <PropertyRef Name="DisplayOrder" />
           </Key>
-          <Property Name="QuestionnaireType" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
-          <Property Name="QuestionID" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="QuestionnaireType" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="QuestionID" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="DisplayOrder" Type="Int32" Nullable="false" />
-          <Property Name="Value" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Text" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="GroupActivityQuestion" Relationship="OQDevSNAPModel.FK_ActivityOption_ActivityQuestion" FromRole="GroupActivityOption" ToRole="GroupActivityQuestion" />
+          <Property Name="Value" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Text" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="GroupActivityQuestion" Relationship="Self.FK_ActivityOption_ActivityQuestion" FromRole="GroupActivityOption" ToRole="GroupActivityQuestion" />
+        </EntityType>
+        <EntityType Name="GroupActivityQuestion">
+          <Key>
+            <PropertyRef Name="QuestionnaireType" />
+            <PropertyRef Name="QuestionID" />
+          </Key>
+          <Property Name="QuestionnaireType" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="QuestionID" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DisplayOrder" Type="Int32" Nullable="false" />
+          <Property Name="QuestionType" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="GroupActivityOptions" Relationship="Self.FK_ActivityOption_ActivityQuestion" FromRole="GroupActivityQuestion" ToRole="GroupActivityOption" />
+          <NavigationProperty Name="GroupActivityType" Relationship="Self.FK_ActivityQuestion_ActivityType" FromRole="GroupActivityQuestion" ToRole="GroupActivityType" />
+          <NavigationProperty Name="GroupActivityTexts" Relationship="Self.FK_ActivityText_ActivityQuestion" FromRole="GroupActivityQuestion" ToRole="GroupActivityText" />
         </EntityType>
         <EntityType Name="GroupActivityTestScore">
           <Key>
@@ -377,7 +328,7 @@
           <Property Name="ClientGroupQuestionnaireTestID" Type="Guid" />
           <Property Name="TestScoreType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="CalculatedValue" Type="Decimal" Precision="18" Scale="2" />
-          <NavigationProperty Name="GroupCompletedActivity" Relationship="OQDevSNAPModel.FK_TestScore_CompletedActivity" FromRole="GroupActivityTestScore" ToRole="GroupCompletedActivity" />
+          <NavigationProperty Name="GroupCompletedActivity" Relationship="Self.FK_TestScore_CompletedActivity" FromRole="GroupActivityTestScore" ToRole="GroupCompletedActivity" />
         </EntityType>
         <EntityType Name="GroupActivityText">
           <Key>
@@ -385,22 +336,22 @@
             <PropertyRef Name="QuestionID" />
             <PropertyRef Name="Language" />
           </Key>
-          <Property Name="QuestionnaireType" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
-          <Property Name="QuestionID" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
-          <Property Name="Language" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="QuestionnaireType" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="QuestionID" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Language" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="QuestionNumber" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="Text" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="GroupActivityQuestion" Relationship="OQDevSNAPModel.FK_ActivityText_ActivityQuestion" FromRole="GroupActivityText" ToRole="GroupActivityQuestion" />
+          <Property Name="Text" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="GroupActivityQuestion" Relationship="Self.FK_ActivityText_ActivityQuestion" FromRole="GroupActivityText" ToRole="GroupActivityQuestion" />
         </EntityType>
         <EntityType Name="GroupActivityType">
           <Key>
             <PropertyRef Name="ActivityTypeID" />
           </Key>
-          <Property Name="ActivityTypeID" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
-          <Property Name="ActivityName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="ActivityDisplayName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="GroupActivityQuestions" Relationship="OQDevSNAPModel.FK_ActivityQuestion_ActivityType" FromRole="GroupActivityType" ToRole="GroupActivityQuestion" />
-          <NavigationProperty Name="GroupPackageActivities" Relationship="OQDevSNAPModel.FK_ActivityType_PackageActivity" FromRole="GroupActivityType" ToRole="GroupPackageActivity" />
+          <Property Name="ActivityTypeID" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ActivityName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ActivityDisplayName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="GroupActivityQuestions" Relationship="Self.FK_ActivityQuestion_ActivityType" FromRole="GroupActivityType" ToRole="GroupActivityQuestion" />
+          <NavigationProperty Name="GroupPackageActivities" Relationship="Self.FK_ActivityType_PackageActivity" FromRole="GroupActivityType" ToRole="GroupPackageActivity" />
         </EntityType>
         <EntityType Name="GroupCompletedActivity">
           <Key>
@@ -409,9 +360,9 @@
           <Property Name="CompletedActivityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CompletedPackageID" Type="Int32" Nullable="false" />
           <Property Name="ActivityType" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="GroupActivityAnswers" Relationship="OQDevSNAPModel.FK_ActivityAnswer_CompletedActivity" FromRole="GroupCompletedActivity" ToRole="GroupActivityAnswer" />
-          <NavigationProperty Name="GroupActivityTestScores" Relationship="OQDevSNAPModel.FK_TestScore_CompletedActivity" FromRole="GroupCompletedActivity" ToRole="GroupActivityTestScore" />
-          <NavigationProperty Name="GroupCompletedPackage" Relationship="OQDevSNAPModel.FK_CompletedActivity_CompletedPackage" FromRole="GroupCompletedActivity" ToRole="GroupCompletedPackage" />
+          <NavigationProperty Name="GroupActivityAnswers" Relationship="Self.FK_ActivityAnswer_CompletedActivity" FromRole="GroupCompletedActivity" ToRole="GroupActivityAnswer" />
+          <NavigationProperty Name="GroupActivityTestScores" Relationship="Self.FK_TestScore_CompletedActivity" FromRole="GroupCompletedActivity" ToRole="GroupActivityTestScore" />
+          <NavigationProperty Name="GroupCompletedPackage" Relationship="Self.FK_CompletedActivity_CompletedPackage" FromRole="GroupCompletedActivity" ToRole="GroupCompletedPackage" />
         </EntityType>
         <EntityType Name="GroupCompletedPackage">
           <Key>
@@ -424,7 +375,7 @@
           <Property Name="SessionNumber" Type="Int32" Nullable="false" />
           <Property Name="ClientID" Type="Int32" Nullable="false" />
           <Property Name="IntakeID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="GroupCompletedActivities" Relationship="OQDevSNAPModel.FK_CompletedActivity_CompletedPackage" FromRole="GroupCompletedPackage" ToRole="GroupCompletedActivity" />
+          <NavigationProperty Name="GroupCompletedActivities" Relationship="Self.FK_CompletedActivity_CompletedPackage" FromRole="GroupCompletedPackage" ToRole="GroupCompletedActivity" />
         </EntityType>
         <EntityType Name="GroupPackageActivity">
           <Key>
@@ -434,36 +385,36 @@
           <Property Name="PackageType" Type="Int32" Nullable="false" />
           <Property Name="ProgramID" Type="Int32" Nullable="false" />
           <Property Name="ActivityDisplayOrder" Type="Int32" Nullable="false" />
-          <Property Name="QuestionnaireType" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="GroupActivityType" Relationship="OQDevSNAPModel.FK_ActivityType_PackageActivity" FromRole="GroupPackageActivity" ToRole="GroupActivityType" />
-          <NavigationProperty Name="GroupPackageName" Relationship="OQDevSNAPModel.FK__GroupPack__Packa__48517AE8" FromRole="GroupPackageActivity" ToRole="GroupPackageName" />
-          <NavigationProperty Name="GroupProgram" Relationship="OQDevSNAPModel.FK__GroupPack__Progr__49459F21" FromRole="GroupPackageActivity" ToRole="GroupProgram" />
+          <Property Name="QuestionnaireType" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="GroupActivityType" Relationship="Self.FK_ActivityType_PackageActivity" FromRole="GroupPackageActivity" ToRole="GroupActivityType" />
+          <NavigationProperty Name="GroupPackageName" Relationship="Self.FK__GroupPack__Packa__48517AE8" FromRole="GroupPackageActivity" ToRole="GroupPackageName" />
+          <NavigationProperty Name="GroupProgram" Relationship="Self.FK__GroupPack__Progr__49459F21" FromRole="GroupPackageActivity" ToRole="GroupProgram" />
         </EntityType>
         <EntityType Name="GroupPackageName">
           <Key>
             <PropertyRef Name="PackageTypeID" />
           </Key>
           <Property Name="PackageTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="PackageName" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="PackageDisplayName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="GroupPackageActivities" Relationship="OQDevSNAPModel.FK__GroupPack__Packa__48517AE8" FromRole="GroupPackageName" ToRole="GroupPackageActivity" />
+          <Property Name="PackageName" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PackageDisplayName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="GroupPackageActivities" Relationship="Self.FK__GroupPack__Packa__48517AE8" FromRole="GroupPackageName" ToRole="GroupPackageActivity" />
         </EntityType>
         <EntityType Name="GroupProgram">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ProgramName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="ProgramDisplayName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ProgramName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ProgramDisplayName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="StartDate" Type="DateTime" Precision="0" />
           <Property Name="EndDate" Type="DateTime" Precision="0" />
           <Property Name="ProgramLength" Type="Int32" Nullable="false" />
-          <Property Name="ProgramID" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="GroupPackageActivities" Relationship="OQDevSNAPModel.FK__GroupPack__Progr__49459F21" FromRole="GroupProgram" ToRole="GroupPackageActivity" />
+          <Property Name="ProgramID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="GroupPackageActivities" Relationship="Self.FK__GroupPack__Progr__49459F21" FromRole="GroupProgram" ToRole="GroupPackageActivity" />
         </EntityType>
         <Association Name="FK_ActivityAnswer_CompletedActivity">
-          <End Type="OQDevSNAPModel.GroupCompletedActivity" Role="GroupCompletedActivity" Multiplicity="1" />
-          <End Type="OQDevSNAPModel.GroupActivityAnswer" Role="GroupActivityAnswer" Multiplicity="*" />
+          <End Role="GroupCompletedActivity" Type="Self.GroupCompletedActivity" Multiplicity="1" />
+          <End Role="GroupActivityAnswer" Type="Self.GroupActivityAnswer" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="GroupCompletedActivity">
               <PropertyRef Name="CompletedActivityID" />
@@ -474,8 +425,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_ActivityOption_ActivityQuestion">
-          <End Type="OQDevSNAPModel.GroupActivityQuestion" Role="GroupActivityQuestion" Multiplicity="1" />
-          <End Type="OQDevSNAPModel.GroupActivityOption" Role="GroupActivityOption" Multiplicity="*" />
+          <End Role="GroupActivityQuestion" Type="Self.GroupActivityQuestion" Multiplicity="1" />
+          <End Role="GroupActivityOption" Type="Self.GroupActivityOption" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="GroupActivityQuestion">
               <PropertyRef Name="QuestionnaireType" />
@@ -488,8 +439,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_ActivityQuestion_ActivityType">
-          <End Type="OQDevSNAPModel.GroupActivityType" Role="GroupActivityType" Multiplicity="1" />
-          <End Type="OQDevSNAPModel.GroupActivityQuestion" Role="GroupActivityQuestion" Multiplicity="*" />
+          <End Role="GroupActivityType" Type="Self.GroupActivityType" Multiplicity="1" />
+          <End Role="GroupActivityQuestion" Type="Self.GroupActivityQuestion" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="GroupActivityType">
               <PropertyRef Name="ActivityTypeID" />
@@ -500,8 +451,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_ActivityText_ActivityQuestion">
-          <End Type="OQDevSNAPModel.GroupActivityQuestion" Role="GroupActivityQuestion" Multiplicity="1" />
-          <End Type="OQDevSNAPModel.GroupActivityText" Role="GroupActivityText" Multiplicity="*" />
+          <End Role="GroupActivityQuestion" Type="Self.GroupActivityQuestion" Multiplicity="1" />
+          <End Role="GroupActivityText" Type="Self.GroupActivityText" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="GroupActivityQuestion">
               <PropertyRef Name="QuestionnaireType" />
@@ -514,8 +465,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_TestScore_CompletedActivity">
-          <End Type="OQDevSNAPModel.GroupCompletedActivity" Role="GroupCompletedActivity" Multiplicity="1" />
-          <End Type="OQDevSNAPModel.GroupActivityTestScore" Role="GroupActivityTestScore" Multiplicity="*" />
+          <End Role="GroupCompletedActivity" Type="Self.GroupCompletedActivity" Multiplicity="1" />
+          <End Role="GroupActivityTestScore" Type="Self.GroupActivityTestScore" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="GroupCompletedActivity">
               <PropertyRef Name="CompletedActivityID" />
@@ -526,8 +477,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_ActivityType_PackageActivity">
-          <End Type="OQDevSNAPModel.GroupActivityType" Role="GroupActivityType" Multiplicity="1" />
-          <End Type="OQDevSNAPModel.GroupPackageActivity" Role="GroupPackageActivity" Multiplicity="*" />
+          <End Role="GroupActivityType" Type="Self.GroupActivityType" Multiplicity="1" />
+          <End Role="GroupPackageActivity" Type="Self.GroupPackageActivity" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="GroupActivityType">
               <PropertyRef Name="ActivityTypeID" />
@@ -538,8 +489,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CompletedActivity_CompletedPackage">
-          <End Type="OQDevSNAPModel.GroupCompletedPackage" Role="GroupCompletedPackage" Multiplicity="1" />
-          <End Type="OQDevSNAPModel.GroupCompletedActivity" Role="GroupCompletedActivity" Multiplicity="*" />
+          <End Role="GroupCompletedPackage" Type="Self.GroupCompletedPackage" Multiplicity="1" />
+          <End Role="GroupCompletedActivity" Type="Self.GroupCompletedActivity" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="GroupCompletedPackage">
               <PropertyRef Name="CompletedPackageID" />
@@ -550,8 +501,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__GroupPack__Packa__48517AE8">
-          <End Type="OQDevSNAPModel.GroupPackageName" Role="GroupPackageName" Multiplicity="1" />
-          <End Type="OQDevSNAPModel.GroupPackageActivity" Role="GroupPackageActivity" Multiplicity="*" />
+          <End Role="GroupPackageName" Type="Self.GroupPackageName" Multiplicity="1" />
+          <End Role="GroupPackageActivity" Type="Self.GroupPackageActivity" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="GroupPackageName">
               <PropertyRef Name="PackageTypeID" />
@@ -562,8 +513,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__GroupPack__Progr__49459F21">
-          <End Type="OQDevSNAPModel.GroupProgram" Role="GroupProgram" Multiplicity="1" />
-          <End Type="OQDevSNAPModel.GroupPackageActivity" Role="GroupPackageActivity" Multiplicity="*" />
+          <End Role="GroupProgram" Type="Self.GroupProgram" Multiplicity="1" />
+          <End Role="GroupPackageActivity" Type="Self.GroupPackageActivity" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="GroupProgram">
               <PropertyRef Name="ID" />
@@ -573,12 +524,83 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityContainer Name="OQDevSNAPEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="GroupActivityAnswers" EntityType="Self.GroupActivityAnswer" />
+          <EntitySet Name="GroupActivityOptions" EntityType="Self.GroupActivityOption" />
+          <EntitySet Name="GroupActivityQuestions" EntityType="Self.GroupActivityQuestion" />
+          <EntitySet Name="GroupActivityTestScores" EntityType="Self.GroupActivityTestScore" />
+          <EntitySet Name="GroupActivityTexts" EntityType="Self.GroupActivityText" />
+          <EntitySet Name="GroupActivityTypes" EntityType="Self.GroupActivityType" />
+          <EntitySet Name="GroupCompletedActivities" EntityType="Self.GroupCompletedActivity" />
+          <EntitySet Name="GroupCompletedPackages" EntityType="Self.GroupCompletedPackage" />
+          <EntitySet Name="GroupPackageActivities" EntityType="Self.GroupPackageActivity" />
+          <EntitySet Name="GroupPackageNames" EntityType="Self.GroupPackageName" />
+          <EntitySet Name="GroupPrograms" EntityType="Self.GroupProgram" />
+          <AssociationSet Name="FK_ActivityAnswer_CompletedActivity" Association="Self.FK_ActivityAnswer_CompletedActivity">
+            <End Role="GroupCompletedActivity" EntitySet="GroupCompletedActivities" />
+            <End Role="GroupActivityAnswer" EntitySet="GroupActivityAnswers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ActivityOption_ActivityQuestion" Association="Self.FK_ActivityOption_ActivityQuestion">
+            <End Role="GroupActivityQuestion" EntitySet="GroupActivityQuestions" />
+            <End Role="GroupActivityOption" EntitySet="GroupActivityOptions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ActivityQuestion_ActivityType" Association="Self.FK_ActivityQuestion_ActivityType">
+            <End Role="GroupActivityType" EntitySet="GroupActivityTypes" />
+            <End Role="GroupActivityQuestion" EntitySet="GroupActivityQuestions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ActivityText_ActivityQuestion" Association="Self.FK_ActivityText_ActivityQuestion">
+            <End Role="GroupActivityQuestion" EntitySet="GroupActivityQuestions" />
+            <End Role="GroupActivityText" EntitySet="GroupActivityTexts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TestScore_CompletedActivity" Association="Self.FK_TestScore_CompletedActivity">
+            <End Role="GroupCompletedActivity" EntitySet="GroupCompletedActivities" />
+            <End Role="GroupActivityTestScore" EntitySet="GroupActivityTestScores" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ActivityType_PackageActivity" Association="Self.FK_ActivityType_PackageActivity">
+            <End Role="GroupActivityType" EntitySet="GroupActivityTypes" />
+            <End Role="GroupPackageActivity" EntitySet="GroupPackageActivities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CompletedActivity_CompletedPackage" Association="Self.FK_CompletedActivity_CompletedPackage">
+            <End Role="GroupCompletedPackage" EntitySet="GroupCompletedPackages" />
+            <End Role="GroupCompletedActivity" EntitySet="GroupCompletedActivities" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GroupPack__Packa__48517AE8" Association="Self.FK__GroupPack__Packa__48517AE8">
+            <End Role="GroupPackageName" EntitySet="GroupPackageNames" />
+            <End Role="GroupPackageActivity" EntitySet="GroupPackageActivities" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GroupPack__Progr__49459F21" Association="Self.FK__GroupPack__Progr__49459F21">
+            <End Role="GroupProgram" EntitySet="GroupPrograms" />
+            <End Role="GroupPackageActivity" EntitySet="GroupPackageActivities" />
+          </AssociationSet>
+        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="OQDevSNAPModelStoreContainer" CdmEntityContainer="OQDevSNAPEntities">
+          <EntitySetMapping Name="GroupActivityAnswers">
+            <EntityTypeMapping TypeName="OQDevSNAPModel.GroupActivityAnswer">
+              <MappingFragment StoreEntitySet="GroupActivityAnswer">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CompletedActivityID" ColumnName="CompletedActivityID" />
+                <ScalarProperty Name="GroupActivityAnswerID" ColumnName="GroupActivityAnswerID" />
+                <ScalarProperty Name="QuestionValue" ColumnName="QuestionValue" />
+                <ScalarProperty Name="QuestionID" ColumnName="QuestionID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GroupActivityOptions">
+            <EntityTypeMapping TypeName="OQDevSNAPModel.GroupActivityOption">
+              <MappingFragment StoreEntitySet="GroupActivityOption">
+                <ScalarProperty Name="QuestionnaireType" ColumnName="QuestionnaireType" />
+                <ScalarProperty Name="QuestionID" ColumnName="QuestionID" />
+                <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="Text" ColumnName="Text" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="GroupActivityQuestions">
             <EntityTypeMapping TypeName="OQDevSNAPModel.GroupActivityQuestion">
               <MappingFragment StoreEntitySet="GroupActivityQuestion">
@@ -589,111 +611,89 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="GroupActivityAnswers">
-            <EntityTypeMapping TypeName="OQDevSNAPModel.GroupActivityAnswer">
-              <MappingFragment StoreEntitySet="GroupActivityAnswer">
-                <ScalarProperty Name="QuestionID" ColumnName="QuestionID" />
-                <ScalarProperty Name="QuestionValue" ColumnName="QuestionValue" />
-                <ScalarProperty Name="GroupActivityAnswerID" ColumnName="GroupActivityAnswerID" />
-                <ScalarProperty Name="CompletedActivityID" ColumnName="CompletedActivityID" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="GroupActivityOptions">
-            <EntityTypeMapping TypeName="OQDevSNAPModel.GroupActivityOption">
-              <MappingFragment StoreEntitySet="GroupActivityOption">
-                <ScalarProperty Name="Text" ColumnName="Text" />
-                <ScalarProperty Name="Value" ColumnName="Value" />
-                <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
-                <ScalarProperty Name="QuestionID" ColumnName="QuestionID" />
-                <ScalarProperty Name="QuestionnaireType" ColumnName="QuestionnaireType" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="GroupActivityTestScores">
             <EntityTypeMapping TypeName="OQDevSNAPModel.GroupActivityTestScore">
               <MappingFragment StoreEntitySet="GroupActivityTestScore">
-                <ScalarProperty Name="CalculatedValue" ColumnName="CalculatedValue" />
-                <ScalarProperty Name="TestScoreType" ColumnName="TestScoreType" />
-                <ScalarProperty Name="ClientGroupQuestionnaireTestID" ColumnName="ClientGroupQuestionnaireTestID" />
-                <ScalarProperty Name="CompletedActivityID" ColumnName="CompletedActivityID" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CompletedActivityID" ColumnName="CompletedActivityID" />
+                <ScalarProperty Name="ClientGroupQuestionnaireTestID" ColumnName="ClientGroupQuestionnaireTestID" />
+                <ScalarProperty Name="TestScoreType" ColumnName="TestScoreType" />
+                <ScalarProperty Name="CalculatedValue" ColumnName="CalculatedValue" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="GroupActivityTexts">
             <EntityTypeMapping TypeName="OQDevSNAPModel.GroupActivityText">
               <MappingFragment StoreEntitySet="GroupActivityText">
-                <ScalarProperty Name="Text" ColumnName="Text" />
-                <ScalarProperty Name="QuestionNumber" ColumnName="QuestionNumber" />
-                <ScalarProperty Name="Language" ColumnName="Language" />
-                <ScalarProperty Name="QuestionID" ColumnName="QuestionID" />
                 <ScalarProperty Name="QuestionnaireType" ColumnName="QuestionnaireType" />
+                <ScalarProperty Name="QuestionID" ColumnName="QuestionID" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="QuestionNumber" ColumnName="QuestionNumber" />
+                <ScalarProperty Name="Text" ColumnName="Text" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="GroupActivityTypes">
             <EntityTypeMapping TypeName="OQDevSNAPModel.GroupActivityType">
               <MappingFragment StoreEntitySet="GroupActivityType">
-                <ScalarProperty Name="ActivityDisplayName" ColumnName="ActivityDisplayName" />
-                <ScalarProperty Name="ActivityName" ColumnName="ActivityName" />
                 <ScalarProperty Name="ActivityTypeID" ColumnName="ActivityTypeID" />
+                <ScalarProperty Name="ActivityName" ColumnName="ActivityName" />
+                <ScalarProperty Name="ActivityDisplayName" ColumnName="ActivityDisplayName" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="GroupCompletedActivities">
             <EntityTypeMapping TypeName="OQDevSNAPModel.GroupCompletedActivity">
               <MappingFragment StoreEntitySet="GroupCompletedActivity">
-                <ScalarProperty Name="ActivityType" ColumnName="ActivityType" />
-                <ScalarProperty Name="CompletedPackageID" ColumnName="CompletedPackageID" />
                 <ScalarProperty Name="CompletedActivityID" ColumnName="CompletedActivityID" />
+                <ScalarProperty Name="CompletedPackageID" ColumnName="CompletedPackageID" />
+                <ScalarProperty Name="ActivityType" ColumnName="ActivityType" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="GroupCompletedPackages">
             <EntityTypeMapping TypeName="OQDevSNAPModel.GroupCompletedPackage">
               <MappingFragment StoreEntitySet="GroupCompletedPackage">
-                <ScalarProperty Name="IntakeID" ColumnName="IntakeID" />
-                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
-                <ScalarProperty Name="SessionNumber" ColumnName="SessionNumber" />
-                <ScalarProperty Name="CompletionDate" ColumnName="CompletionDate" />
-                <ScalarProperty Name="PackageType" ColumnName="PackageType" />
-                <ScalarProperty Name="GroupID" ColumnName="GroupID" />
                 <ScalarProperty Name="CompletedPackageID" ColumnName="CompletedPackageID" />
+                <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+                <ScalarProperty Name="PackageType" ColumnName="PackageType" />
+                <ScalarProperty Name="CompletionDate" ColumnName="CompletionDate" />
+                <ScalarProperty Name="SessionNumber" ColumnName="SessionNumber" />
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+                <ScalarProperty Name="IntakeID" ColumnName="IntakeID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="GroupPackageActivities">
             <EntityTypeMapping TypeName="OQDevSNAPModel.GroupPackageActivity">
               <MappingFragment StoreEntitySet="GroupPackageActivity">
-                <ScalarProperty Name="QuestionnaireType" ColumnName="QuestionnaireType" />
-                <ScalarProperty Name="ActivityDisplayOrder" ColumnName="ActivityDisplayOrder" />
-                <ScalarProperty Name="ProgramID" ColumnName="ProgramID" />
-                <ScalarProperty Name="PackageType" ColumnName="PackageType" />
                 <ScalarProperty Name="GroupPackageActID" ColumnName="GroupPackageActID" />
+                <ScalarProperty Name="PackageType" ColumnName="PackageType" />
+                <ScalarProperty Name="ProgramID" ColumnName="ProgramID" />
+                <ScalarProperty Name="ActivityDisplayOrder" ColumnName="ActivityDisplayOrder" />
+                <ScalarProperty Name="QuestionnaireType" ColumnName="QuestionnaireType" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="GroupPackageNames">
             <EntityTypeMapping TypeName="OQDevSNAPModel.GroupPackageName">
               <MappingFragment StoreEntitySet="GroupPackageName">
-                <ScalarProperty Name="PackageDisplayName" ColumnName="PackageDisplayName" />
-                <ScalarProperty Name="PackageName" ColumnName="PackageName" />
                 <ScalarProperty Name="PackageTypeID" ColumnName="PackageTypeID" />
+                <ScalarProperty Name="PackageName" ColumnName="PackageName" />
+                <ScalarProperty Name="PackageDisplayName" ColumnName="PackageDisplayName" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="GroupPrograms">
             <EntityTypeMapping TypeName="OQDevSNAPModel.GroupProgram">
               <MappingFragment StoreEntitySet="GroupProgram">
-                <ScalarProperty Name="ProgramID" ColumnName="ProgramID" />
-                <ScalarProperty Name="ProgramLength" ColumnName="ProgramLength" />
-                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
-                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
-                <ScalarProperty Name="ProgramDisplayName" ColumnName="ProgramDisplayName" />
-                <ScalarProperty Name="ProgramName" ColumnName="ProgramName" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ProgramName" ColumnName="ProgramName" />
+                <ScalarProperty Name="ProgramDisplayName" ColumnName="ProgramDisplayName" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="ProgramLength" ColumnName="ProgramLength" />
+                <ScalarProperty Name="ProgramID" ColumnName="ProgramID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

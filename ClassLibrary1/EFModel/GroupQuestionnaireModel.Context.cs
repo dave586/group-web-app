@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ClassLibrary1.EFModel
+namespace GroupQuestionnaireApp.EFModel
 {
     using System;
     using System.Data.Entity;
@@ -25,9 +25,9 @@ namespace ClassLibrary1.EFModel
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<GroupActivityQuestion> GroupActivityQuestions { get; set; }
         public virtual DbSet<GroupActivityAnswer> GroupActivityAnswers { get; set; }
         public virtual DbSet<GroupActivityOption> GroupActivityOptions { get; set; }
+        public virtual DbSet<GroupActivityQuestion> GroupActivityQuestions { get; set; }
         public virtual DbSet<GroupActivityTestScore> GroupActivityTestScores { get; set; }
         public virtual DbSet<GroupActivityText> GroupActivityTexts { get; set; }
         public virtual DbSet<GroupActivityType> GroupActivityTypes { get; set; }
