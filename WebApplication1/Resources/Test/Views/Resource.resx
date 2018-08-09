@@ -132,7 +132,6 @@
   <data name="OutcomeQuestionnaireTitle" xml:space="preserve">
     <value>Outcome Questionnaire (OQ - 45.2)</value>
   </data>
-  
   <data name="PageDescriptionResponseComplete" xml:space="preserve">
     <value>Thank you for completing your questionnaires.  Please click the "finish" button below to complete the process.  Once you are done, please return the device to the front desk. </value>
   </data>
@@ -321,5 +320,8 @@
   </data>
   <data name="Tbl_Yes" xml:space="preserve">
     <value>Yes</value>
+  </data>
+  <data name="PageTitleGroupProgram" xml:space="preserve">
+    <value>Select Group Program</value>
   </data>
 </root>
