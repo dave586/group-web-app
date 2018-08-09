@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Group-Web-App", "WebApplication1\Group-Web-App.csproj", "{AB28BB54-28E2-4109-84BD-E00D62486386}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{FE8B3866-7464-4525-92D9-50820494AE8A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupQuestionnaireApp", "ClassLibrary1\GroupQuestionnaireApp.csproj", "{FE8B3866-7464-4525-92D9-50820494AE8A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
