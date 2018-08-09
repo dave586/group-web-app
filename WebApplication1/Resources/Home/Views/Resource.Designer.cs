@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Questionnaire.Resources.Home.Views {
+namespace GroupPackageApp.Resources.Home.Views {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Questionnaire.Resources.Home.Views {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Questionnaire.Resources.Home.Views.Resource", typeof(Resource).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("GroupPackageApp.Resources.Home.Views.Resource", typeof(Resource).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
