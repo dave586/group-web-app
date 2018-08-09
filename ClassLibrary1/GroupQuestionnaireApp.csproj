@@ -7,8 +7,8 @@
     <ProjectGuid>{FE8B3866-7464-4525-92D9-50820494AE8A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ClassLibrary1</RootNamespace>
-    <AssemblyName>ClassLibrary1</AssemblyName>
+    <RootNamespace>GroupQuestionnaireApp</RootNamespace>
+    <AssemblyName>GroupQuestionnaireApp</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -94,12 +94,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GroupQuestionnaireModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="GroupQuestionnaire.cs" />
     <Compile Include="EFModel\GroupQuestionnaireModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>GroupQuestionnaireModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="GroupQuestionnaire.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -119,13 +119,13 @@
   <ItemGroup>
     <Content Include="EFModel\GroupQuestionnaireModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>GroupQuestionnaireModel.Context.cs</LastGenOutput>
       <DependentUpon>GroupQuestionnaireModel.edmx</DependentUpon>
+      <LastGenOutput>GroupQuestionnaireModel.Context.cs</LastGenOutput>
     </Content>
     <Content Include="EFModel\GroupQuestionnaireModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>GroupQuestionnaireModel.cs</LastGenOutput>
       <DependentUpon>GroupQuestionnaireModel.edmx</DependentUpon>
+      <LastGenOutput>GroupQuestionnaireModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

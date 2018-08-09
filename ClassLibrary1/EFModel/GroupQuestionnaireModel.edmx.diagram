@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="9369e4bbbd054511b6d8302198ba6a0f" Name="Diagram1">
+      <Diagram DiagramId="5bedfe000fc74d188b52ea9ea4b9b08a" Name="Diagram1">
         <EntityTypeShape EntityType="OQDevSNAPModel.GroupActivityAnswer" Width="1.5" PointX="12.25" PointY="1.625" IsExpanded="true" />
         <EntityTypeShape EntityType="OQDevSNAPModel.GroupActivityOption" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
         <EntityTypeShape EntityType="OQDevSNAPModel.GroupActivityQuestion" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />

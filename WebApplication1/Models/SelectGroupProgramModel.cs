@@ -10,19 +10,19 @@ namespace WebApplication1.Models
     public class SelectGroupProgramModel
     {
         [Required]
-        public int ClientID { get; set; }
+        public int ProgramID { get; set; }
         [Required]
-        public int IntakeFileID { get; set; }
-        public List<GroupProgram> Program { get; set; }
+        public string ProgramName { get; set; }
+        public List<GroupProgram> Programs { get; set; }
 
         public SelectGroupProgramModel()
         {
-            Program = new List<GroupProgram>();
+            Programs = new List<GroupProgram>();
         }
 
-        public static SelectGroupProgramModel GenerateSelectGroupProgramModel(int clientID, int intakeFileID)
+        public static SelectGroupProgramModel GenerateSelectGroupProgramModel(int programID, string programName)
         {
-            SelectGroupProgramModel gp = new SelectGroupProgramModel { ClientID = clientID, IntakeFileID = intakeFileID };
+            SelectGroupProgramModel gp = new SelectGroupProgramModel { ProgramID = programID , ProgramName = programName };
 
             using (OQDevSNAPEntities dbContext = new OQDevSNAPEntities())
             {
@@ -49,6 +49,8 @@ namespace WebApplication1.Models
                 };
 
                 programs.Add(was);
+
+                gp.Programs = programs;
             }
             return gp;
         }
