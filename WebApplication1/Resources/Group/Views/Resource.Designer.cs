@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Questionnaire.Resources.Error.Views {
+namespace GroupPackageApp.Resources.Group.Views {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Questionnaire.Resources.Error.Views {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Questionnaire.Resources.Error.Views.Resource", typeof(Resource).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("GroupPackageApp.Resources.Group.Views.Resource", typeof(Resource).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,29 +61,20 @@ namespace Questionnaire.Resources.Error.Views {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error has occured in the system.  Please try restarting the test..
+        ///   Looks up a localized string similar to Your counsellor or the front desk staff should have informed you what group program you&apos;re enrolled in. If you are unsure, please contact the front desk for assistance..
         /// </summary>
-        public static string PageDescription1Error {
+        public static string PageDescriptionSelectGroupProgram {
             get {
-                return ResourceManager.GetString("PageDescription1Error", resourceCulture);
+                return ResourceManager.GetString("PageDescriptionSelectGroupProgram", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to If the error persists please contact the front desk for assistance..
+        ///   Looks up a localized string similar to Select Group Program.
         /// </summary>
-        public static string PageDescription2Error {
+        public static string PageTitleSelectGroupProgram {
             get {
-                return ResourceManager.GetString("PageDescription2Error", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Error.
-        /// </summary>
-        public static string PageTitleError {
-            get {
-                return ResourceManager.GetString("PageTitleError", resourceCulture);
+                return ResourceManager.GetString("PageTitleSelectGroupProgram", resourceCulture);
             }
         }
     }
