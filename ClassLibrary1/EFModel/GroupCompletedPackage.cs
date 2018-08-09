@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ClassLibrary1
+namespace ClassLibrary1.EFModel
 {
     using System;
     using System.Collections.Generic;

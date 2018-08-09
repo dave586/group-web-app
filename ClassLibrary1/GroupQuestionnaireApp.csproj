@@ -51,51 +51,51 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EFModel\GroupActivityAnswer.cs">
+      <DependentUpon>GroupQuestionnaireModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EFModel\GroupActivityOption.cs">
+      <DependentUpon>GroupQuestionnaireModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EFModel\GroupActivityQuestion.cs">
+      <DependentUpon>GroupQuestionnaireModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EFModel\GroupActivityTestScore.cs">
+      <DependentUpon>GroupQuestionnaireModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EFModel\GroupActivityText.cs">
+      <DependentUpon>GroupQuestionnaireModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EFModel\GroupActivityType.cs">
+      <DependentUpon>GroupQuestionnaireModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EFModel\GroupCompletedActivity.cs">
+      <DependentUpon>GroupQuestionnaireModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EFModel\GroupCompletedPackage.cs">
+      <DependentUpon>GroupQuestionnaireModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EFModel\GroupPackageActivity.cs">
+      <DependentUpon>GroupQuestionnaireModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EFModel\GroupPackageName.cs">
+      <DependentUpon>GroupQuestionnaireModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EFModel\GroupProgram.cs">
+      <DependentUpon>GroupQuestionnaireModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EFModel\GroupQuestionnaireModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GroupQuestionnaireModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EFModel\GroupQuestionnaireModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GroupQuestionnaireModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="GroupQuestionnaire.cs" />
-    <Compile Include="GroupActivityAnswer.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GroupActivityOption.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GroupActivityQuestion.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GroupActivityTestScore.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GroupActivityText.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GroupActivityType.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GroupCompletedActivity.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GroupCompletedPackage.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GroupPackageActivity.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GroupPackageName.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GroupProgram.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GroupQuestionnaireModel.Designer.cs">
+    <Compile Include="EFModel\GroupQuestionnaireModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>GroupQuestionnaireModel.edmx</DependentUpon>
@@ -104,11 +104,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="GroupQuestionnaireModel.edmx">
+    <EntityDeploy Include="EFModel\GroupQuestionnaireModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>GroupQuestionnaireModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="GroupQuestionnaireModel.edmx.diagram">
+    <None Include="EFModel\GroupQuestionnaireModel.edmx.diagram">
       <DependentUpon>GroupQuestionnaireModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
@@ -117,15 +117,15 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model1.Context.tt">
+    <Content Include="EFModel\GroupQuestionnaireModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>GroupQuestionnaireModel.Context.cs</LastGenOutput>
       <DependentUpon>GroupQuestionnaireModel.edmx</DependentUpon>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Model1.tt">
+    <Content Include="EFModel\GroupQuestionnaireModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>GroupQuestionnaireModel.cs</LastGenOutput>
       <DependentUpon>GroupQuestionnaireModel.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
