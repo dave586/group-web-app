@@ -26,16 +26,29 @@ namespace WebApplication1.Models
 
             using (OQDevSNAPEntities dbContext = new OQDevSNAPEntities())
             {
-                var was  = dbContext.GroupPrograms.FirstOrDefault(p => p.ProgramName == "WAS");
-                var oed  = dbContext.GroupPrograms.FirstOrDefault(p => p.ProgramName == "OED");
-                var be   = dbContext.GroupPrograms.FirstOrDefault(p => p.ProgramName == "BE");
-                var bld  = dbContext.GroupPrograms.FirstOrDefault(p => p.ProgramName == "BLD");
-                var yna  = dbContext.GroupPrograms.FirstOrDefault(p => p.ProgramName == "YNA");
-                var tftb = dbContext.GroupPrograms.FirstOrDefault(p => p.ProgramName == "TFTB");
-                var rcm  = dbContext.GroupPrograms.FirstOrDefault(p => p.ProgramName == "RCM");
-                var rcw  = dbContext.GroupPrograms.FirstOrDefault(p => p.ProgramName == "RCW");
+                var wasProgram = dbContext.GroupPrograms.FirstOrDefault(p => p.ProgramName == "WAS");
+                var oedProgram = dbContext.GroupPrograms.FirstOrDefault(p => p.ProgramName == "OED");
+                var beProgram = dbContext.GroupPrograms.FirstOrDefault(p => p.ProgramName == "BE");
+                var bldProgram = dbContext.GroupPrograms.FirstOrDefault(p => p.ProgramName == "BLD");
+                var ynaProgram = dbContext.GroupPrograms.FirstOrDefault(p => p.ProgramName == "YNA");
+                var tftbProgram = dbContext.GroupPrograms.FirstOrDefault(p => p.ProgramName == "TFTB");
+                var rcmProgram = dbContext.GroupPrograms.FirstOrDefault(p => p.ProgramName == "RCM");
+                var rcwProgram = dbContext.GroupPrograms.FirstOrDefault(p => p.ProgramName == "RCW");
 
                 var programs = new List<GroupProgram>();
+
+                GroupProgram was = new GroupProgram()
+                {
+                    ID = wasProgram.ID,
+                    ProgramDisplayName = wasProgram.ProgramDisplayName,
+                    ProgramName = wasProgram.ProgramName,
+                    StartDate = wasProgram.StartDate,
+                    EndDate = wasProgram.EndDate,
+                    ProgramLength = wasProgram.ProgramLength,
+                    ProgramID = wasProgram.ProgramID
+                };
+
+                programs.Add(was);
             }
             return gp;
         }
