@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EFModel\Extensions\GroupProgram.cs" />
     <Compile Include="EFModel\GroupActivityAnswer.cs">
       <DependentUpon>GroupQuestionnaireModel.tt</DependentUpon>
     </Compile>
