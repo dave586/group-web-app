@@ -25,27 +25,33 @@ namespace WebApplication1.Controllers
             set { _homeContext = value; }
         }
 
-        [HttpPost]
-        public ActionResult SelectActivityType (SelectActivityTypeModel viewModel)
+        public ActionResult StartTest (ClientSelectedProgram viewModel)
         {
+
             using (OQDevSNAPEntities dbContext = new OQDevSNAPEntities())
             {
+                foreach (string selectedTest in viewModel.SelectedProgram)
+                {
 
+                }
             }
-            return null;
+            return View("~/Views/Home/SelectGroupProgram.cshtml", new SelectGroupProgramModel
+            {
+                //ProgramID = viewModel.ProgramID,
+                //ProgramName = viewModel.ProgramName
+            });
         }
 
-        public ActionResult SelectGroupProgram (SelectGroupProgramModel viewModel)
+        public ActionResult NextTest (Guid responseID, RequestContext _requestContext)
         {
+            ModelState.Clear();
             using (OQDevSNAPEntities dbContext = new OQDevSNAPEntities())
             {
-                
+                //GroupProgram pro = dbContext.GroupPrograms.Include('GroupPackageActivity').Include('GroupActivityType').FirstOrDefault()
+
+                ClientTestDisplay ctd = new ClientTestDisplay();
+                return View("~/Views/Test/CompleteTest.cshtml", ctd);
             }
-            return View("~/Views/SelectGroupProgram.cshtml", new SelectGroupProgramModel
-            {
-                ProgramID = viewModel.ProgramID,
-                ProgramName = viewModel.ProgramName
-            });
         }
     }
 }
