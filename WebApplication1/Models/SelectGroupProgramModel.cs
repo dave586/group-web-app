@@ -13,7 +13,16 @@ namespace WebApplication1.Models
         public int ProgramID { get; set; }
         [Required]
         public string ProgramName { get; set; }
+        [Required]
+        public int ClientID { get; set; }
+        [Required]
+        public int IntakeFileID { get; set; }
+
+        public string[] SelectedProgram { get; set; }
         public List<GroupProgram> Programs { get; set; }
+
+        [Required]
+        public bool isPreSession { get; set; }
 
         public SelectGroupProgramModel()
         {
@@ -39,7 +48,7 @@ namespace WebApplication1.Models
 
                 GroupProgram was = new GroupProgram()
                 {
-                    ID = wasProgram.ID,
+                    SelectorID = wasProgram.ID,
                     ProgramDisplayName = wasProgram.ProgramDisplayName,
                     ProgramName = wasProgram.ProgramName,
                     StartDate = wasProgram.StartDate,

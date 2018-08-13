@@ -169,6 +169,8 @@
     </Compile>
     <Compile Include="Helpers\Extensions.cs" />
     <Compile Include="Helpers\Html.cs" />
+    <Compile Include="Models\ClientSelectedProgram.cs" />
+    <Compile Include="Models\ClientTestDisplay.cs" />
     <Compile Include="Models\SelectActivityTypeModel.cs" />
     <Compile Include="Models\SelectGroupProgramModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -180,11 +182,23 @@
       <DependentUpon>Resource.resx</DependentUpon>
     </Compile>
     <Compile Include="Resources\Home\Models\Resource.Designer.cs" />
-    <Compile Include="Resources\Home\Views\Resource.Designer.cs" />
-    <Compile Include="Resources\Shared\Views\Resource.Designer.cs" />
+    <Compile Include="Resources\Home\Views\Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Shared\Views\Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
     <Compile Include="Resources\Test\Views\Resource.ar-SA.Designer.cs" />
     <Compile Include="Resources\Test\Views\Resource.de-DE.Designer.cs" />
-    <Compile Include="Resources\Test\Views\Resource.Designer.cs" />
+    <Compile Include="Resources\Test\Views\Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
     <Compile Include="Resources\Test\Views\Resource.es-CL.Designer.cs" />
     <Compile Include="Resources\Test\Views\Resource.es-ES.Designer.cs" />
     <Compile Include="Resources\Test\Views\Resource.fr.Designer.cs" />
@@ -629,15 +643,15 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\GroupTest\ViewPage1.cshtml" />
+    <Content Include="Views\Test\TestOQ.cshtml" />
     <Content Include="Views\Home\ValidateClientId.cshtml" />
     <Content Include="Views\Home\SelectPrePostSession.cshtml" />
     <Content Include="Views\Home\SelectTest.cshtml" />
     <Content Include="Views\Home\SelectGroupProgram.cshtml" />
+    <Content Include="Views\Test\CompleteTest.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -669,8 +683,14 @@
       <LastGenOutput>Resource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Home\Models\Resource.resx" />
-    <EmbeddedResource Include="Resources\Home\Views\Resource.resx" />
-    <EmbeddedResource Include="Resources\Shared\Views\Resource.resx" />
+    <EmbeddedResource Include="Resources\Home\Views\Resource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Shared\Views\Resource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\Test\Views\Resource.ar-SA.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -694,7 +714,10 @@
     <EmbeddedResource Include="Resources\Test\Views\Resource.ko-KR.resx" />
     <EmbeddedResource Include="Resources\Test\Views\Resource.nb-NO.resx" />
     <EmbeddedResource Include="Resources\Test\Views\Resource.pt-PT.resx" />
-    <EmbeddedResource Include="Resources\Test\Views\Resource.resx" />
+    <EmbeddedResource Include="Resources\Test\Views\Resource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\Test\Views\Resource.ru-RU.resx" />
     <EmbeddedResource Include="Resources\Test\Views\Resource.sk-SK.resx" />
     <EmbeddedResource Include="Resources\Test\Views\Resource.sv-SE.resx" />
