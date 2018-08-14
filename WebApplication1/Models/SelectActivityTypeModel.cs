@@ -67,7 +67,18 @@ namespace WebApplication1.Models
                 var codExit = dbContext.GroupActivityTypes.FirstOrDefault(t => t.ActivityName == "COD Exit");
 
                 var activity = new List<GroupActivityType>();
+
+                GroupActivityType oq = new GroupActivityType()
+                {
+                    ActivityTypeID = oqTest.ActivityTypeID,
+                    ActivityDisplayName = oqTest.ActivityDisplayName,
+                    ActivityName = oqTest.ActivityName
+                };
+                activity.Add(oq);
+
+                satm.Activity = activity;
             }
+
             return satm;
         }
     }
