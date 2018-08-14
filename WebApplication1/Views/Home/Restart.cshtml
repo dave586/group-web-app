@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = GroupPackageApp.Resources.Home.Views.Resource.PageTitleRestart;
+    Layout = "~/Views/Shared/_layout.cshtml";
+}
+
+<div class="row section">
+    <div class="col-sm-12">
+        <div class="row paragraph">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+                <p>@GroupPackageApp.Resources.Home.Views.Resource.PageDescriptionRestart</p>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <a class="btn" href="@Url.Action("Index", "Home")" title="@GroupPackageApp.Resources.Home.Views.Resource.BtnRestartTests">@GroupPackageApp.Resources.Home.Views.Resource.BtnRestartTests</a>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <a class="btn" href="@Url.Action("ValidateClientID", "Home")" title="@GroupPackageApp.Resources.Home.Views.Resource.BtnClientOverride">@GroupPackageApp.Resources.Home.Views.Resource.BtnClientOverride</a>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+    </div>
+</div>
