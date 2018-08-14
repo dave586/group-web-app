@@ -31,11 +31,11 @@ namespace WebApplication1.Controllers
         [HttpPost]
         public ActionResult SelectGroupProgram(SelectGroupProgramModel programModel)
         {
-            var groupProgram = SelectGroupProgramModel.GenerateSelectGroupProgramModel(programModel.ProgramID, programModel.ProgramName);
+            var groupProgram = SelectGroupProgramModel.GenerateSelectGroupProgramModel(programModel.ID, programModel.ProgramName);
             string programName = groupProgram.Programs[0].ProgramName;
             GroupProgram pro = _dbContext.GroupPrograms.FirstOrDefault(p => p.ProgramName == programName);
 
-            groupProgram.ProgramID = programModel.ProgramID;
+            groupProgram.ID = programModel.ID;
             groupProgram.ProgramName = programModel.ProgramName;
             groupProgram.ProgramDisplayName = programModel.ProgramDisplayName;
             return View("~/Views/Home/SelectGroupProgram.cshtml", groupProgram);

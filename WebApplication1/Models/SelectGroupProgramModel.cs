@@ -11,7 +11,7 @@ namespace WebApplication1.Models
     public class SelectGroupProgramModel
     {
         [Required]
-        public int ProgramID { get; set; }
+        public int ID { get; set; }
         [Required]
         public string ProgramName { get; set; }
         [Required]
@@ -25,7 +25,7 @@ namespace WebApplication1.Models
 
         public static SelectGroupProgramModel GenerateSelectGroupProgramModel(int programID, string programName)
         {
-            SelectGroupProgramModel gp = new SelectGroupProgramModel { ProgramID = programID , ProgramName = programName };
+            SelectGroupProgramModel gp = new SelectGroupProgramModel { ID = programID , ProgramName = programName };
 
             using (OQDevSNAPEntities dbContext = new OQDevSNAPEntities())
             {
