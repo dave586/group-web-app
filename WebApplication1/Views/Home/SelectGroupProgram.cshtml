@@ -38,7 +38,7 @@
                     @foreach (var item in @Model.Programs as List<GroupProgram>)
                     {
                         <div class="checkboxcontainer">
-                            <input class="SelectedTests" name="SelectedTests" type="checkbox" id="@item.SelectorID" value="@item.SelectorID" />
+                            <input class="SelectedProgram" name="SelectedProgram" type="checkbox" id="@item.SelectorID" value="@item.SelectorID" />
                             <label class="checkboxlabel" for="@item.SelectorID"><span></span><span class="padder"></span>@item.ProgramDisplayName</label>
                         </div>
                     }
