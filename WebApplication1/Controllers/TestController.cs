@@ -25,33 +25,43 @@ namespace WebApplication1.Controllers
             set { _homeContext = value; }
         }
 
-        public ActionResult StartTest (ClientSelectedProgram viewModel)
-        {
+        //public ActionResult StartTest(ClientSelectedProgram viewModel)
+        //{
+        //    using (OQDevSNAPEntities1 dbContext = new OQDevSNAPEntities1())
+        //    {
 
-            using (OQDevSNAPEntities dbContext = new OQDevSNAPEntities())
-            {
-                foreach (string selectedTest in viewModel.SelectedProgram)
-                {
+        //        foreach (string selectedTest in viewModel.SelectedProgram)
+        //        {
+        //            GroupProgram pro = new GroupProgram();
 
-                }
-            }
-            return View("~/Views/Home/SelectGroupProgram.cshtml", new SelectGroupProgramModel
-            {
-                //ProgramID = viewModel.ProgramID,
-                //ProgramName = viewModel.ProgramName
-            });
-        }
+        //            int proID = 0;
+        //            int.TryParse(selectedTest, out proID);
 
-        public ActionResult NextTest (Guid responseID, RequestContext _requestContext)
-        {
-            ModelState.Clear();
-            using (OQDevSNAPEntities dbContext = new OQDevSNAPEntities())
-            {
-                //GroupProgram pro = dbContext.GroupPrograms.Include('GroupPackageActivity').Include('GroupActivityType').FirstOrDefault()
+        //            if (proID > 100)
+        //            {
+        //                pro.Program = dbContext.GroupPrograms.FirstOrDefault(p => p.ProgramName == "WAS");
+        //                pro.ID = proID;
+        //            }
+        //        }
+        //    }
+        //    return NextTest();
+        //    return View("~/Views/Home/SelectGroupProgram.cshtml", new SelectGroupProgramModel
+        //    {
+        //        ProgramID = viewModel.ProgramID,
+        //        ProgramName = viewModel.ProgramName
+        //    });
+        //}
 
-                ClientTestDisplay ctd = new ClientTestDisplay();
-                return View("~/Views/Test/CompleteTest.cshtml", ctd);
-            }
-        }
+        //public ActionResult NextTest (Guid responseID, RequestContext _requestContext)
+        //{
+        //    ModelState.Clear();
+        //    using (OQDevSNAPEntities1 dbContext = new OQDevSNAPEntities1())
+        //    {
+        //        //GroupProgram pro = dbContext.GroupPrograms.Include('GroupPackageActivity').Include('GroupActivityType').FirstOrDefault()
+
+        //        ClientTestDisplay ctd = new ClientTestDisplay();
+        //        return View("~/Views/Test/CompleteTest.cshtml", ctd);
+        //    }
+        //}
     }
 }

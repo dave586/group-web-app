@@ -1,13 +1,52 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Error</title>
-</head>
-<body>
-    <hgroup>
-        <h1>Error.</h1>
-        <h2>An error occurred while processing your request.</h2>
-    </hgroup>
-</body>
-</html>
+﻿@using WebApplication1.Models
+
+@{
+    ViewBag.Title = GroupPackageApp.Resources.Error.Views.Resource.PageTitleError;
+    Layout = "~/Views/Shared/_layout.cshtml";
+
+    if (Model != null && Model.ErrorType != null && Model.ErrorType != ErrorTypes.Exception)
+    {
+        UrbanLighthouse.Shared.Utilities.Logging.WriteToLog("Model Error: " + Model.ErrorMessage);
+    }
+}
+
+<div class="row section">
+    <div class="col-sm-12">
+        <div class="row paragraph">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <h2>@GroupPackageApp.Resources.Error.Views.Resource.PageTitleError</h2>
+                @if (Model == null || Model.ErrorType == null || Model.ErrorType == ErrorTypes.Exception)
+                {
+                    <h3>@GroupPackageApp.Resources.Error.Views.Resource.PageDescription1Error</h3>
+                    <h3>@GroupPackageApp.Resources.Error.Views.Resource.PageDescription2Error</h3>
+                }
+                else
+                {
+                    <h3>@Html.Raw(Model.ErrorMessage)</h3>
+                }
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+
+        @if (Model != null && Model.ErrorType == ErrorTypes.ClientNotFound)
+        {
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    @using (Html.BeginForm("ReValidateClient", "Home", FormMethod.Post, new { id = "form-ReValidateClient" }))
+                    {
+                        @Html.HiddenFor(m => m.ClientFirstName)
+                        @Html.HiddenFor(m => m.ClientLastName)
+                        @*Html.HiddenFor(m=>m.ClientBirthDate)*@
+                        @Html.HiddenFor(m => m.ClientBD_Day)
+                        @Html.HiddenFor(m => m.ClientBD_Month)
+                        @Html.HiddenFor(m => m.ClientBD_Year)
+                        <button class="back" type="submit" title="@GroupPackageApp.Resources.Home.Views.Resource.BtnBack">@GroupPackageApp.Resources.Home.Views.Resource.BtnBack</button>
+                    }
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+        }
+    </div>
+</div>

@@ -9,9 +9,9 @@ namespace WebApplication1.Models
     public class ClientSelectedProgram
     {
         [Required]
-        public int ClientID { get; set; }
+        public int ProgramID { get; set; }
         [Required]
-        public int IntakeFileID { get; set; }
+        public int ClientID { get; set; }
 
         public string[] SelectedProgram { get; set; }
     }

@@ -175,7 +175,11 @@
     <Compile Include="Models\SelectGroupProgramModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\Error\Models\Resource.Designer.cs" />
-    <Compile Include="Resources\Error\Views\Resource.Designer.cs" />
+    <Compile Include="Resources\Error\Views\Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
     <Compile Include="Resources\Group\Views\Resource.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -677,7 +681,10 @@
     <EmbeddedResource Include="Resources\Error\Models\Resource.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Error\Views\Resource.resx" />
+    <EmbeddedResource Include="Resources\Error\Views\Resource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\Group\Views\Resource.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource.Designer.cs</LastGenOutput>
@@ -724,8 +731,8 @@
     <EmbeddedResource Include="Resources\Test\Views\Resource.zh-CHT.resx" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary1\GroupQuestionnaireApp.csproj">
-      <Project>{fe8b3866-7464-4525-92d9-50820494ae8a}</Project>
+    <ProjectReference Include="..\GroupQuestionnaireApp\GroupQuestionnaireApp.csproj">
+      <Project>{11aed5e0-40dc-4524-bd4c-daba53eddf8a}</Project>
       <Name>GroupQuestionnaireApp</Name>
     </ProjectReference>
   </ItemGroup>

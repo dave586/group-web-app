@@ -29,17 +29,23 @@ namespace WebApplication1.Controllers
         }
 
         [HttpPost]
-        public ActionResult SelectGroupProgram(SelectGroupProgramModel viewModel)
+        public ActionResult SelectGroupProgram(SelectGroupProgramModel programModel)
         {
-            var programSelection = SelectGroupProgramModel.GenerateSelectGroupProgramModel(viewModel.ProgramID, viewModel.ProgramName);
-
-            string programName = programSelection.Programs[0].ProgramName;
-
+            var groupProgram = SelectGroupProgramModel.GenerateSelectGroupProgramModel(programModel.ProgramID, programModel.ProgramName);
+            string programName = groupProgram.Programs[0].ProgramName;
             GroupProgram pro = _dbContext.GroupPrograms.FirstOrDefault(p => p.ProgramName == programName);
 
-            var testController = new TestController();
-            testController.HomeContext = this.Request.RequestContext;
-            return testController.StartTest(new ClientSelectedProgram { ClientID = viewModel.ClientID, IntakeFileID = viewModel.IntakeFileID, SelectedProgram = new string[] { pro.ID.ToString()} });
+            groupProgram.ProgramID = programModel.ProgramID;
+            groupProgram.ProgramName = programModel.ProgramName;
+            groupProgram.ProgramDisplayName = programModel.ProgramDisplayName;
+            return View("~/Views/Home/SelectGroupProgram.cshtml", groupProgram);
+            //if (pro == null)
+            //    return View("~/Views/Shared/Error.cshtml", new ErrorModel { ErrorType = ErrorTypes.TestNotFound });
+            //var testController = new TestController();
+            //testController.HomeContext = this.Request.RequestContext;
+
+            //return testController.StartTest(new ClientSelectedProgram { ProgramID = programModel.ProgramID, ClientID = programModel.ClientID, SelectedProgram = new string[] { pro.ProgramID.ToString() } });
+
         }
 
         public ActionResult Restart()
