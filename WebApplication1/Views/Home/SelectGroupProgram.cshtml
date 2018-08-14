@@ -16,7 +16,7 @@
             </div>
             <div class="col-sm-2"></div>
         </div>
-        @using (Html.BeginForm("StartTest", "Test", FormMethod.Post, new { id = "form-SelectTest" }))
+        @using (Html.BeginForm("StartTest", "Test", FormMethod.Post, new { id = "form-SelectProgram" }))
         {
             <div class="row">
                 <div class="col-sm-3"></div>
@@ -34,7 +34,7 @@
                         </div>
                     </div>*@
 
-                    @Html.ValidationMessage("SelectedTests")
+                    @Html.ValidationMessage("SelectedProgram")
                     @foreach (var item in @Model.Programs as List<GroupProgram>)
                     {
                         <div class="checkboxcontainer">
@@ -54,3 +54,20 @@
         }
     </div>
 </div>
+<script>
+    (function () {
+
+        $.validator.addMethod("oneselected",
+            function (value, element) {
+                return $(".SelectedProgram:checked").length > 0;
+            });
+
+        Utilities.validation.ValidateForm($("#form-SelectProgram"), {}, {}, true);
+
+        $('.SelectedProgram').rules('add', {
+            oneselected: true,
+            messages: { oneselected: '@GroupPackageApp.Resources.Group.Views.Resource.SelectGroupError' }
+        });
+
+    })();
+</script>
