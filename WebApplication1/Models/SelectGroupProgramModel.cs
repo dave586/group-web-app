@@ -16,22 +16,9 @@ namespace WebApplication1.Models
         public string ProgramName { get; set; }
         [Required]
         public string ProgramDisplayName { get; set; }
-        [Required]
-        public int ClientID { get; set; }
-        [Required]
-        public int IntakeID { get; set; }
-
-        public bool IsPreSession { get { return SelectedPrePostSession == "IsPreSession"; } }
-
-        public bool IsPostSession { get { return SelectedPrePostSession == "IsPostSession"; } }
-
-        public string SelectedPrePostSession { get; set; }
 
         public string[] SelectedProgram { get; set; }
         public List<GroupProgram> Programs { get; set; }
-
-        [Required]
-        public bool isPreSession { get; set; }
 
         public SelectGroupProgramModel()
         {
