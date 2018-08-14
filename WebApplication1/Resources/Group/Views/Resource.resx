@@ -123,4 +123,7 @@
   <data name="PageTitleSelectGroupProgram" xml:space="preserve">
     <value>Select Group Program</value>
   </data>
+  <data name="SelectGroupError" xml:space="preserve">
+    <value>You must select at least one group</value>
+  </data>
 </root>

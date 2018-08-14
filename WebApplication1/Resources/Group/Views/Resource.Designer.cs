@@ -77,5 +77,14 @@ namespace GroupPackageApp.Resources.Group.Views {
                 return ResourceManager.GetString("PageTitleSelectGroupProgram", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You must select at least one group.
+        /// </summary>
+        public static string SelectGroupError {
+            get {
+                return ResourceManager.GetString("SelectGroupError", resourceCulture);
+            }
+        }
     }
 }
