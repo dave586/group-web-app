@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 using GroupQuestionnaireApp.EFModel;
 
 namespace WebApplication1.Models
@@ -14,9 +15,17 @@ namespace WebApplication1.Models
         [Required]
         public string ProgramName { get; set; }
         [Required]
+        public string ProgramDisplayName { get; set; }
+        [Required]
         public int ClientID { get; set; }
         [Required]
-        public int IntakeFileID { get; set; }
+        public int IntakeID { get; set; }
+
+        public bool IsPreSession { get { return SelectedPrePostSession == "IsPreSession"; } }
+
+        public bool IsPostSession { get { return SelectedPrePostSession == "IsPostSession"; } }
+
+        public string SelectedPrePostSession { get; set; }
 
         public string[] SelectedProgram { get; set; }
         public List<GroupProgram> Programs { get; set; }
@@ -58,6 +67,90 @@ namespace WebApplication1.Models
                 };
 
                 programs.Add(was);
+
+                GroupProgram oed = new GroupProgram()
+                {
+                    SelectorID = oedProgram.ID,
+                    ProgramDisplayName = oedProgram.ProgramDisplayName,
+                    StartDate = oedProgram.StartDate,
+                    EndDate = oedProgram.EndDate,
+                    ProgramLength = oedProgram.ProgramLength,
+                    ProgramID = oedProgram.ProgramID
+                };
+
+                programs.Add(oed);
+
+                GroupProgram be = new GroupProgram()
+                {
+                    SelectorID = beProgram.ID,
+                    ProgramDisplayName = beProgram.ProgramDisplayName,
+                    StartDate = beProgram.StartDate,
+                    EndDate = beProgram.EndDate,
+                    ProgramLength = beProgram.ProgramLength,
+                    ProgramID = beProgram.ProgramID
+                };
+
+                programs.Add(be);
+
+                GroupProgram bld = new GroupProgram()
+                {
+                    SelectorID = bldProgram.ID,
+                    ProgramDisplayName = bldProgram.ProgramDisplayName,
+                    StartDate = bldProgram.StartDate,
+                    EndDate = bldProgram.EndDate,
+                    ProgramLength = bldProgram.ProgramLength,
+                    ProgramID = bldProgram.ProgramID
+                };
+
+                programs.Add(bld);
+
+                GroupProgram yna = new GroupProgram()
+                {
+                    SelectorID = ynaProgram.ID,
+                    ProgramDisplayName = ynaProgram.ProgramDisplayName,
+                    StartDate = ynaProgram.StartDate,
+                    EndDate = ynaProgram.EndDate,
+                    ProgramLength = ynaProgram.ProgramLength,
+                    ProgramID = ynaProgram.ProgramID
+                };
+
+                programs.Add(yna);
+
+                GroupProgram tftb = new GroupProgram()
+                {
+                    SelectorID = tftbProgram.ID,
+                    ProgramDisplayName = tftbProgram.ProgramDisplayName,
+                    StartDate = tftbProgram.StartDate,
+                    EndDate = tftbProgram.EndDate,
+                    ProgramLength = tftbProgram.ProgramLength,
+                    ProgramID = tftbProgram.ProgramID
+                };
+
+                programs.Add(tftb);
+
+                GroupProgram rcm = new GroupProgram()
+                {
+                    SelectorID = rcmProgram.ID,
+                    ProgramDisplayName = rcmProgram.ProgramDisplayName,
+                    StartDate = rcmProgram.StartDate,
+                    EndDate = rcmProgram.EndDate,
+                    ProgramLength = rcmProgram.ProgramLength,
+                    ProgramID = rcmProgram.ProgramID
+                };
+
+                programs.Add(rcm);
+
+                GroupProgram rcw = new GroupProgram()
+                {
+                    SelectorID = rcwProgram.ID,
+                    ProgramDisplayName = rcwProgram.ProgramDisplayName,
+                    StartDate = rcwProgram.StartDate,
+                    EndDate = rcwProgram.EndDate,
+                    ProgramLength = rcwProgram.ProgramLength,
+                    ProgramID = rcwProgram.ProgramID
+                };
+
+                programs.Add(rcw);
 
                 gp.Programs = programs;
             }
