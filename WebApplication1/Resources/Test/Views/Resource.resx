@@ -132,7 +132,6 @@
   <data name="OutcomeQuestionnaireTitle" xml:space="preserve">
     <value>Outcome Questionnaire (OQ - 45.2)</value>
   </data>
-  
   <data name="PageDescriptionResponseComplete" xml:space="preserve">
     <value>Thank you for completing your questionnaires.  Please click the "finish" button below to complete the process.  Once you are done, please return the device to the front desk. </value>
   </data>
@@ -321,5 +320,188 @@
   </data>
   <data name="Tbl_Yes" xml:space="preserve">
     <value>Yes</value>
+  </data>
+  <data name="FAMDescription" xml:space="preserve">
+    <value>On this page, you will find 42 statements about the relationship between yourself and another person. Read each statement carefully and decide how well the statement describes your relationship with this person. Make your response by choosing one of the provided answers ("SA", "A", "D", or "SD"). Choose only one response for each item. Mark an answer for every statement, even if you are not completely sure of your answer.</value>
+  </data>
+  <data name="FAMQuestionnaireTitle" xml:space="preserve">
+    <value>FAM - III: Dyadic Relationship Scale</value>
+  </data>
+  <data name="GCSDescription" xml:space="preserve">
+    <value>This questionnaire is designed to measure the way you feel about your life and surroundings. It is not a test, so there are no right or wrong answers. Please answer each item as carefully and as accurately as you can by placing a number beside each one as follows:
+&lt;ol&gt;
+&lt;li&gt;None of the time&lt;/li&gt;
+&lt;li&gt;Very rarely&lt;/li&gt;
+&lt;li&gt;A little of the time&lt;/li&gt;
+&lt;li&gt;Some of the time&lt;/li&gt;
+&lt;li&gt;A good part of the time&lt;/li&gt;
+&lt;li&gt;Most of the time&lt;/li&gt;
+&lt;li&gt;All of the time&lt;/li&gt;
+&lt;/ol&gt;</value>
+  </data>
+  <data name="GCSQuestionnaireTitle" xml:space="preserve">
+    <value>Generalized Contentment Scale (GCS)</value>
+  </data>
+  <data name="ICSDescription" xml:space="preserve">
+    <value>This questionnaire is designed to measure the way you feel about the amount of personal stress that you experience. It is not a test, so there are no right or wrong answers. Please answer each item as carefully and as accurately as you can by placing a number beside each one as follows:
+&lt;ol&gt;
+&lt;li&gt;None of the time&lt;/li&gt;
+&lt;li&gt;Very rarely&lt;/li&gt;
+&lt;li&gt;A little of the time&lt;/li&gt;
+&lt;li&gt;Some of the time&lt;/li&gt;
+&lt;li&gt;A good part of the time&lt;/li&gt;
+&lt;li&gt;Most of the time&lt;/li&gt;
+&lt;li&gt; All of the time&lt;/li&gt;
+&lt;/ol&gt;</value>
+  </data>
+  <data name="ICSQuestionnaireTitle" xml:space="preserve">
+    <value>Index of Clinical Stress (ICS)</value>
+  </data>
+  <data name="NPAPSDescription" xml:space="preserve">
+    <value>This questionnaire is designed to measure the non-physical abuse you have delivered upon your partner. It is not a test, so there are no right or wrong answers. Please answer each item as carefully and as accurately as you can by placing a number beside each one as follow:
+&lt;ol&gt;
+&lt;li&gt;Never&lt;/li&gt;
+&lt;li&gt;Very rarely&lt;/li&gt;
+&lt;li&gt;A little of the time&lt;/li&gt;
+&lt;li&gt;Some of the time&lt;/li&gt;
+&lt;li&gt;A good part of the time&lt;/li&gt;
+&lt;li&gt;Very frequently&lt;/li&gt;
+&lt;li&gt;All of the time&lt;/li&gt;
+&lt;/ol&gt;</value>
+  </data>
+  <data name="NPAPSQuestionnaireTitle" xml:space="preserve">
+    <value>Non-Physical Abuse of Partner Scale (NPAPS)</value>
+  </data>
+  <data name="PAPSDescription" xml:space="preserve">
+    <value>This questionnaire is designed to measure the physical abuse you have delivered upon your partner. It is not a test, so there are no right or wrong answers. Please answer each item as carefully and as accurately as you can by placing a number beside each one as follows:
+&lt;ol&gt;
+&lt;li&gt;Never&lt;/li&gt;
+&lt;li&gt;Very rarely&lt;/li&gt;
+&lt;li&gt;A little of the time&lt;/li&gt;
+&lt;li&gt;Some of the time&lt;/li&gt;
+&lt;li&gt;A good part of the time&lt;/li&gt;
+&lt;li&gt;Very frequently&lt;/li&gt;
+&lt;li&gt;All of the time&lt;/li&gt;
+&lt;/ol&gt;</value>
+  </data>
+  <data name="PAPSQuestionnaireTitle" xml:space="preserve">
+    <value>Physical Abuse of Partner Scale (PAPS)</value>
+  </data>
+  <data name="PASDescription" xml:space="preserve">
+    <value>Read each statement and decide whether it is an accurate statement about you.
+&lt;ul&gt;
+&lt;li&gt;If the statement is &lt;strong&gt;FALSE, NOT AT ALL TRUE&lt;/strong&gt;, choose &lt;strong&gt;F&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;If the statement is &lt;strong&gt;SLIGHTLY TRUE&lt;/strong&gt;, choose &lt;strong&gt;ST&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;If the statement is &lt;strong&gt;MAINLY TRUE&lt;/strong&gt;, choose &lt;strong&gt;MT&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;If the statement is &lt;strong&gt;VERY TRUE&lt;/strong&gt;, choose &lt;strong&gt;VT&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+Give &lt;strong&gt;your own opinion&lt;/strong&gt; of yourself. Be sure to answer every statement.</value>
+  </data>
+  <data name="PASNPDescription" xml:space="preserve">
+    <value>This questionnaire is designed to measure the non-physical abuse you have experienced in your relationship with your partner. It is not a test, so there are no right or wrong answers. Please answer each item as carefully and as accurately as you can by placing a number beside each one as follows:
+&lt;ol&gt;
+&lt;li&gt;None of the time&lt;/li&gt;
+&lt;li&gt;Very rarely&lt;/li&gt;
+&lt;li&gt;A little of the time&lt;/li&gt;
+&lt;li&gt;Some of the time&lt;/li&gt;
+&lt;li&gt;A good part of the time&lt;/li&gt;
+&lt;li&gt;Most of the time&lt;/li&gt;
+&lt;li&gt;All of the time&lt;/li&gt;
+&lt;/ol&gt;</value>
+  </data>
+  <data name="PASNPQuestionnaireTitle" xml:space="preserve">
+    <value>Partner Abuse Scale: Non-Physical (PASNP)</value>
+  </data>
+  <data name="PASPHDescription" xml:space="preserve">
+    <value>This questionnaire is designed to measure the physical abuse you have experienced in your relationship with your partner. It is not a test, so there are no right or wrong answers. Please answer each item as carefully and as accurately as you can by placing a number beside each one as follows:
+&lt;ol&gt;
+&lt;li&gt;None of the time&lt;/li&gt;
+&lt;li&gt;Very rarely&lt;/li&gt;
+&lt;li&gt;A little of the time&lt;/li&gt;
+&lt;li&gt;Some of the time&lt;/li&gt;
+&lt;li&gt;A good part of the time&lt;/li&gt;
+&lt;li&gt;Most of the time&lt;/li&gt;
+&lt;li&gt; All of the time&lt;/li&gt;
+&lt;/ol&gt;</value>
+  </data>
+  <data name="PASPHQuestionnaireTitle" xml:space="preserve">
+    <value>Partner Abuse Scale: Physical (PASPH)</value>
+  </data>
+  <data name="PASQuestionnaireTitle" xml:space="preserve">
+    <value>PAS</value>
+  </data>
+  <data name="RSEDescription" xml:space="preserve">
+    <value>This scale is designed to measure self esteem. Answer each question by placing a number beside the item that best describes how much you agree or disagree with each one as follows:
+&lt;ol&gt;
+&lt;li&gt;Strongly Agree&lt;/li&gt;
+&lt;li&gt;Agree&lt;/li&gt;
+&lt;li&gt;Disagree&lt;/li&gt;
+&lt;li&gt;Strongly Disagree&lt;/li&gt;
+&lt;/ol&gt;</value>
+  </data>
+  <data name="RSEQuestionnaireTitle" xml:space="preserve">
+    <value>Rosenberg Self Esteem Scale (RSE)</value>
+  </data>
+  <data name="RSFVPDescription" xml:space="preserve">
+    <value>&lt;p&gt;If you are &lt;strong&gt;still in contact, please complete&lt;/strong&gt; the rest of this booklet about your relationship with this person &lt;strong&gt;over the past 3 months&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;If you are no longer in contact, &lt;strong&gt;please do not complete&lt;/strong&gt; the rest of this booklet.&lt;/p&gt;</value>
+  </data>
+  <data name="RSFVPQuestionnaireTitle" xml:space="preserve">
+    <value>Relationship Scales</value>
+  </data>
+  <data name="SDTDescription" xml:space="preserve">
+    <value>Please select the answer that best applies to you.</value>
+  </data>
+  <data name="SDTQuestionnaireTitle" xml:space="preserve">
+    <value>Marlow Crowne (SDT)</value>
+  </data>
+  <data name="TSCLDescription" xml:space="preserve">
+    <value>The following are a list of issues that many people experience. How often have you experienced each of the following in the last &lt;strong&gt;TWO MONTHS&lt;/strong&gt;?</value>
+  </data>
+  <data name="TSCLQuestionnaireTitle" xml:space="preserve">
+    <value>Trauma Symptom Check List-40 (TSCL-40)</value>
+  </data>
+  <data name="UricaDVDescription" xml:space="preserve">
+    <value>&lt;p&gt;This survey asks a lot of questions about violence. By "violence", we mean physical aggression toward a partner or ex-partner, like a wife or girlfriend. This includes throwing objects, pushing, slapping, kicking, or choking, using a weapon, and other behaviors that can cause fear, pain, or injury.&lt;/p&gt;
+&lt;p&gt;If you did none of these things, think about "violence" as the thing you did that got you arrested or got you into a domestic violence program.&lt;/p&gt;
+&lt;p&gt;By "ending the violence", we mean using healthy strategies to improve your relationship and stay violence-free. Examples of healthy strategies include: 
+&lt;ul&gt;
+&lt;li&gt;Communicating with your partner clearly and respectfully.&lt;/li&gt;
+&lt;li&gt;Managing stress.&lt;/li&gt;
+&lt;li&gt;Controlling your anger.&lt;/li&gt;
+&lt;li&gt;Not abusing drugs or alcohol.&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+&lt;p&gt;Please tell us how much you &lt;strong&gt;DISAGREE&lt;/strong&gt; or &lt;strong&gt;AGREE&lt;/strong&gt; with each of the following statements. Base your answers on how you're feeling and acting &lt;strong&gt;NOW&lt;/strong&gt;. Please answer using a number from 1 to 5, where 1 = Strongly Disagree and 5 = Strongly Agree.&lt;/p&gt;</value>
+  </data>
+  <data name="UricaDVQuestionnaireTitle" xml:space="preserve">
+    <value>URICA - DV (2)</value>
+  </data>
+  <data name="SESDescription" xml:space="preserve">
+    <value>This questionnaire cites statements about your personal attitudes and traits. Read each statement and decide how it describes you. There are no right or wrong answers. Please be truthful and describe yourself as you really are, not as you would like to be.
+&lt;ol type="A"&gt;
+&lt;li&gt;Disagree strongly&lt;/li&gt;
+&lt;li&gt;Disagree moderately&lt;/li&gt;
+&lt;li&gt;Neither agree nor disagree&lt;/li&gt;
+&lt;li&gt;Agree moderately&lt;/li&gt;
+&lt;li&gt;Agree strongly&lt;/li&gt;
+&lt;/ol&gt;</value>
+  </data>
+  <data name="SESQuestionnaireTitle" xml:space="preserve">
+    <value>Self Efficiency Scale</value>
+  </data>
+  <data name="ISEDescription" xml:space="preserve">
+    <value>This questionnaire is designed to measure how you see yourself. It is not a test, so there are no right or wrong answers. Please answer each item as carefully and as accurately as you can by placing a number beside each one as follows:
+&lt;ol&gt;
+&lt;li&gt;None of the time&lt;/li&gt;
+&lt;li&gt;Very rarely&lt;/li&gt;
+&lt;li&gt;A little of the time&lt;/li&gt;
+&lt;li&gt;Some of the time&lt;/li&gt;
+&lt;li&gt;A good part of the time&lt;/li&gt;
+&lt;li&gt;Most of the time&lt;/li&gt;
+&lt;li&gt; All of the time&lt;/li&gt;
+&lt;/ol&gt;</value>
+  </data>
+  <data name="ISEQuestionnaireTitle" xml:space="preserve">
+    <value>Index of Self-Esteem (ISE)</value>
   </data>
 </root>

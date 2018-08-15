@@ -106,6 +106,132 @@ namespace GroupPackageApp.Resources.Test.Views {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to On this page, you will find 42 statements about the relationship between yourself and another person. Read each statement carefully and decide how well the statement describes your relationship with this person. Make your response by choosing one of the provided answers (&quot;SA&quot;, &quot;A&quot;, &quot;D&quot;, or &quot;SD&quot;). Choose only one response for each item. Mark an answer for every statement, even if you are not completely sure of your answer..
+        /// </summary>
+        public static string FAMDescription {
+            get {
+                return ResourceManager.GetString("FAMDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to FAM - III: Dyadic Relationship Scale.
+        /// </summary>
+        public static string FAMQuestionnaireTitle {
+            get {
+                return ResourceManager.GetString("FAMQuestionnaireTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This questionnaire is designed to measure the way you feel about your life and surroundings. It is not a test, so there are no right or wrong answers. Please answer each item as carefully and as accurately as you can by placing a number beside each one as follows:
+        ///&lt;ol&gt;
+        ///&lt;li&gt;None of the time&lt;/li&gt;
+        ///&lt;li&gt;Very rarely&lt;/li&gt;
+        ///&lt;li&gt;A little of the time&lt;/li&gt;
+        ///&lt;li&gt;Some of the time&lt;/li&gt;
+        ///&lt;li&gt;A good part of the time&lt;/li&gt;
+        ///&lt;li&gt;Most of the time&lt;/li&gt;
+        ///&lt;li&gt;All of the time&lt;/li&gt;
+        ///&lt;/ol&gt;.
+        /// </summary>
+        public static string GCSDescription {
+            get {
+                return ResourceManager.GetString("GCSDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Generalized Contentment Scale (GCS).
+        /// </summary>
+        public static string GCSQuestionnaireTitle {
+            get {
+                return ResourceManager.GetString("GCSQuestionnaireTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This questionnaire is designed to measure the way you feel about the amount of personal stress that you experience. It is not a test, so there are no right or wrong answers. Please answer each item as carefully and as accurately as you can by placing a number beside each one as follows:
+        ///&lt;ol&gt;
+        ///&lt;li&gt;None of the time&lt;/li&gt;
+        ///&lt;li&gt;Very rarely&lt;/li&gt;
+        ///&lt;li&gt;A little of the time&lt;/li&gt;
+        ///&lt;li&gt;Some of the time&lt;/li&gt;
+        ///&lt;li&gt;A good part of the time&lt;/li&gt;
+        ///&lt;li&gt;Most of the time&lt;/li&gt;
+        ///&lt;li&gt; All of the time&lt;/li&gt;
+        ///&lt;/ol&gt;.
+        /// </summary>
+        public static string ICSDescription {
+            get {
+                return ResourceManager.GetString("ICSDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Index of Clinical Stress (ICS).
+        /// </summary>
+        public static string ICSQuestionnaireTitle {
+            get {
+                return ResourceManager.GetString("ICSQuestionnaireTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This questionnaire is designed to measure how you see yourself. It is not a test, so there are no right or wrong answers. Please answer each item as carefully and as accurately as you can by placing a number beside each one as follows:
+        ///&lt;ol&gt;
+        ///&lt;li&gt;None of the time&lt;/li&gt;
+        ///&lt;li&gt;Very rarely&lt;/li&gt;
+        ///&lt;li&gt;A little of the time&lt;/li&gt;
+        ///&lt;li&gt;Some of the time&lt;/li&gt;
+        ///&lt;li&gt;A good part of the time&lt;/li&gt;
+        ///&lt;li&gt;Most of the time&lt;/li&gt;
+        ///&lt;li&gt; All of the time&lt;/li&gt;
+        ///&lt;/ol&gt;.
+        /// </summary>
+        public static string ISEDescription {
+            get {
+                return ResourceManager.GetString("ISEDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Index of Self-Esteem (ISE).
+        /// </summary>
+        public static string ISEQuestionnaireTitle {
+            get {
+                return ResourceManager.GetString("ISEQuestionnaireTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This questionnaire is designed to measure the non-physical abuse you have delivered upon your partner. It is not a test, so there are no right or wrong answers. Please answer each item as carefully and as accurately as you can by placing a number beside each one as follow:
+        ///&lt;ol&gt;
+        ///&lt;li&gt;Never&lt;/li&gt;
+        ///&lt;li&gt;Very rarely&lt;/li&gt;
+        ///&lt;li&gt;A little of the time&lt;/li&gt;
+        ///&lt;li&gt;Some of the time&lt;/li&gt;
+        ///&lt;li&gt;A good part of the time&lt;/li&gt;
+        ///&lt;li&gt;Very frequently&lt;/li&gt;
+        ///&lt;li&gt;All of the time&lt;/li&gt;
+        ///&lt;/ol&gt;.
+        /// </summary>
+        public static string NPAPSDescription {
+            get {
+                return ResourceManager.GetString("NPAPSDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Non-Physical Abuse of Partner Scale (NPAPS).
+        /// </summary>
+        public static string NPAPSQuestionnaireTitle {
+            get {
+                return ResourceManager.GetString("NPAPSQuestionnaireTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;strong&gt;Looking back over the last week&lt;/strong&gt;, help us understand how you have been feeling. Read each item carefully and mark the box which best describes your current situation..
         /// </summary>
         public static string OQDescription {
@@ -169,11 +295,203 @@ namespace GroupPackageApp.Resources.Test.Views {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to This questionnaire is designed to measure the physical abuse you have delivered upon your partner. It is not a test, so there are no right or wrong answers. Please answer each item as carefully and as accurately as you can by placing a number beside each one as follows:
+        ///&lt;ol&gt;
+        ///&lt;li&gt;Never&lt;/li&gt;
+        ///&lt;li&gt;Very rarely&lt;/li&gt;
+        ///&lt;li&gt;A little of the time&lt;/li&gt;
+        ///&lt;li&gt;Some of the time&lt;/li&gt;
+        ///&lt;li&gt;A good part of the time&lt;/li&gt;
+        ///&lt;li&gt;Very frequently&lt;/li&gt;
+        ///&lt;li&gt;All of the time&lt;/li&gt;
+        ///&lt;/ol&gt;.
+        /// </summary>
+        public static string PAPSDescription {
+            get {
+                return ResourceManager.GetString("PAPSDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Physical Abuse of Partner Scale (PAPS).
+        /// </summary>
+        public static string PAPSQuestionnaireTitle {
+            get {
+                return ResourceManager.GetString("PAPSQuestionnaireTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Read each statement and decide whether it is an accurate statement about you.
+        ///&lt;ul&gt;
+        ///&lt;li&gt;If the statement is &lt;strong&gt;FALSE, NOT AT ALL TRUE&lt;/strong&gt;, choose &lt;strong&gt;F&lt;/strong&gt;.&lt;/li&gt;
+        ///&lt;li&gt;If the statement is &lt;strong&gt;SLIGHTLY TRUE&lt;/strong&gt;, choose &lt;strong&gt;ST&lt;/strong&gt;.&lt;/li&gt;
+        ///&lt;li&gt;If the statement is &lt;strong&gt;MAINLY TRUE&lt;/strong&gt;, choose &lt;strong&gt;MT&lt;/strong&gt;.&lt;/li&gt;
+        ///&lt;li&gt;If the statement is &lt;strong&gt;VERY TRUE&lt;/strong&gt;, choose &lt;strong&gt;VT&lt;/strong&gt;.&lt;/li&gt;
+        ///&lt;/ul&gt;
+        ///Give &lt;strong&gt;your own opinion&lt;/strong&gt; of yourself. Be sur [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string PASDescription {
+            get {
+                return ResourceManager.GetString("PASDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This questionnaire is designed to measure the non-physical abuse you have experienced in your relationship with your partner. It is not a test, so there are no right or wrong answers. Please answer each item as carefully and as accurately as you can by placing a number beside each one as follows:
+        ///&lt;ol&gt;
+        ///&lt;li&gt;None of the time&lt;/li&gt;
+        ///&lt;li&gt;Very rarely&lt;/li&gt;
+        ///&lt;li&gt;A little of the time&lt;/li&gt;
+        ///&lt;li&gt;Some of the time&lt;/li&gt;
+        ///&lt;li&gt;A good part of the time&lt;/li&gt;
+        ///&lt;li&gt;Most of the time&lt;/li&gt;
+        ///&lt;li&gt;All of the time&lt;/li&gt;
+        ///&lt;/ol&gt;.
+        /// </summary>
+        public static string PASNPDescription {
+            get {
+                return ResourceManager.GetString("PASNPDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Partner Abuse Scale: Non-Physical (PASNP).
+        /// </summary>
+        public static string PASNPQuestionnaireTitle {
+            get {
+                return ResourceManager.GetString("PASNPQuestionnaireTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This questionnaire is designed to measure the physical abuse you have experienced in your relationship with your partner. It is not a test, so there are no right or wrong answers. Please answer each item as carefully and as accurately as you can by placing a number beside each one as follows:
+        ///&lt;ol&gt;
+        ///&lt;li&gt;None of the time&lt;/li&gt;
+        ///&lt;li&gt;Very rarely&lt;/li&gt;
+        ///&lt;li&gt;A little of the time&lt;/li&gt;
+        ///&lt;li&gt;Some of the time&lt;/li&gt;
+        ///&lt;li&gt;A good part of the time&lt;/li&gt;
+        ///&lt;li&gt;Most of the time&lt;/li&gt;
+        ///&lt;li&gt; All of the time&lt;/li&gt;
+        ///&lt;/ol&gt;.
+        /// </summary>
+        public static string PASPHDescription {
+            get {
+                return ResourceManager.GetString("PASPHDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Partner Abuse Scale: Physical (PASPH).
+        /// </summary>
+        public static string PASPHQuestionnaireTitle {
+            get {
+                return ResourceManager.GetString("PASPHQuestionnaireTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PAS.
+        /// </summary>
+        public static string PASQuestionnaireTitle {
+            get {
+                return ResourceManager.GetString("PASQuestionnaireTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This scale is designed to measure self esteem. Answer each question by placing a number beside the item that best describes how much you agree or disagree with each one as follows:
+        ///&lt;ol&gt;
+        ///&lt;li&gt;Strongly Agree&lt;/li&gt;
+        ///&lt;li&gt;Agree&lt;/li&gt;
+        ///&lt;li&gt;Disagree&lt;/li&gt;
+        ///&lt;li&gt;Strongly Disagree&lt;/li&gt;
+        ///&lt;/ol&gt;.
+        /// </summary>
+        public static string RSEDescription {
+            get {
+                return ResourceManager.GetString("RSEDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rosenberg Self Esteem Scale (RSE).
+        /// </summary>
+        public static string RSEQuestionnaireTitle {
+            get {
+                return ResourceManager.GetString("RSEQuestionnaireTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;If you are &lt;strong&gt;still in contact, please complete&lt;/strong&gt; the rest of this booklet about your relationship with this person &lt;strong&gt;over the past 3 months&lt;/strong&gt;.&lt;/p&gt;
+        ///&lt;p&gt;If you are no longer in contact, &lt;strong&gt;please do not complete&lt;/strong&gt; the rest of this booklet.&lt;/p&gt;.
+        /// </summary>
+        public static string RSFVPDescription {
+            get {
+                return ResourceManager.GetString("RSFVPDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Relationship Scales.
+        /// </summary>
+        public static string RSFVPQuestionnaireTitle {
+            get {
+                return ResourceManager.GetString("RSFVPQuestionnaireTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please select the answer that best applies to you..
+        /// </summary>
+        public static string SDTDescription {
+            get {
+                return ResourceManager.GetString("SDTDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Marlow Crowne (SDT).
+        /// </summary>
+        public static string SDTQuestionnaireTitle {
+            get {
+                return ResourceManager.GetString("SDTQuestionnaireTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to You must select at least one test.
         /// </summary>
         public static string SelectTestError {
             get {
                 return ResourceManager.GetString("SelectTestError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This questionnaire cites statements about your personal attitudes and traits. Read each statement and decide how it describes you. There are no right or wrong answers. Please be truthful and describe yourself as you really are, not as you would like to be.
+        ///&lt;ol type=&quot;A&quot;&gt;
+        ///&lt;li&gt;Disagree strongly&lt;/li&gt;
+        ///&lt;li&gt;Disagree moderately&lt;/li&gt;
+        ///&lt;li&gt;Neither agree nor disagree&lt;/li&gt;
+        ///&lt;li&gt;Agree moderately&lt;/li&gt;
+        ///&lt;li&gt;Agree strongly&lt;/li&gt;
+        ///&lt;/ol&gt;.
+        /// </summary>
+        public static string SESDescription {
+            get {
+                return ResourceManager.GetString("SESDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Self Efficiency Scale.
+        /// </summary>
+        public static string SESQuestionnaireTitle {
+            get {
+                return ResourceManager.GetString("SESQuestionnaireTitle", resourceCulture);
             }
         }
         
@@ -619,11 +937,49 @@ namespace GroupPackageApp.Resources.Test.Views {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The following are a list of issues that many people experience. How often have you experienced each of the following in the last &lt;strong&gt;TWO MONTHS&lt;/strong&gt;?.
+        /// </summary>
+        public static string TSCLDescription {
+            get {
+                return ResourceManager.GetString("TSCLDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trauma Symptom Check List-40 (TSCL-40).
+        /// </summary>
+        public static string TSCLQuestionnaireTitle {
+            get {
+                return ResourceManager.GetString("TSCLQuestionnaireTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to When answering the questions below, think about the problem you have come to the Centre to work through. Please indicate how much you disagree or agree with each of the following statements. Base your responses on how you are feeling and acting NOW..
         /// </summary>
         public static string UricaDescription {
             get {
                 return ResourceManager.GetString("UricaDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;This survey asks a lot of questions about violence. By &quot;violence&quot;, we mean physical aggression toward a partner or ex-partner, like a wife or girlfriend. This includes throwing objects, pushing, slapping, kicking, or choking, using a weapon, and other behaviors that can cause fear, pain, or injury.&lt;/p&gt;
+        ///&lt;p&gt;If you did none of these things, think about &quot;violence&quot; as the thing you did that got you arrested or got you into a domestic violence program.&lt;/p&gt;
+        ///&lt;p&gt;By &quot;ending the violence&quot;, we mean using healthy s [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string UricaDVDescription {
+            get {
+                return ResourceManager.GetString("UricaDVDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to URICA - DV (2).
+        /// </summary>
+        public static string UricaDVQuestionnaireTitle {
+            get {
+                return ResourceManager.GetString("UricaDVQuestionnaireTitle", resourceCulture);
             }
         }
         
