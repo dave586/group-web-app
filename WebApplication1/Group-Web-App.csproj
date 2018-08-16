@@ -1265,6 +1265,7 @@
     <Content Include="Views\Shared\SingleChoice.cshtml" />
     <Content Include="Views\Test\TestUricaDV.cshtml" />
     <Content Include="Views\Test\TestPYOQ.cshtml" />
+    <Content Include="Views\Test\TestYOQ.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
