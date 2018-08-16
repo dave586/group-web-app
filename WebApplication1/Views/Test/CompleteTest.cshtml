@@ -15,37 +15,12 @@ Resp ID: @Html.DisplayFor(m => m.ResponseID) <br/>*@
 
 @using (Html.BeginForm("SubmitTest", "Test", FormMethod.Post))
 {
-    if (Model.TestID == 1)
+    switch (Model.TestID)
     {
-        //if (Model.RightToLeftLanguage)
-        //{
-            //@Html.Partial("~/Views/Test/TestOQ_RightToLeft.cshtml", Model)
-        //}
-        //else
-        //{
-            @Html.Partial("~/Views/Test/TestOQ.cshtml", Model)
-        //}
-    //}
-    //else if (Model.TestID == 2)
-    //{
-       // @Html.Partial("~/Views/Test/TestUrica.cshtml", Model)
-    //}
-   // else if (Model.TestID == 3)
-    //{
-    //    @Html.Partial("~/Views/Test/TestYOQP.cshtml", Model)
-    //}
-    //else if (Model.TestID == 4)
-    //{
-    //    @Html.Partial("~/Views/Test/TestYOQSR.cshtml", Model)
-    //}
-    //else if (Model.TestID == 5)
-    //{
-    //    @Html.Partial("~/Views/Test/TestSRS.cshtml", Model)
-    //}
-    //else if(Model.TestID == 6)
-    //{
-    //    @Html.Partial("~/Views/Test/TestACE.cshtml", Model)
-    //}
+        case 1:
+            @Html.Partial("~/Views/Test/TestOQ.cshtml", Model);
+            break;
+    }
     <div class="row">
         <div class="col-sm-3"></div>
         <div class="col-sm-6">
@@ -61,7 +36,7 @@ Resp ID: @Html.DisplayFor(m => m.ResponseID) <br/>*@
 
     $(document).ready(function() {
         $("#submitTest").click(function () {
-            
+
             if(model.testAnswers()) {
                 $("#data").val(JSON.stringify(model.viewModel));
                 $("form").submit();
@@ -74,26 +49,22 @@ Resp ID: @Html.DisplayFor(m => m.ResponseID) <br/>*@
         {
             viewModel: data,
             testAnswers:function () {
-                var allAnswered = true;
-                for(var q=0; q < this.viewModel.Questions.length; q++) {
-                    if(ul.utils.isNullOrEmpty(this.viewModel.Questions[q].Answer)) {
-                        allAnswered = false;
-                        break;
-                    }
+            var allAnswered = true;
+            for(var q=0; q < this.viewModel.Questions.length; q++) {
+                if(ul.utils.isNullOrEmpty(this.viewModel.Questions[q].Answer)) {
+                    allAnswered = false;
+                    break;
                 }
-                
-                if(!allAnswered) {
-                    if(confirm('Some questions have not been answered. Are you sure you want to continue?')) {
-                        return true;
-                    } else {
-                        return false;
-                    }
-                }
-                return true;
             }
-        };
 
-        ko.applyBindings(model);
+            if(!allAnswered) {
+                return (confirm('Some questions have not been answered. Are you sure you want to continue?')) ? true : false;
+            }
+            return true;
+        }
+    };
+
+    ko.applyBindings(model);
 
     });
 
