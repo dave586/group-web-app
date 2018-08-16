@@ -11,7 +11,7 @@ namespace WebApplication1.Models
     {
         public Guid ResponseID { get; set; }
         public Guid ClientQuestionnaireTestId { get; set; }
-        public int TestID { get; set; }
+        public string TestID { get; set; }
         public IEnumerable<Question> Questions { get; set; }
         //public IEnumerable<Answer> Answers { get; set; }
         public bool RightToLeftLanguage { get; set; }
