@@ -4,8 +4,8 @@
 
     <!-- ko foreach: $data.Options -->
     <td class="answercol">
-        <div class="radiocontainer">
-            <input type="radio" data-bind="value: $data.Value, checked: $parent.Answer, attr: { name: $parent.QuestionID, id: $data.Value + $parent.QuestionID } " />
+        <div class="container">
+            <input type="text" data-bind="value: $data.Value, checked: $parent.Answer, attr: { name: $parent.QuestionID, id: $data.Value + $parent.QuestionID } " />
             <label data-bind="attr: { for: $data.Value + $parent.QuestionID }"><span></span></label>
         </div>
     </td>

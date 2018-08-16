@@ -1269,6 +1269,7 @@
     <Content Include="Views\Test\TestGCS.cshtml" />
     <Content Include="Views\Test\TestICS.cshtml" />
     <Content Include="Views\Shared\TextField.cshtml" />
+    <Content Include="Views\Test\TestEDI3.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
