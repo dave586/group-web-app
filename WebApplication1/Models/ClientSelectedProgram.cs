@@ -15,6 +15,6 @@ namespace WebApplication1.Models
         public int PackageType { get; set; }
         public int QuestionnaireType { get; set; }
 
-        public string[] SelectedProgram { get; set; }
+        public string[] Questionnaires { get; set; }
     }
 }
