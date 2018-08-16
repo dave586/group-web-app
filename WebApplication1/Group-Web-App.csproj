@@ -1261,6 +1261,7 @@
     <Content Include="Scripts\kendo\2015.2.624\kendo.virtuallist.min.js.map" />
     <Content Include="Scripts\kendo\2015.2.624\kendo.window.min.js.map" />
     <Content Include="Views\Home\Restart.cshtml" />
+    <Content Include="Views\Home\StartTest.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
