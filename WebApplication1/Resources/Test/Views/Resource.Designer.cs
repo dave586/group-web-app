@@ -208,16 +208,7 @@ namespace GroupPackageApp.Resources.Test.Views {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This questionnaire is designed to measure the way you feel about your life and surroundings. It is not a test, so there are no right or wrong answers. Please answer each item as carefully and as accurately as you can by placing a number beside each one as follows:
-        ///&lt;ol&gt;
-        ///&lt;li&gt;None of the time&lt;/li&gt;
-        ///&lt;li&gt;Very rarely&lt;/li&gt;
-        ///&lt;li&gt;A little of the time&lt;/li&gt;
-        ///&lt;li&gt;Some of the time&lt;/li&gt;
-        ///&lt;li&gt;A good part of the time&lt;/li&gt;
-        ///&lt;li&gt;Most of the time&lt;/li&gt;
-        ///&lt;li&gt;All of the time&lt;/li&gt;
-        ///&lt;/ol&gt;.
+        ///   Looks up a localized string similar to This questionnaire is designed to measure the way you feel about your life and surroundings. It is not a test, so there are no right or wrong answers. Please answer each item as carefully and as accurately as you can by checking the appropriate box..
         /// </summary>
         public static string GCSDescription {
             get {
@@ -969,6 +960,15 @@ namespace GroupPackageApp.Resources.Test.Views {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to All of the Time.
+        /// </summary>
+        public static string Tbl_AllOfTheTime {
+            get {
+                return ResourceManager.GetString("Tbl_AllOfTheTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Almost Always.
         /// </summary>
         public static string Tbl_AlmostAlways {
@@ -996,6 +996,33 @@ namespace GroupPackageApp.Resources.Test.Views {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to A Good Part of the Time.
+        /// </summary>
+        public static string Tbl_GoodPartOfTheTime {
+            get {
+                return ResourceManager.GetString("Tbl_GoodPartOfTheTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Little of the Time.
+        /// </summary>
+        public static string Tbl_LittleOfTheTime {
+            get {
+                return ResourceManager.GetString("Tbl_LittleOfTheTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Most of the Time.
+        /// </summary>
+        public static string Tbl_MostOfTheTime {
+            get {
+                return ResourceManager.GetString("Tbl_MostOfTheTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Never.
         /// </summary>
         public static string Tbl_Never {
@@ -1014,6 +1041,15 @@ namespace GroupPackageApp.Resources.Test.Views {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to None of the Time.
+        /// </summary>
+        public static string Tbl_NoneOfTheTime {
+            get {
+                return ResourceManager.GetString("Tbl_NoneOfTheTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to No Opinion.
         /// </summary>
         public static string Tbl_NoOpinion {
@@ -1028,6 +1064,15 @@ namespace GroupPackageApp.Resources.Test.Views {
         public static string Tbl_Rarely {
             get {
                 return ResourceManager.GetString("Tbl_Rarely", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Some of the Time.
+        /// </summary>
+        public static string Tbl_SomeOfTheTime {
+            get {
+                return ResourceManager.GetString("Tbl_SomeOfTheTime", resourceCulture);
             }
         }
         
@@ -1055,6 +1100,15 @@ namespace GroupPackageApp.Resources.Test.Views {
         public static string Tbl_StronglyDisagree {
             get {
                 return ResourceManager.GetString("Tbl_StronglyDisagree", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Very Rarely.
+        /// </summary>
+        public static string Tbl_VeryRarely {
+            get {
+                return ResourceManager.GetString("Tbl_VeryRarely", resourceCulture);
             }
         }
         
