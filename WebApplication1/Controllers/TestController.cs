@@ -29,11 +29,12 @@ namespace WebApplication1.Controllers
         {
             using (OQDevSNAPEntities dbContext = new OQDevSNAPEntities())
             {
-                GroupProgram gp = dbContext.GroupPrograms.Include("GroupPackageActivity").FirstOrDefault(p => p.ID == viewModel.ProgramID);
-                GroupPackageActivity gpa = dbContext.GroupPackageActivities.Include("GroupPackageName").FirstOrDefault(g => g.PackageType == viewModel.PackageType);
+                //GroupProgram gp = dbContext.GroupPrograms.Include("GroupPackageActivity").FirstOrDefault(p => p.ID == viewModel.ProgramID);
+                //GroupPackageActivity gpa = dbContext.GroupPackageActivities.Include("GroupPackageName").FirstOrDefault(g => g.PackageType == viewModel.PackageType);
+                
                 foreach (string selectedProgram in viewModel.Questionnaires)
                 {
-
+                    
                 }
             }
             return null;
