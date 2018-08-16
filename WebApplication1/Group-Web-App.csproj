@@ -1186,7 +1186,6 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Test\TestOQ.cshtml" />
     <Content Include="Views\Home\ValidateClientId.cshtml" />
-    <Content Include="Views\Home\SelectPrePostSession.cshtml" />
     <Content Include="Views\Home\SelectTest.cshtml" />
     <Content Include="Views\Home\SelectGroupProgram.cshtml" />
     <Content Include="Views\Test\CompleteTest.cshtml" />
