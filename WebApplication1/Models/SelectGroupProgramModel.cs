@@ -16,6 +16,7 @@ namespace WebApplication1.Models
         public string ProgramName { get; set; }
         [Required]
         public string ProgramDisplayName { get; set; }
+        public int QuestionnaireType { get; set; }
         public List<GroupProgram> Programs { get; set; }
 
         public SelectGroupProgramModel()
