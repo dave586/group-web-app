@@ -1268,6 +1268,7 @@
     <Content Include="Views\Test\TestYOQ.cshtml" />
     <Content Include="Views\Test\TestGCS.cshtml" />
     <Content Include="Views\Test\TestICS.cshtml" />
+    <Content Include="Views\Shared\TextField.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
