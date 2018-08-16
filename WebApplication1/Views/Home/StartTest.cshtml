@@ -1,6 +1,7 @@
 ﻿@using WebApplication1.Helpers
 @{
-    ViewBag.Title = WebApplication1.Resources.Home.Views.Resource.PageTitleClientOverride;
+    
+    ViewBag.Title = "Start Test";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -14,7 +15,27 @@
 </head>
 <body>
     <div>
-    
+        @using (Html.BeginForm("SelectGroupProgram", "Home", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            @*<div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    @Html.ValidationMessage("SelectLanguageError")
+                    @Html.ValidationMessageFor(m=>m.Language)
+                </div>
+                <div class="col-sm-3"></div>
+            </div>*@
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                   
+
+                    Hello
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+        }
     </div>
 </body>
 </html>
