@@ -15,11 +15,9 @@ Resp ID: @Html.DisplayFor(m => m.ResponseID) <br/>*@
 
 @using (Html.BeginForm("SubmitTest", "Test", FormMethod.Post))
 {
-    switch (Model.TestID)
+    if (Model.TestID == "1")
     {
-        case 1:
-            @Html.Partial("~/Views/Test/TestOQ.cshtml", Model);
-            break;
+      @Html.Partial("~/Views/Test/TestOQ.cshtml", Model);
     }
     <div class="row">
         <div class="col-sm-3"></div>
