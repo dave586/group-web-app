@@ -11,6 +11,7 @@ using Newtonsoft.Json;
 using WebApplication1.Models;
 using GroupQuestionnaireApp;
 using GroupQuestionnaireApp.EFModel;
+using GroupQuestionnaireApp.Signals;
 using System.Web.Script.Serialization;
 
 namespace WebApplication1.Controllers
@@ -37,6 +38,22 @@ namespace WebApplication1.Controllers
                 }
             }
             return null;
+        }
+
+        private IEnumerable<Question> GetTestQuestions (string questionnaireType, string language)
+        {
+            return QuestionnaireRepository.GetQuestionnaireQuestions("1", language).AsEnumerable();
+        }
+
+        public ActionResult NextTest()
+        {
+            ModelState.Clear();
+            using (OQDevSNAPEntities dbContext = new OQDevSNAPEntities())
+            {
+                ClientTestDisplay ctd = new ClientTestDisplay();
+                ctd.Questions = GetTestQuestions("1", "en-CA");
+                return View("~/Views/Test/CompleteTest.cshtml", ctd);
+            }
         }
         //public ActionResult StartTest(ClientSelectedProgram viewModel)
         //{
