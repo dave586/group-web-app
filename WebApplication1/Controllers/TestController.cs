@@ -49,7 +49,7 @@ namespace WebApplication1.Controllers
             using (OQDevSNAPEntities dbContext = new OQDevSNAPEntities())
             {
                 ClientTestDisplay ctd = new ClientTestDisplay();
-                ctd.TestID = "1";
+                ctd.TestID = "3";
                 ctd.Questions = GetTestQuestions(ctd.TestID, "en-CA");
                 return View("~/Views/Test/CompleteTest.cshtml", ctd);
             }

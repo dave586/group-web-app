@@ -1263,6 +1263,8 @@
     <Content Include="Views\Home\Restart.cshtml" />
     <Content Include="Views\Home\StartTest.cshtml" />
     <Content Include="Views\Shared\SingleChoice.cshtml" />
+    <Content Include="Views\Test\TestUricaDV.cshtml" />
+    <Content Include="Views\Test\TestPYOQ.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -17,7 +17,15 @@ Resp ID: @Html.DisplayFor(m => m.ResponseID) <br/>*@
 {
     if (Model.TestID == "1")
     {
-      @Html.Partial("~/Views/Test/TestOQ.cshtml", Model);
+        @Html.Partial("~/Views/Test/TestOQ.cshtml", Model);
+    }
+    else if (Model.TestID == "2")
+    {
+        @Html.Partial("~/Views/Test/TestUricaDV.cshtml", Model)
+    }
+    else if (Model.TestID == "3")
+    {
+        @Html.Partial("~/Views/Test/TestPYOQ.cshtml", Model)
     }
     <div class="row">
         <div class="col-sm-3"></div>
