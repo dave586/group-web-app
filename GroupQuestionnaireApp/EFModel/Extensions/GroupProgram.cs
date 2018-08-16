@@ -10,6 +10,7 @@ namespace GroupQuestionnaireApp.EFModel
     {
         public int SelectorID { get; set; }
 
+        public List<GroupActivityType> Questionnaires { get; set; }
         public virtual GroupProgram Program { get; set; }
     }
 }
