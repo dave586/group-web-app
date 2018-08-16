@@ -485,6 +485,29 @@ namespace GroupPackageApp.Resources.Test.Views {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;This questionnaire contains 36 statements. Read each statement carefully. For each statement, please focus on the child you are most concerned about and choose the response that best represents your opinion. Answer all questions about the same child.
+        ///&lt;ul&gt;
+        ///&lt;li&gt;Choose SD if you &lt;em&gt;strongly disagree&lt;/em&gt; with the statement.&lt;/li&gt;
+        ///&lt;li&gt;Choose D if you &lt;em&gt;disagree&lt;/em&gt; with the statement.&lt;/li&gt;
+        ///&lt;li&gt;Choose NS if you are &lt;em&gt;not sure&lt;/em&gt; how you feel about the statement.&lt;/li&gt;
+        ///&lt;li&gt;Choose A if you &lt;em&gt;agree&lt; [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string PSIDescription {
+            get {
+                return ResourceManager.GetString("PSIDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PSI-4.
+        /// </summary>
+        public static string PSIQuestionnaireTitle {
+            get {
+                return ResourceManager.GetString("PSIQuestionnaireTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to This scale is designed to measure self esteem. Answer each question by placing a number beside the item that best describes how much you agree or disagree with each one as follows:
         ///&lt;ol&gt;
         ///&lt;li&gt;Strongly Agree&lt;/li&gt;
@@ -576,6 +599,30 @@ namespace GroupPackageApp.Resources.Test.Views {
         public static string SESQuestionnaireTitle {
             get {
                 return ResourceManager.GetString("SESQuestionnaireTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;This questionnaire contains 112 statements. Read each statement carefully. Please focus on the adolescent you are currently concerned about, and choose the response which best represents your opinion.&lt;/p&gt;
+        ///&lt;p&gt;For statements 1-90:
+        ///&lt;ul&gt;
+        ///&lt;li&gt;Choose SD if you &lt;em&gt;strongly disagree&lt;/em&gt; with the statement.&lt;/li&gt;
+        ///&lt;li&gt;Choose D if you &lt;em&gt;disagree&lt;/em&gt; with the statement.&lt;/li&gt;
+        ///&lt;li&gt;Choose NS if you are &lt;em&gt;not sure&lt;/em&gt; how you feel about the statement.&lt;/li&gt;
+        ///&lt;li&gt;Choose A if you &lt;em&gt;agree&lt;/em&gt; with the stateme [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string SIPADescription {
+            get {
+                return ResourceManager.GetString("SIPADescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SIPA.
+        /// </summary>
+        public static string SIPAQuestionnaireTitle {
+            get {
+                return ResourceManager.GetString("SIPAQuestionnaireTitle", resourceCulture);
             }
         }
         

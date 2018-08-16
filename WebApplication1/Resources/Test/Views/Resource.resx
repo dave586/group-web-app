@@ -534,4 +534,39 @@ Give &lt;strong&gt;your own opinion&lt;/strong&gt; of yourself. Be sure to answe
   <data name="DAIRQuestionnaireTitle" xml:space="preserve">
     <value>DAI-R</value>
   </data>
+  <data name="PSIDescription" xml:space="preserve">
+    <value>&lt;p&gt;This questionnaire contains 36 statements. Read each statement carefully. For each statement, please focus on the child you are most concerned about and choose the response that best represents your opinion. Answer all questions about the same child.
+&lt;ul&gt;
+&lt;li&gt;Choose SD if you &lt;em&gt;strongly disagree&lt;/em&gt; with the statement.&lt;/li&gt;
+&lt;li&gt;Choose D if you &lt;em&gt;disagree&lt;/em&gt; with the statement.&lt;/li&gt;
+&lt;li&gt;Choose NS if you are &lt;em&gt;not sure&lt;/em&gt; how you feel about the statement.&lt;/li&gt;
+&lt;li&gt;Choose A if you &lt;em&gt;agree&lt;/em&gt; with the statement.&lt;/li&gt;
+&lt;li&gt;Choose SA if you &lt;em&gt;strongly agree&lt;/em&gt; with the statement.&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+&lt;p&gt;While you may not find a response that exactly states your feelings, please choose the response that comes closest to describing how you feel. Your first reaction to each question should be your answer. Choose only one response for each statement and respond to each statemenr.&lt;/p&gt;</value>
+  </data>
+  <data name="PSIQuestionnaireTitle" xml:space="preserve">
+    <value>PSI-4</value>
+  </data>
+  <data name="SIPADescription" xml:space="preserve">
+    <value>&lt;p&gt;This questionnaire contains 112 statements. Read each statement carefully. Please focus on the adolescent you are currently concerned about, and choose the response which best represents your opinion.&lt;/p&gt;
+&lt;p&gt;For statements 1-90:
+&lt;ul&gt;
+&lt;li&gt;Choose SD if you &lt;em&gt;strongly disagree&lt;/em&gt; with the statement.&lt;/li&gt;
+&lt;li&gt;Choose D if you &lt;em&gt;disagree&lt;/em&gt; with the statement.&lt;/li&gt;
+&lt;li&gt;Choose NS if you are &lt;em&gt;not sure&lt;/em&gt; how you feel about the statement.&lt;/li&gt;
+&lt;li&gt;Choose A if you &lt;em&gt;agree&lt;/em&gt; with the statement.&lt;/li&gt;
+&lt;li&gt;Choose SA if you &lt;em&gt;strongly agree&lt;/em&gt; with the statement.&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+&lt;p&gt;For statements 91-112:
+&lt;ul&gt;
+&lt;li&gt;Choose Y for "Yes".&lt;/li&gt;
+&lt;li&gt;Choose N for "No".&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+&lt;p&gt;Although you may not find a response that exactly states your feelings, please choose the response that comes closest to describing how you feel.&lt;strong&gt;YOUR FIRST REACTION TO EACH QUESTION SHOULD BE YOUR ANSWER.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Questions about your "spouse or partner" refer to your husband or wife, or other parenting partner (i.e., the other person who is most involved in the parenting of your child). If you do not currently have a spouse or partner, leave these items blank.&lt;/p&gt;</value>
+  </data>
+  <data name="SIPAQuestionnaireTitle" xml:space="preserve">
+    <value>SIPA</value>
+  </data>
 </root>
