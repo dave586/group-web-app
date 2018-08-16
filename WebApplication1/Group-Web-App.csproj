@@ -1262,6 +1262,7 @@
     <Content Include="Scripts\kendo\2015.2.624\kendo.window.min.js.map" />
     <Content Include="Views\Home\Restart.cshtml" />
     <Content Include="Views\Home\StartTest.cshtml" />
+    <Content Include="Views\Shared\SingleChoice.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
