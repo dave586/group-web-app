@@ -12,6 +12,8 @@ namespace WebApplication1.Models
         public int ProgramID { get; set; }
         [Required]
         public int ClientID { get; set; }
+        public int PackageType { get; set; }
+        public int QuestionnaireType { get; set; }
 
         public string[] SelectedProgram { get; set; }
     }
