@@ -45,13 +45,6 @@ namespace WebApplication1.Controllers
             groupProgram.ProgramName = programModel.ProgramName;
             groupProgram.ProgramDisplayName = programModel.ProgramDisplayName;
             return View("~/Views/Home/SelectGroupProgram.cshtml", groupProgram);
-            //if (pro == null)
-            //    return View("~/Views/Shared/Error.cshtml", new ErrorModel { ErrorType = ErrorTypes.TestNotFound });
-            //var testController = new TestController();
-            //testController.HomeContext = this.Request.RequestContext;
-
-            //return testController.StartTest(new ClientSelectedProgram { ProgramID = programModel.ProgramID, ClientID = programModel.ClientID, SelectedProgram = new string[] { pro.ProgramID.ToString() } });
-
         }
 
         public ActionResult Restart()
