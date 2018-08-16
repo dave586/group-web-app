@@ -30,8 +30,6 @@ namespace WebApplication1.Controllers
         {
             using (OQDevSNAPEntities dbContext = new OQDevSNAPEntities())
             {
-                GroupProgram gp = dbContext.GroupPrograms.Include("GroupPackageActivity").FirstOrDefault(p => p.ID == viewModel.ProgramID);
-                GroupPackageActivity gpa = dbContext.GroupPackageActivities.Include("GroupPackageName").FirstOrDefault(g => g.PackageType == viewModel.PackageType);
                 foreach (string selectedProgram in viewModel.Questionnaires)
                 {
                     
@@ -42,7 +40,7 @@ namespace WebApplication1.Controllers
 
         private IEnumerable<Question> GetTestQuestions (string questionnaireType, string language)
         {
-            return QuestionnaireRepository.GetQuestionnaireQuestions("1", language).AsEnumerable();
+            return QuestionnaireRepository.GetQuestionnaireQuestions(questionnaireType, language).AsEnumerable();
         }
 
         public ActionResult NextTest()
@@ -51,7 +49,8 @@ namespace WebApplication1.Controllers
             using (OQDevSNAPEntities dbContext = new OQDevSNAPEntities())
             {
                 ClientTestDisplay ctd = new ClientTestDisplay();
-                ctd.Questions = GetTestQuestions("1", "en-CA");
+                ctd.TestID = "1";
+                ctd.Questions = GetTestQuestions(ctd.TestID, "en-CA");
                 return View("~/Views/Test/CompleteTest.cshtml", ctd);
             }
         }
