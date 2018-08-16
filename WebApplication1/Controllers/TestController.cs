@@ -31,7 +31,7 @@ namespace WebApplication1.Controllers
             {
                 GroupProgram gp = dbContext.GroupPrograms.Include("GroupPackageActivity").FirstOrDefault(p => p.ID == viewModel.ProgramID);
                 GroupPackageActivity gpa = dbContext.GroupPackageActivities.Include("GroupPackageName").FirstOrDefault(g => g.PackageType == viewModel.PackageType);
-                foreach (string selectedProgram in viewModel.SelectedProgram)
+                foreach (string selectedProgram in viewModel.Questionnaires)
                 {
 
                 }
