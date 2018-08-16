@@ -25,6 +25,19 @@ namespace WebApplication1.Controllers
             set { _homeContext = value; }
         }
 
+        public ActionResult StartTest (ClientSelectedProgram viewModel)
+        {
+            using (OQDevSNAPEntities dbContext = new OQDevSNAPEntities())
+            {
+                GroupProgram gp = dbContext.GroupPrograms.Include("GroupPackageActivity").FirstOrDefault(p => p.ID == viewModel.ProgramID);
+                GroupPackageActivity gpa = dbContext.GroupPackageActivities.Include("GroupPackageName").FirstOrDefault(g => g.PackageType == viewModel.PackageType);
+                foreach (string selectedProgram in viewModel.SelectedProgram)
+                {
+
+                }
+            }
+            return null;
+        }
         //public ActionResult StartTest(ClientSelectedProgram viewModel)
         //{
         //    using (OQDevSNAPEntities1 dbContext = new OQDevSNAPEntities1())
@@ -45,11 +58,6 @@ namespace WebApplication1.Controllers
         //        }
         //    }
         //    return NextTest();
-        //    return View("~/Views/Home/SelectGroupProgram.cshtml", new SelectGroupProgramModel
-        //    {
-        //        ProgramID = viewModel.ProgramID,
-        //        ProgramName = viewModel.ProgramName
-        //    });
         //}
 
         //public ActionResult NextTest (Guid responseID, RequestContext _requestContext)
