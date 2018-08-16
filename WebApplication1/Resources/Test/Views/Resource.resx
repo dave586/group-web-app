@@ -328,31 +328,13 @@
     <value>FAM - III: Dyadic Relationship Scale</value>
   </data>
   <data name="GCSDescription" xml:space="preserve">
-    <value>This questionnaire is designed to measure the way you feel about your life and surroundings. It is not a test, so there are no right or wrong answers. Please answer each item as carefully and as accurately as you can by placing a number beside each one as follows:
-&lt;ol&gt;
-&lt;li&gt;None of the time&lt;/li&gt;
-&lt;li&gt;Very rarely&lt;/li&gt;
-&lt;li&gt;A little of the time&lt;/li&gt;
-&lt;li&gt;Some of the time&lt;/li&gt;
-&lt;li&gt;A good part of the time&lt;/li&gt;
-&lt;li&gt;Most of the time&lt;/li&gt;
-&lt;li&gt;All of the time&lt;/li&gt;
-&lt;/ol&gt;</value>
+    <value>This questionnaire is designed to measure the way you feel about your life and surroundings. It is not a test, so there are no right or wrong answers. Please answer each item as carefully and as accurately as you can by checking the appropriate box.</value>
   </data>
   <data name="GCSQuestionnaireTitle" xml:space="preserve">
     <value>Generalized Contentment Scale (GCS)</value>
   </data>
   <data name="ICSDescription" xml:space="preserve">
-    <value>This questionnaire is designed to measure the way you feel about the amount of personal stress that you experience. It is not a test, so there are no right or wrong answers. Please answer each item as carefully and as accurately as you can by placing a number beside each one as follows:
-&lt;ol&gt;
-&lt;li&gt;None of the time&lt;/li&gt;
-&lt;li&gt;Very rarely&lt;/li&gt;
-&lt;li&gt;A little of the time&lt;/li&gt;
-&lt;li&gt;Some of the time&lt;/li&gt;
-&lt;li&gt;A good part of the time&lt;/li&gt;
-&lt;li&gt;Most of the time&lt;/li&gt;
-&lt;li&gt; All of the time&lt;/li&gt;
-&lt;/ol&gt;</value>
+    <value>This questionnaire is designed to measure the way you feel about the amount of personal stress that you experience. It is not a test, so there are no right or wrong answers. Please answer each item as carefully and as accurately as you can by checking the appropriate box. </value>
   </data>
   <data name="ICSQuestionnaireTitle" xml:space="preserve">
     <value>Index of Clinical Stress (ICS)</value>
@@ -568,5 +550,26 @@ Give &lt;strong&gt;your own opinion&lt;/strong&gt; of yourself. Be sure to answe
   </data>
   <data name="SIPAQuestionnaireTitle" xml:space="preserve">
     <value>SIPA</value>
+  </data>
+  <data name="Tbl_AllOfTheTime" xml:space="preserve">
+    <value>All of the Time</value>
+  </data>
+  <data name="Tbl_GoodPartOfTheTime" xml:space="preserve">
+    <value>A Good Part of the Time</value>
+  </data>
+  <data name="Tbl_LittleOfTheTime" xml:space="preserve">
+    <value>A Little of the Time</value>
+  </data>
+  <data name="Tbl_MostOfTheTime" xml:space="preserve">
+    <value>Most of the Time</value>
+  </data>
+  <data name="Tbl_NoneOfTheTime" xml:space="preserve">
+    <value>None of the Time</value>
+  </data>
+  <data name="Tbl_SomeOfTheTime" xml:space="preserve">
+    <value>Some of the Time</value>
+  </data>
+  <data name="Tbl_VeryRarely" xml:space="preserve">
+    <value>Very Rarely</value>
   </data>
 </root>

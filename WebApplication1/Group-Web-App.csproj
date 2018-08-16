@@ -1266,6 +1266,8 @@
     <Content Include="Views\Test\TestUricaDV.cshtml" />
     <Content Include="Views\Test\TestPYOQ.cshtml" />
     <Content Include="Views\Test\TestYOQ.cshtml" />
+    <Content Include="Views\Test\TestGCS.cshtml" />
+    <Content Include="Views\Test\TestICS.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
