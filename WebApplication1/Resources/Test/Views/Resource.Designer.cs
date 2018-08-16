@@ -226,16 +226,7 @@ namespace GroupPackageApp.Resources.Test.Views {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This questionnaire is designed to measure the way you feel about the amount of personal stress that you experience. It is not a test, so there are no right or wrong answers. Please answer each item as carefully and as accurately as you can by placing a number beside each one as follows:
-        ///&lt;ol&gt;
-        ///&lt;li&gt;None of the time&lt;/li&gt;
-        ///&lt;li&gt;Very rarely&lt;/li&gt;
-        ///&lt;li&gt;A little of the time&lt;/li&gt;
-        ///&lt;li&gt;Some of the time&lt;/li&gt;
-        ///&lt;li&gt;A good part of the time&lt;/li&gt;
-        ///&lt;li&gt;Most of the time&lt;/li&gt;
-        ///&lt;li&gt; All of the time&lt;/li&gt;
-        ///&lt;/ol&gt;.
+        ///   Looks up a localized string similar to This questionnaire is designed to measure the way you feel about the amount of personal stress that you experience. It is not a test, so there are no right or wrong answers. Please answer each item as carefully and as accurately as you can by checking the appropriate box. .
         /// </summary>
         public static string ICSDescription {
             get {
