@@ -30,9 +30,16 @@ namespace WebApplication1.Controllers
         [HttpPost]
         public ActionResult SelectGroupProgram(SelectGroupProgramModel programModel)
         {
-            var groupProgram = SelectGroupProgramModel.GenerateSelectGroupProgramModel(programModel.ID, programModel.ProgramName);
-            string programName = groupProgram.Programs[0].ProgramName;
-            GroupProgram pro = _dbContext.GroupPrograms.FirstOrDefault(p => p.ProgramName == programName);
+            var groupProgram = SelectGroupProgramModel.GenerateSelectGroupProgramModel(programModel.ID, programModel.ProgramName);            
+            //if (groupProgram.Programs.Count == 1)
+            //{
+            //    string programName = groupProgram.Programs[0].ProgramName;
+            //    GroupProgram pro = _dbContext.GroupPrograms.FirstOrDefault(p => p.ProgramName == programName);
+
+            //    var testController = new TestController();
+            //    testController.HomeContext = this.Request.RequestContext;
+            //    return testController.StartTest(new ClientSelectedProgram { ProgramID = programModel.ID, QuestionnaireType = programModel.QuestionnaireType, Questionnaires = new string[] { pro.GroupPackageActivities.ToString() } });
+            //}
 
             groupProgram.ID = programModel.ID;
             groupProgram.ProgramName = programModel.ProgramName;
