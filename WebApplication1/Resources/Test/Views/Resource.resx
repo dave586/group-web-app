@@ -519,6 +519,15 @@ Give &lt;strong&gt;your own opinion&lt;/strong&gt; of yourself. Be sure to answe
   <data name="EDI3QuestionnaireTitle" xml:space="preserve">
     <value>EDI-3</value>
   </data>
+  <data name="CDI2Description" xml:space="preserve">
+    <value>&lt;p&gt;Kids sometimes have different feelings and ideas.&lt;/p&gt;
+&lt;p&gt;This form lists the feelings and ideas in groups. From each group of three sentences, pick &lt;strong&gt;one&lt;/strong&gt; sentence that describes you best for the &lt;strong&gt;past two weeks&lt;/strong&gt;. After you pick a sentence from the first group, go on to the next group.&lt;/p&gt;
+&lt;p&gt;There is no right or wrong answer. Just pick a sentence that best describes the way you have been recently. Put a mark in the box next to the sentence that you pick.&lt;/p&gt;
+&lt;p&gt;Remember, for each group, pick out the sentence that describes you best in the &lt;strong&gt;PAST TWO WEEKS&lt;/strong&gt;.&lt;/p&gt;</value>
+  </data>
+  <data name="CDI2QuestionnaireTitle" xml:space="preserve">
+    <value>CDI-2 Self-Report</value>
+  </data>
   <data name="DAIRDescription" xml:space="preserve">
     <value>In this section, you will find 42 statements about the situation in your family before and after your separation. Read each statement carefully and decide how much you agree or disagree with the statement. Make your response by choosing one of the provided answers ("SA", "A", "N", "D", or "SD"). Choose only one response for each item. Mark an answer for every statement, even if you are not completely sure of your answer.</value>
   </data>

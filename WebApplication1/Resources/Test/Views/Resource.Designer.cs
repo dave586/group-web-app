@@ -106,6 +106,27 @@ namespace GroupPackageApp.Resources.Test.Views {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Kids sometimes have different feelings and ideas.&lt;/p&gt;
+        ///&lt;p&gt;This form lists the feelings and ideas in groups. From each group of three sentences, pick &lt;strong&gt;one&lt;/strong&gt; sentence that describes you best for the &lt;strong&gt;past two weeks&lt;/strong&gt;. After you pick a sentence from the first group, go on to the next group.&lt;/p&gt;
+        ///&lt;p&gt;There is no right or wrong answer. Just pick a sentence that best describes the way you have been recently. Put a mark in the box next to the sentence that you pick.&lt;/p&gt;
+        ///&lt;p&gt;Remember,  [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string CDI2Description {
+            get {
+                return ResourceManager.GetString("CDI2Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CDI-2 Self-Report.
+        /// </summary>
+        public static string CDI2QuestionnaireTitle {
+            get {
+                return ResourceManager.GetString("CDI2QuestionnaireTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Please assist us in improving our program by answering these questions. We are interested in your honest opinion, whether it is positive or negative. Please answer all of the questions. We also welcome your comments and suggestions. Thank you very much, we really appreciate your help..
         /// </summary>
         public static string CSQ8Description {
