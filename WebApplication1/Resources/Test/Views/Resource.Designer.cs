@@ -106,7 +106,70 @@ namespace GroupPackageApp.Resources.Test.Views {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to On this page, you will find 42 statements about the relationship between yourself and another person. Read each statement carefully and decide how well the statement describes your relationship with this person. Make your response by choosing one of the provided answers (&quot;SA&quot;, &quot;A&quot;, &quot;D&quot;, or &quot;SD&quot;). Choose only one response for each item. Mark an answer for every statement, even if you are not completely sure of your answer..
+        ///   Looks up a localized string similar to Please assist us in improving our program by answering these questions. We are interested in your honest opinion, whether it is positive or negative. Please answer all of the questions. We also welcome your comments and suggestions. Thank you very much, we really appreciate your help..
+        /// </summary>
+        public static string CSQ8Description {
+            get {
+                return ResourceManager.GetString("CSQ8Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Calgary Counselling Centre Client Satisfaction Questionnaire (CSQ-8).
+        /// </summary>
+        public static string CSQ8QuestionnaireTitle {
+            get {
+                return ResourceManager.GetString("CSQ8QuestionnaireTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to In this section, you will find 42 statements about the situation in your family before and after your separation. Read each statement carefully and decide how much you agree or disagree with the statement. Make your response by choosing one of the provided answers (&quot;SA&quot;, &quot;A&quot;, &quot;N&quot;, &quot;D&quot;, or &quot;SD&quot;). Choose only one response for each item. Mark an answer for every statement, even if you are not completely sure of your answer..
+        /// </summary>
+        public static string DAIRDescription {
+            get {
+                return ResourceManager.GetString("DAIRDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DAI-R.
+        /// </summary>
+        public static string DAIRQuestionnaireTitle {
+            get {
+                return ResourceManager.GetString("DAIRQuestionnaireTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please complete the following questions..
+        /// </summary>
+        public static string EDI3Description1 {
+            get {
+                return ResourceManager.GetString("EDI3Description1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to For each item, decide if the item is true about you &lt;strong&gt;ALWAYS&lt;/strong&gt;, &lt;strong&gt;USUALLY&lt;/strong&gt;, &lt;strong&gt;OFTEN&lt;/strong&gt;, &lt;strong&gt;SOMETIMES&lt;/strong&gt;, &lt;strong&gt;RARELY&lt;/strong&gt;, or &lt;strong&gt;NEVER&lt;/strong&gt;. Choose the letter that appears beneath your answer for each question. Respond to &lt;strong&gt;ALL&lt;/strong&gt; of the items, making sure that you choose the option that is true about you..
+        /// </summary>
+        public static string EDI3Description2 {
+            get {
+                return ResourceManager.GetString("EDI3Description2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EDI-3.
+        /// </summary>
+        public static string EDI3QuestionnaireTitle {
+            get {
+                return ResourceManager.GetString("EDI3QuestionnaireTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to In this section, you will find 42 statements about the relationship between yourself and another person. Read each statement carefully and decide how well the statement describes your relationship with this person. Make your response by choosing one of the provided answers (&quot;SA&quot;, &quot;A&quot;, &quot;D&quot;, or &quot;SD&quot;). Choose only one response for each item. Mark an answer for every statement, even if you are not completely sure of your answer..
         /// </summary>
         public static string FAMDescription {
             get {

@@ -322,7 +322,7 @@
     <value>Yes</value>
   </data>
   <data name="FAMDescription" xml:space="preserve">
-    <value>On this page, you will find 42 statements about the relationship between yourself and another person. Read each statement carefully and decide how well the statement describes your relationship with this person. Make your response by choosing one of the provided answers ("SA", "A", "D", or "SD"). Choose only one response for each item. Mark an answer for every statement, even if you are not completely sure of your answer.</value>
+    <value>In this section, you will find 42 statements about the relationship between yourself and another person. Read each statement carefully and decide how well the statement describes your relationship with this person. Make your response by choosing one of the provided answers ("SA", "A", "D", or "SD"). Choose only one response for each item. Mark an answer for every statement, even if you are not completely sure of your answer.</value>
   </data>
   <data name="FAMQuestionnaireTitle" xml:space="preserve">
     <value>FAM - III: Dyadic Relationship Scale</value>
@@ -503,5 +503,26 @@ Give &lt;strong&gt;your own opinion&lt;/strong&gt; of yourself. Be sure to answe
   </data>
   <data name="ISEQuestionnaireTitle" xml:space="preserve">
     <value>Index of Self-Esteem (ISE)</value>
+  </data>
+  <data name="CSQ8Description" xml:space="preserve">
+    <value>Please assist us in improving our program by answering these questions. We are interested in your honest opinion, whether it is positive or negative. Please answer all of the questions. We also welcome your comments and suggestions. Thank you very much, we really appreciate your help.</value>
+  </data>
+  <data name="CSQ8QuestionnaireTitle" xml:space="preserve">
+    <value>The Calgary Counselling Centre Client Satisfaction Questionnaire (CSQ-8)</value>
+  </data>
+  <data name="EDI3Description1" xml:space="preserve">
+    <value>Please complete the following questions.</value>
+  </data>
+  <data name="EDI3Description2" xml:space="preserve">
+    <value>For each item, decide if the item is true about you &lt;strong&gt;ALWAYS&lt;/strong&gt;, &lt;strong&gt;USUALLY&lt;/strong&gt;, &lt;strong&gt;OFTEN&lt;/strong&gt;, &lt;strong&gt;SOMETIMES&lt;/strong&gt;, &lt;strong&gt;RARELY&lt;/strong&gt;, or &lt;strong&gt;NEVER&lt;/strong&gt;. Choose the letter that appears beneath your answer for each question. Respond to &lt;strong&gt;ALL&lt;/strong&gt; of the items, making sure that you choose the option that is true about you.</value>
+  </data>
+  <data name="EDI3QuestionnaireTitle" xml:space="preserve">
+    <value>EDI-3</value>
+  </data>
+  <data name="DAIRDescription" xml:space="preserve">
+    <value>In this section, you will find 42 statements about the situation in your family before and after your separation. Read each statement carefully and decide how much you agree or disagree with the statement. Make your response by choosing one of the provided answers ("SA", "A", "N", "D", or "SD"). Choose only one response for each item. Mark an answer for every statement, even if you are not completely sure of your answer.</value>
+  </data>
+  <data name="DAIRQuestionnaireTitle" xml:space="preserve">
+    <value>DAI-R</value>
   </data>
 </root>
