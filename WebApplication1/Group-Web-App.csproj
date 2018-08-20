@@ -170,6 +170,7 @@
     <Compile Include="Helpers\Extensions.cs" />
     <Compile Include="Helpers\Html.cs" />
     <Compile Include="Models\ClientSelectedProgram.cs" />
+    <Compile Include="Models\ClientProgramDisplay.cs" />
     <Compile Include="Models\ClientTestDisplay.cs" />
     <Compile Include="Models\SelectActivityTypeModel.cs" />
     <Compile Include="Models\SelectGroupProgramModel.cs" />
