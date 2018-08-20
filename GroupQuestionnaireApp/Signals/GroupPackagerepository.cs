@@ -15,8 +15,21 @@ namespace GroupQuestionnaireApp.Signals
             {
                 using (OQDevSNAPEntities dbContext = new OQDevSNAPEntities())
                 {
-                    var dbActivities = dbContext.GroupPrograms.Include("GroupPackageActivities").Include("GroupPackageNames").Include("GroupActivityTypes").Where(
-                        a => a.ID == programID);
+                    var dbActivities = dbContext.GroupPrograms.Include("GroupPackageActivities").Where(g => g.ID == programID).ToList();
+                    foreach (GroupProgram gp in dbActivities)
+                    {
+                        Package p = new Package();
+                        p.ProgramName = gp.ProgramName;
+
+                        gp.GroupPackageActivities.FirstOrDefault(gpa => gpa.PackageType == 1);
+
+                        foreach(GroupPackageActivity gpa in gp.GroupPackageActivities)
+                        {
+                            
+                        }
+
+                        activities.Add(p);
+                    }
                 }
             }
             catch (Exception e)
