@@ -30,12 +30,22 @@ namespace WebApplication1.Controllers
         {
             using (OQDevSNAPEntities dbContext = new OQDevSNAPEntities())
             {
+                ClientProgramDisplay cpd = new ClientProgramDisplay();
+                cpd.programID = 1;
+                cpd.Activities = GetPackageActivities(cpd.programID);
+
                 foreach (string selectedProgram in viewModel.Questionnaires)
                 {
-                    
+                    int proID = 0;
+                    int.TryParse(selectedProgram, out proID);
                 }
             }
             return null;
+        }
+
+        private IEnumerable<Package> GetPackageActivities (int programID)
+        {
+            return GroupPackageRepository.GetPackageActivities(programID).AsEnumerable();
         }
 
         private IEnumerable<Question> GetTestQuestions (string questionnaireType, string language)
@@ -53,6 +63,16 @@ namespace WebApplication1.Controllers
                 ctd.Questions = GetTestQuestions(ctd.TestID, "en-CA");
                 return View("~/Views/Test/CompleteTest.cshtml", ctd);
             }
+        }
+
+        [HttpPost]
+        public ActionResult SubmitTest (string data)
+        {
+            ClientTestDisplay responseData = JsonConvert.DeserializeObject<ClientTestDisplay>(data, new JsonSerializerSettings
+            {
+                TypeNameHandling = TypeNameHandling.Auto
+            });
+            return null;
         }
         //public ActionResult StartTest(ClientSelectedProgram viewModel)
         //{
