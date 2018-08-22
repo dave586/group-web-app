@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using GroupQuestionnaireApp.EFModel;
+using GroupQuestionnaireApp.Signals;
 
 namespace GroupQuestionnaireApp.Signals
 {
@@ -16,52 +17,24 @@ namespace GroupQuestionnaireApp.Signals
                 using (OQDevSNAPEntities dbContext = new OQDevSNAPEntities())
                 {
                     var dbActivities = dbContext.GroupPrograms.Include("GroupPackageActivities").Where(g => g.ID == programID).ToList();
-                    foreach (GroupPackageActivity gp in dbActivities[0].GroupPackageActivities)
+                    foreach (GroupPackageActivity gp in dbActivities[0].GroupPackageActivities.OrderBy(g => g.ActivityDisplayOrder))
                     {
+						Package p = new Package();
 
-                       
+						p.PackageName = gp.GroupPackageName.PackageName;
+						p.ProgramName = gp.GroupProgram.ProgramName;
+						p.ActivityName = gp.GroupActivityType.ActivityName;
+						p.ActivityDisplayName = gp.GroupActivityType.ActivityDisplayName;
+						p.ActivityID = gp.QuestionnaireType;
 
-                        Package p = new Package();
-                        p.PackageName = gp.GroupPackageName.PackageName;
-
-                        if (gp.PackageType == 1)
-                        {
-                            var a = gp.GroupActivityType.ActivityName;
-                            var b = gp.GroupActivityType.GroupActivityQuestions.ToList();
-
-                            foreach ( var entry in b) {
-                                var c = entry.GroupActivityTexts.ToList();
-                                c[0].Text.ToString();
-
-
-
-                            }
-
-
-
-
-
-
-                        }
-                        else {
-
-
-
-
-
-
-
-
-                        }
-
-                      foreach (GroupPackageActivity gpa in gp.GroupPackageActivities)
-                        {
-                            
-                        }
-                        activities.Add(p);
+						if (gp.PackageType == 1)
+						{
+							string language = "en-CA";
+							p.Activities = QuestionnaireRepository.GetQuestionnaireQuestions((string)gp.QuestionnaireType, language);
+							activities.Add(p);
+						}
+						//activities.Add(p);
                     }
-                    
-
                 }
             }
             catch (Exception e)
