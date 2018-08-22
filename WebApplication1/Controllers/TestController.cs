@@ -34,12 +34,12 @@ namespace WebApplication1.Controllers
                 cpd.programID = 1;
                 cpd.Activities = GetPackageActivities(cpd.programID);
 
-                foreach (string selectedProgram in viewModel.Questionnaires)
-                {
-                    int proID = 0;
-                    int.TryParse(selectedProgram, out proID);
-                }
-            }
+				foreach (string selectedProgram in viewModel.SelectedProgram)
+				{
+					int proID = 0;
+					int.TryParse(selectedProgram, out proID);
+				}
+			}
             return null;
         }
 
