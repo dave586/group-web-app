@@ -13,7 +13,7 @@ namespace WebApplication1.Models
         public Guid ClientQuestionnaireTestId { get; set; }
         public string TestID { get; set; }
         public IEnumerable<Question> Questions { get; set; }
-        //public IEnumerable<Answer> Answers { get; set; }
+        public IEnumerable<Package> Package { get; set; }
         public bool RightToLeftLanguage { get; set; }
         public string ClientDisplayName { get; set; }
 
@@ -21,7 +21,7 @@ namespace WebApplication1.Models
         public ClientTestDisplay()
         {
             Questions = new List<Question>().AsEnumerable();
-            //Answers = new List<Answer>().AsEnumerable();
+            Package = new List<Package>().AsEnumerable();
         }
 
     }
