@@ -28,24 +28,24 @@ namespace WebApplication1.Controllers
 
         public ActionResult StartTest (ClientSelectedProgram viewModel)
         {
+			int proID = 0;
             using (OQDevSNAPEntities dbContext = new OQDevSNAPEntities())
             {
-                ClientProgramDisplay cpd = new ClientProgramDisplay();
-                cpd.programID = 1;
-                cpd.Activities = GetPackageActivities(cpd.programID);
+				//ClientProgramDisplay cpd = new ClientProgramDisplay();
+				//cpd.programID = 1;
+				//cpd.Activities = GetPackageActivities(cpd.programID);
 
 				foreach (string selectedProgram in viewModel.SelectedProgram)
 				{
-					int proID = 0;
 					int.TryParse(selectedProgram, out proID);
 				}
 			}
-            return null;
+            return NextTest(proID);
         }
 
         private IEnumerable<Package> GetPackageActivities (int programID)
         {
-            return GroupPackageRepository.GetPackageActivities(programID).AsEnumerable();
+			return GroupPackageRepository.GetPackageActivities(programID).AsEnumerable();
         }
 
         private IEnumerable<Question> GetTestQuestions (string questionnaireType, string language)
@@ -53,14 +53,21 @@ namespace WebApplication1.Controllers
             return QuestionnaireRepository.GetQuestionnaireQuestions(questionnaireType, language).AsEnumerable();
         }
 
-        public ActionResult NextTest()
+        public ActionResult NextTest(int programID)
         {
             ModelState.Clear();
             using (OQDevSNAPEntities dbContext = new OQDevSNAPEntities())
             {
                 ClientTestDisplay ctd = new ClientTestDisplay();
-                ctd.TestID = "6"; //Change it so TestID is not hard coded
-                ctd.Questions = GetTestQuestions(ctd.TestID, "en-CA");
+
+				ctd.Package = GetPackageActivities(programID);
+
+				//for (int i = 0; i < ctd.Package.Count(); i++)
+				//{
+				//	ctd.TestID = ctd.Package.ElementAt(i).ActivityID;
+				//}
+                ctd.TestID = "1"; //Change it so TestID is not hard coded
+                //ctd.Questions = GetTestQuestions(ctd.TestID, "en-CA");
                 return View("~/Views/Test/CompleteTest.cshtml", ctd);
             }
         }
