@@ -15,30 +15,34 @@ Resp ID: @Html.DisplayFor(m => m.ResponseID) <br/>*@
 
 @using (Html.BeginForm("SubmitTest", "Test", FormMethod.Post))
 {
-    if (Model.TestID == "1")
-    {
+	if (Model.TestID.Equals("1"))
+	{
         @Html.Partial("~/Views/Test/TestOQ.cshtml", Model);
     }
-    else if (Model.TestID == "2")
+    else if (Model.TestID.Equals("2"))
     {
         @Html.Partial("~/Views/Test/TestUricaDV.cshtml", Model)
     }
-    else if (Model.TestID == "3")
+    else if (Model.TestID.Equals("3"))
     {
         @Html.Partial("~/Views/Test/TestPYOQ.cshtml", Model)
     }
-    else if (Model.TestID == "4")
+    else if (Model.TestID.Equals("4"))
     {
         @Html.Partial("~/Views/Test/TestYOQ.cshtml", Model)
     }
-    else if (Model.TestID == "5")
+    else if (Model.TestID.Equals("5"))
     {
         @Html.Partial("~/Views/Test/TestGCS.cshtml", Model)
     }
-    else if (Model.TestID == "6")
+    else if (Model.TestID.Equals("6"))
     {
         @Html.Partial("~/Views/Test/TestICS.cshtml", Model)
-    }
+	}
+	else if (Model.TestID == "18")
+	{
+		@Html.Partial("~/Views/Test/TestISE.cshtml", Model)
+	}
     <div class="row">
         <div class="col-sm-3"></div>
         <div class="col-sm-6">

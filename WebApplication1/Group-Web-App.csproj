@@ -1271,6 +1271,7 @@
     <Content Include="Views\Test\TestICS.cshtml" />
     <Content Include="Views\Shared\TextField.cshtml" />
     <Content Include="Views\Test\TestEDI3.cshtml" />
+    <Content Include="Views\Test\TestISE.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
