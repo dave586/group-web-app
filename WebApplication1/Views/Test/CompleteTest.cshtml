@@ -86,7 +86,8 @@ Resp ID: @Html.DisplayFor(m => m.ResponseID) <br/>*@
         }
     };
 
-    ko.applyBindings(model);
+	console.log(model.viewModel);
+    ko.applyBindings(model.viewModel);
 
     });
 

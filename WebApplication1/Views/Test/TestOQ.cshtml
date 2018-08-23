@@ -28,25 +28,25 @@
                                 </tr>
                             </thead>*@
                         <tbody>
-							<!-- ko foreach: viewModel.Package -->
-                            <!-- ko foreach: viewModel.Activities -->
-                            <!-- ko if: $data.QuestionType == "SingleChoiceQuestion" -->
-								<!--ko if:$index() % 10 == 0 -->
-								<tr>
-									<th></th>
-									<th></th>
-									<th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_Never</th>
-									<th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_Rarely</th>
-									<th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_Sometimes</th>
-									<th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_Frequently</th>
-									<th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_AlmostAlways</th>
-								</tr>
-								<!-- /ko -->
-							
+							<!-- ko foreach: $root.Package -->
+								<!-- ko if: $data.ActivityID == 1 -->
+									<!-- ko foreach: $data.Activities -->
+									<!-- ko if: $data.QuestionType == "SingleChoiceQuestion" -->
+										<!--ko if:$index() % 10 == 0 -->
+											<tr>
+												<th></th>
+												<th></th>
+												<th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_Never</th>
+												<th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_Rarely</th>
+												<th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_Sometimes</th>
+												<th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_Frequently</th>
+												<th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_AlmostAlways</th>
+											</tr>
+										<!-- /ko -->
+									<!-- /ko -->
 
                             @Html.Partial("SingleChoice")
-
-                            <!-- /ko -->
+							<!-- /ko -->
                             <!-- /ko -->
 							<!-- /ko -->
 

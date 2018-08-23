@@ -62,13 +62,13 @@ namespace WebApplication1.Controllers
 
 				ctd.Package = GetPackageActivities(programID);
 
-				//for (int i = 0; i < ctd.Package.Count(); i++)
-				//{
-				//	ctd.TestID = ctd.Package.ElementAt(i).ActivityID;
-				//}
-                ctd.TestID = "1"; //Change it so TestID is not hard coded
-                //ctd.Questions = GetTestQuestions(ctd.TestID, "en-CA");
-                return View("~/Views/Test/CompleteTest.cshtml", ctd);
+				for (int i = 0; i < ctd.Package.Count(); i++)
+				{
+					ctd.TestID = ctd.Package.ElementAt(i).ActivityID;
+				}
+				//ctd.TestID = "1"; //Change it so TestID is not hard coded
+				//ctd.Questions = GetTestQuestions(ctd.TestID, "en-CA");
+				return View("~/Views/Test/CompleteTest.cshtml", ctd);
             }
         }
 
