@@ -172,6 +172,7 @@
     <Compile Include="Models\ClientSelectedProgram.cs" />
     <Compile Include="Models\ClientProgramDisplay.cs" />
     <Compile Include="Models\ClientTestDisplay.cs" />
+    <Compile Include="Models\CompleteTestModel.cs" />
     <Compile Include="Models\SelectActivityTypeModel.cs" />
     <Compile Include="Models\SelectGroupProgramModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
