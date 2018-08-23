@@ -569,6 +569,18 @@ Give &lt;strong&gt;your own opinion&lt;/strong&gt; of yourself. Be sure to answe
   <data name="Tbl_Occasionally" xml:space="preserve">
     <value>Occasionally</value>
   </data>
+  <data name="Tbl_Option1" xml:space="preserve">
+    <value>Option 1</value>
+  </data>
+  <data name="Tbl_Option2" xml:space="preserve">
+    <value>Option 2</value>
+  </data>
+  <data name="Tbl_Option3" xml:space="preserve">
+    <value>Option 3</value>
+  </data>
+  <data name="Tbl_Option4" xml:space="preserve">
+    <value>Option 4</value>
+  </data>
   <data name="Tbl_VeryOften" xml:space="preserve">
     <value>Very Often</value>
   </data>

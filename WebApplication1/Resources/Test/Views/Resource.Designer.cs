@@ -1059,6 +1059,42 @@ namespace GroupPackageApp.Resources.Test.Views {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Option 1.
+        /// </summary>
+        public static string Tbl_Option1 {
+            get {
+                return ResourceManager.GetString("Tbl_Option1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Option 2.
+        /// </summary>
+        public static string Tbl_Option2 {
+            get {
+                return ResourceManager.GetString("Tbl_Option2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Option 3.
+        /// </summary>
+        public static string Tbl_Option3 {
+            get {
+                return ResourceManager.GetString("Tbl_Option3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Option 4.
+        /// </summary>
+        public static string Tbl_Option4 {
+            get {
+                return ResourceManager.GetString("Tbl_Option4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Rarely.
         /// </summary>
         public static string Tbl_Rarely {

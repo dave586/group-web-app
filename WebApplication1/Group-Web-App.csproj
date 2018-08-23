@@ -1283,6 +1283,8 @@
     <Content Include="Views\Test\TestNPAPS.cshtml" />
     <Content Include="Views\Test\TestPAPS.cshtml" />
     <Content Include="Views\Test\TestSES.cshtml" />
+    <Content Include="Views\Test\TestCSQ-8.cshtml" />
+    <Content Include="Views\Test\TestPF-RCM.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
