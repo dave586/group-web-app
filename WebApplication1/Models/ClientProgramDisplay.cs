@@ -11,16 +11,12 @@ namespace WebApplication1.Models
     {
         public int programID { get; set; }
         public IEnumerable<Package> Activities { get; set; }
-        //public IEnumerable<Answer> Answers { get; set; }
         public bool RightToLeftLanguage { get; set; }
         public string ClientDisplayName { get; set; }
-
 
         public ClientProgramDisplay()
         {
             Activities = new List<Package>().AsEnumerable();
-            //Answers = new List<Answer>().AsEnumerable();
         }
-
     }
 }
