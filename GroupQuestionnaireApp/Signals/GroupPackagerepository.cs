@@ -29,9 +29,20 @@ namespace GroupQuestionnaireApp.Signals
 
 						if (gp.PackageType == 1)
 						{
-							string language = "en-CA";
-							p.Activities = QuestionnaireRepository.GetQuestionnaireQuestions((string)gp.QuestionnaireType, language);
+							p.Activities = QuestionnaireRepository.GetQuestionnaireQuestions((string)gp.QuestionnaireType, "en-CA");
 							activities.Add(p);
+						}
+						else if (gp.PackageType == 2)
+						{
+
+						}
+						else if (gp.PackageType == 3)
+						{
+
+						}
+						else
+						{
+
 						}
 						//activities.Add(p);
                     }
