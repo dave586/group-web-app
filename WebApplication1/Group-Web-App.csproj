@@ -1275,6 +1275,12 @@
     <Content Include="Views\Test\TestISE.cshtml" />
     <Content Include="Views\Test\ResponseComplete.cshtml" />
     <Content Include="Views\Shared\_finalLayout.cshtml" />
+    <Content Include="Views\Test\TestTSCL-40.cshtml" />
+    <Content Include="Views\Test\TestPreRS-FVP.cshtml" />
+    <Content Include="Views\Test\TestFAM-III.cshtml" />
+    <Content Include="Views\Test\TestPASPH.cshtml" />
+    <Content Include="Views\Test\TestPASNP.cshtml" />
+    <Content Include="Views\Test\TestNPAPS.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

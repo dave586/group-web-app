@@ -563,4 +563,13 @@ Give &lt;strong&gt;your own opinion&lt;/strong&gt; of yourself. Be sure to answe
   <data name="Tbl_VeryRarely" xml:space="preserve">
     <value>Very Rarely</value>
   </data>
+  <data name="Tbl_FairlyOften" xml:space="preserve">
+    <value>Fairly Often</value>
+  </data>
+  <data name="Tbl_Occasionally" xml:space="preserve">
+    <value>Occasionally</value>
+  </data>
+  <data name="Tbl_VeryOften" xml:space="preserve">
+    <value>Very Often</value>
+  </data>
 </root>

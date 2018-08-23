@@ -969,6 +969,15 @@ namespace GroupPackageApp.Resources.Test.Views {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fairly Often.
+        /// </summary>
+        public static string Tbl_FairlyOften {
+            get {
+                return ResourceManager.GetString("Tbl_FairlyOften", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Frequently.
         /// </summary>
         public static string Tbl_Frequently {
@@ -1041,6 +1050,15 @@ namespace GroupPackageApp.Resources.Test.Views {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Occasionally.
+        /// </summary>
+        public static string Tbl_Occasionally {
+            get {
+                return ResourceManager.GetString("Tbl_Occasionally", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Rarely.
         /// </summary>
         public static string Tbl_Rarely {
@@ -1082,6 +1100,15 @@ namespace GroupPackageApp.Resources.Test.Views {
         public static string Tbl_StronglyDisagree {
             get {
                 return ResourceManager.GetString("Tbl_StronglyDisagree", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Very Often.
+        /// </summary>
+        public static string Tbl_VeryOften {
+            get {
+                return ResourceManager.GetString("Tbl_VeryOften", resourceCulture);
             }
         }
         
