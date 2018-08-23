@@ -54,8 +54,8 @@ Resp ID: @Html.DisplayFor(m => m.ResponseID) <br/>*@
 
 <script type="text/javascript">
 
-    $(document).ready(function() {
-        $("#submitTest").click(function () {
+    $(document).ready(() => {
+        $("#submitTest").click(() => {
 
 			if(model.testAnswers()) {
                 $("#data").val(JSON.stringify(model.viewModel));
@@ -68,7 +68,7 @@ Resp ID: @Html.DisplayFor(m => m.ResponseID) <br/>*@
 		var model =
 		{
 			viewModel: data,
-            testAnswers:function () {
+            testAnswers: () => {
 			var allAnswered = true;
 			for (var p = 0; p < this.viewModel.Package.length; p++) {
 				for (var q = 0; q < this.viewModel.Package[p].Activities.length; q++)
@@ -78,13 +78,15 @@ Resp ID: @Html.DisplayFor(m => m.ResponseID) <br/>*@
 					}
 			}
 
+			console.log(viewModel);
+
 			if(!allAnswered) {
 				return (confirm('Some questions have not been answered. Are you sure you want to continue?')) ? true : false;
 			}
 			return true;
 		}
 	};
-
+	
 	ko.applyBindings(model.viewModel);
 
     });
