@@ -29,8 +29,7 @@ namespace GroupQuestionnaireApp.Signals
 
 						if (gp.PackageType == 1) // Pre-Testing Package
 						{
-							p.Activities = QuestionnaireRepository.GetQuestionnaireQuestions((string)gp.QuestionnaireType, "en-CA");
-							activities.Add(p);
+							
 						}
 						else if (gp.PackageType == 2) // Mid-Session
 						{
@@ -38,7 +37,8 @@ namespace GroupQuestionnaireApp.Signals
 						}
 						else if (gp.PackageType == 3) // Post-Testing Package
 						{
-
+							p.Activities = QuestionnaireRepository.GetQuestionnaireQuestions((string)gp.QuestionnaireType, "en-CA");
+							activities.Add(p);
 						}
 						else // Non-Packages
 						{
