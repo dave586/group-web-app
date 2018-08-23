@@ -33,7 +33,7 @@ namespace GroupQuestionnaireApp.Signals
                         }
                         foreach (GroupActivityOption o in dbQ.GroupActivityOptions.OrderBy(o => o.DisplayOrder))
                         {
-                            q.Options.Add(new Option { Value = o.Value });
+                            q.Options.Add(new Option { Value = o.Value, Text = o.Text });
                         }
 
                         questions.Add(q);
