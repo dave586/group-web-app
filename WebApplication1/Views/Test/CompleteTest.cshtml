@@ -15,95 +15,33 @@ Resp ID: @Html.DisplayFor(m => m.ResponseID) <br/>*@
 
 @using (Html.BeginForm("SubmitTest", "Test", FormMethod.Post))
 {
-	if (Model.TestID == "1")
+	switch (Model.TestID)
 	{
-        @Html.Partial("~/Views/Test/TestOQ.cshtml", Model);
-    }
-    else if (Model.TestID == "2")
-    {
-        @Html.Partial("~/Views/Test/TestUricaDV.cshtml", Model)
-    }
-    else if (Model.TestID == "3")
-    {
-        @Html.Partial("~/Views/Test/TestPYOQ.cshtml", Model)
-    }
-    else if (Model.TestID == "4")
-    {
-        @Html.Partial("~/Views/Test/TestYOQ.cshtml", Model)
-    }
-    else if (Model.TestID == "5")
-    {
-        @Html.Partial("~/Views/Test/TestGCS.cshtml", Model)
-    }
-    else if (Model.TestID == "6")
-    {
-        @Html.Partial("~/Views/Test/TestICS.cshtml", Model)
+		case  1: @Html.Partial("~/Views/Test/TestOQ.cshtml", Model);		break;
+		case  2: @Html.Partial("~/Views/Test/TestUricaDV.cshtml", Model);	break;
+		case  3: @Html.Partial("~/Views/Test/TestPYOQ.cshtml", Model);		break;
+		case  4: @Html.Partial("~/Views/Test/TestYOQ.cshtml", Model);		break;
+		case  5: @Html.Partial("~/Views/Test/TestGCS.cshtml", Model);		break;
+		case  6: @Html.Partial("~/Views/Test/TestICS.cshtml", Model);		break;
+		case  7: @Html.Partial("~/Views/Test/TestSDT.cshtml", Model);		break;
+		case  8: @Html.Partial("~/Views/Test/TestRSE.cshtml", Model);		break;
+		case  9: @Html.Partial("~/Views/Test/TestPAS.cshtml", Model);		break;
+		case 10: @Html.Partial("~/Views/Test/TestTSCL-40.cshtml", Model);	break;
+		case 11: @Html.Partial("~/Views/Test/TestPreRS-FVP.cshtml", Model); break;
+		case 12: @Html.Partial("~/Views/Test/TestFAM-III.cshtml", Model);	break;
+		case 13: @Html.Partial("~/Views/Test/TestPASPH.cshtml", Model);		break;
+		case 14: @Html.Partial("~/Views/Test/TestPASNP.cshtml", Model);		break;
+		case 15: @Html.Partial("~/Views/Test/TestNPAPS.cshtml", Model);		break;
+		case 16: @Html.Partial("~/Views/Test/TestPAPS.cshtml", Model);		break;
+		case 17: @Html.Partial("~/Views/Test/TestSES.cshtml", Model);		break;
+		case 18: @Html.Partial("~/Views/Test/TestISE.cshtml", Model);		break;
+		case 19: @Html.Partial("~/Views/Test/TestEDI3.cshtml", Model);		break;
+		case 20: @Html.Partial("~/Views/Test/TestCSQ-8.cshtml", Model);		break;
+		case 21: @Html.Partial("~/Views/Test/TestPF-RCM.cshtml", Model);	break;
+		case 22: @Html.Partial("~/Views/Test/TestDAI-R.cshtml", Model);		break;
 	}
-	else if (Model.TestID == "7")
-	{
-		@Html.Partial("~/Views/Test/TestSDT.cshtml", Model)
-	}
-	else if (Model.TestID == "8")
-	{
-		@Html.Partial("~/Views/Test/TestRSE.cshtml", Model)
-	}
-	else if (Model.TestID == "9")
-	{
-		@Html.Partial("~/Views/Test/TestPAS.cshtml", Model)
-	}
-	else if (Model.TestID == "10")
-	{
-		@Html.Partial("~/Views/Test/TestTSCL-40.cshtml", Model)
-	}
-	else if (Model.TestID == "11")
-	{
-		@Html.Partial("~/Views/Test/TestPreRS-FVP.cshtml", Model)
-	}
-	else if (Model.TestID == "12")
-	{
-		@Html.Partial("~/Views/Test/TestFAM-III.cshtml", Model)
-	}
-	else if (Model.TestID == "13")
-	{
-		@Html.Partial("~/Views/Test/TestPASPH.cshtml", Model)
-	}
-	else if (Model.TestID == "14")
-	{
-		@Html.Partial("~/Views/Test/TestPASNP.cshtml", Model)
-	}
-	else if (Model.TestID == "15")
-	{
-		@Html.Partial("~/Views/Test/TestNPAPS.cshtml", Model)
-	}
-	else if (Model.TestID == "16")
-	{
-		@Html.Partial("~/Views/Test/TestPAPS.cshtml", Model)
-	}
-	else if (Model.TestID == "17")
-	{
-		@Html.Partial("~/Views/Test/TestSES.cshtml", Model)
-	}
-	else if (Model.TestID == "18")
-	{
-		@Html.Partial("~/Views/Test/TestISE.cshtml", Model)
-	}
-	else if (Model.TestID == "19")
-	{
-		@Html.Partial("~/Views/Test/TestEDI3.cshtml", Model)
-	}
-	else if (Model.TestID == "20")
-	{
-		@Html.Partial("~/Views/Test/TestCSQ-8.cshtml", Model)
-	}
-	else if (Model.TestID == "21")
-	{
-		@Html.Partial("~/Views/Test/TestPF-RCM.cshtml", Model)
-	}
-	else if (Model.TestID == "22")
-	{
-		@Html.Partial("~/Views/Test/TestDAI-R.cshtml", Model)
-	}
-    <div class="row">
+
+	<div class="row">
         <div class="col-sm-3"></div>
         <div class="col-sm-6">
             <button class="btn" id="submitTest" title="@GroupPackageApp.Resources.Test.Views.Resource.BtnNext" type="button" value="Next">@GroupPackageApp.Resources.Test.Views.Resource.BtnNext<i class="fa fa-caret-right"></i></button>
@@ -119,34 +57,34 @@ Resp ID: @Html.DisplayFor(m => m.ResponseID) <br/>*@
     $(document).ready(function() {
         $("#submitTest").click(function () {
 
-            if(model.testAnswers()) {
+			if(model.testAnswers()) {
                 $("#data").val(JSON.stringify(model.viewModel));
                 $("form").submit();
-            }
-        });
+			}
+		});
 
-        var data = @Html.Raw(Json.Encode(Model));
+		var data = @Html.Raw(Json.Encode(Model));
 
-        var model =
-        {
-            viewModel: data,
+		var model =
+		{
+			viewModel: data,
             testAnswers:function () {
-            var allAnswered = true;
-            for(var q=0; q < this.viewModel.Questions.length; q++) {
-                if(ul.utils.isNullOrEmpty(this.viewModel.Questions[q].Answer)) {
-                    allAnswered = false;
-                    break;
-                }
-            }
+			var allAnswered = true;
+			for(var q=0; q < this.viewModel.Questions.length; q++) {
+				if(ul.utils.isNullOrEmpty(this.viewModel.Questions[q].Answer)) {
+					allAnswered = false;
+					break;
+				}
+			}
 
-            if(!allAnswered) {
-                return (confirm('Some questions have not been answered. Are you sure you want to continue?')) ? true : false;
-            }
-            return true;
-        }
-    };
+			if(!allAnswered) {
+				return (confirm('Some questions have not been answered. Are you sure you want to continue?')) ? true : false;
+			}
+			return true;
+		}
+	};
 
-    ko.applyBindings(model.viewModel);
+	ko.applyBindings(model.viewModel);
 
     });
 
