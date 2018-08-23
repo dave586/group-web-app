@@ -936,6 +936,15 @@ namespace GroupPackageApp.Resources.Test.Views {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to False.
+        /// </summary>
+        public static string Tbl_False {
+            get {
+                return ResourceManager.GetString("Tbl_False", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Frequently.
         /// </summary>
         public static string Tbl_Frequently {
@@ -959,6 +968,15 @@ namespace GroupPackageApp.Resources.Test.Views {
         public static string Tbl_LittleOfTheTime {
             get {
                 return ResourceManager.GetString("Tbl_LittleOfTheTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mainly True.
+        /// </summary>
+        public static string Tbl_MainlyTrue {
+            get {
+                return ResourceManager.GetString("Tbl_MainlyTrue", resourceCulture);
             }
         }
         
@@ -1080,6 +1098,15 @@ namespace GroupPackageApp.Resources.Test.Views {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Slight False.
+        /// </summary>
+        public static string Tbl_SlightlyFalse {
+            get {
+                return ResourceManager.GetString("Tbl_SlightlyFalse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Some of the Time.
         /// </summary>
         public static string Tbl_SomeOfTheTime {
@@ -1139,6 +1166,15 @@ namespace GroupPackageApp.Resources.Test.Views {
         public static string Tbl_VeryRarely {
             get {
                 return ResourceManager.GetString("Tbl_VeryRarely", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Very True.
+        /// </summary>
+        public static string Tbl_VeryTrue {
+            get {
+                return ResourceManager.GetString("Tbl_VeryTrue", resourceCulture);
             }
         }
         

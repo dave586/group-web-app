@@ -551,4 +551,16 @@ Give &lt;strong&gt;your own opinion&lt;/strong&gt; of yourself. Be sure to answe
   <data name="Tbl_True" xml:space="preserve">
     <value>True</value>
   </data>
+  <data name="Tbl_False" xml:space="preserve">
+    <value>False</value>
+  </data>
+  <data name="Tbl_MainlyTrue" xml:space="preserve">
+    <value>Mainly True</value>
+  </data>
+  <data name="Tbl_SlightlyFalse" xml:space="preserve">
+    <value>Slight False</value>
+  </data>
+  <data name="Tbl_VeryTrue" xml:space="preserve">
+    <value>Very True</value>
+  </data>
 </root>

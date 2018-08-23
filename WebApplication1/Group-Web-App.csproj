@@ -1288,6 +1288,7 @@
     <Content Include="Views\Test\TestDAI-R.cshtml" />
     <Content Include="Views\Test\TestSDT.cshtml" />
     <Content Include="Views\Test\TestRSE.cshtml" />
+    <Content Include="Views\Test\TestPAS.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
