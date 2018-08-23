@@ -530,6 +530,9 @@ Give &lt;strong&gt;your own opinion&lt;/strong&gt; of yourself. Be sure to answe
   <data name="Tbl_FairlyOften" xml:space="preserve">
     <value>Fairly Often</value>
   </data>
+  <data name="Tbl_Neither" xml:space="preserve">
+    <value>Neither agree nor disagree</value>
+  </data>
   <data name="Tbl_Occasionally" xml:space="preserve">
     <value>Occasionally</value>
   </data>
