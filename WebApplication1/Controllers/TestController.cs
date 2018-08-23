@@ -81,38 +81,5 @@ namespace WebApplication1.Controllers
             });
             return null;
         }
-        //public ActionResult StartTest(ClientSelectedProgram viewModel)
-        //{
-        //    using (OQDevSNAPEntities1 dbContext = new OQDevSNAPEntities1())
-        //    {
-
-        //        foreach (string selectedTest in viewModel.SelectedProgram)
-        //        {
-        //            GroupProgram pro = new GroupProgram();
-
-        //            int proID = 0;
-        //            int.TryParse(selectedTest, out proID);
-
-        //            if (proID > 100)
-        //            {
-        //                pro.Program = dbContext.GroupPrograms.FirstOrDefault(p => p.ProgramName == "WAS");
-        //                pro.ID = proID;
-        //            }
-        //        }
-        //    }
-        //    return NextTest();
-        //}
-
-        //public ActionResult NextTest (Guid responseID, RequestContext _requestContext)
-        //{
-        //    ModelState.Clear();
-        //    using (OQDevSNAPEntities1 dbContext = new OQDevSNAPEntities1())
-        //    {
-        //        //GroupProgram pro = dbContext.GroupPrograms.Include('GroupPackageActivity').Include('GroupActivityType').FirstOrDefault()
-
-        //        ClientTestDisplay ctd = new ClientTestDisplay();
-        //        return View("~/Views/Test/CompleteTest.cshtml", ctd);
-        //    }
-        //}
     }
 }
