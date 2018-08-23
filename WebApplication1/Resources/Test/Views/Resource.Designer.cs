@@ -262,16 +262,7 @@ namespace GroupPackageApp.Resources.Test.Views {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This questionnaire is designed to measure the non-physical abuse you have delivered upon your partner. It is not a test, so there are no right or wrong answers. Please answer each item as carefully and as accurately as you can by placing a number beside each one as follow:
-        ///&lt;ol&gt;
-        ///&lt;li&gt;Never&lt;/li&gt;
-        ///&lt;li&gt;Very rarely&lt;/li&gt;
-        ///&lt;li&gt;A little of the time&lt;/li&gt;
-        ///&lt;li&gt;Some of the time&lt;/li&gt;
-        ///&lt;li&gt;A good part of the time&lt;/li&gt;
-        ///&lt;li&gt;Very frequently&lt;/li&gt;
-        ///&lt;li&gt;All of the time&lt;/li&gt;
-        ///&lt;/ol&gt;.
+        ///   Looks up a localized string similar to This questionnaire is designed to measure the non-physical abuse you have delivered upon your partner. It is not a test, so there are no right or wrong answers. Please answer each item as carefully and as accurately as you can by checking the appropriate box..
         /// </summary>
         public static string NPAPSDescription {
             get {
@@ -352,16 +343,7 @@ namespace GroupPackageApp.Resources.Test.Views {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This questionnaire is designed to measure the physical abuse you have delivered upon your partner. It is not a test, so there are no right or wrong answers. Please answer each item as carefully and as accurately as you can by placing a number beside each one as follows:
-        ///&lt;ol&gt;
-        ///&lt;li&gt;Never&lt;/li&gt;
-        ///&lt;li&gt;Very rarely&lt;/li&gt;
-        ///&lt;li&gt;A little of the time&lt;/li&gt;
-        ///&lt;li&gt;Some of the time&lt;/li&gt;
-        ///&lt;li&gt;A good part of the time&lt;/li&gt;
-        ///&lt;li&gt;Very frequently&lt;/li&gt;
-        ///&lt;li&gt;All of the time&lt;/li&gt;
-        ///&lt;/ol&gt;.
+        ///   Looks up a localized string similar to This questionnaire is designed to measure the physical abuse you have delivered upon your partner. It is not a test, so there are no right or wrong answers. Please answer each item as carefully and as accurately as you can by checking the appropriate box..
         /// </summary>
         public static string PAPSDescription {
             get {
@@ -395,16 +377,7 @@ namespace GroupPackageApp.Resources.Test.Views {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This questionnaire is designed to measure the non-physical abuse you have experienced in your relationship with your partner. It is not a test, so there are no right or wrong answers. Please answer each item as carefully and as accurately as you can by placing a number beside each one as follows:
-        ///&lt;ol&gt;
-        ///&lt;li&gt;None of the time&lt;/li&gt;
-        ///&lt;li&gt;Very rarely&lt;/li&gt;
-        ///&lt;li&gt;A little of the time&lt;/li&gt;
-        ///&lt;li&gt;Some of the time&lt;/li&gt;
-        ///&lt;li&gt;A good part of the time&lt;/li&gt;
-        ///&lt;li&gt;Most of the time&lt;/li&gt;
-        ///&lt;li&gt;All of the time&lt;/li&gt;
-        ///&lt;/ol&gt;.
+        ///   Looks up a localized string similar to This questionnaire is designed to measure the non-physical abuse you have experienced in your relationship with your partner. It is not a test, so there are no right or wrong answers. Please answer each item as carefully and as accurately as you can by checking the appropriate box..
         /// </summary>
         public static string PASNPDescription {
             get {
@@ -422,16 +395,7 @@ namespace GroupPackageApp.Resources.Test.Views {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This questionnaire is designed to measure the physical abuse you have experienced in your relationship with your partner. It is not a test, so there are no right or wrong answers. Please answer each item as carefully and as accurately as you can by placing a number beside each one as follows:
-        ///&lt;ol&gt;
-        ///&lt;li&gt;None of the time&lt;/li&gt;
-        ///&lt;li&gt;Very rarely&lt;/li&gt;
-        ///&lt;li&gt;A little of the time&lt;/li&gt;
-        ///&lt;li&gt;Some of the time&lt;/li&gt;
-        ///&lt;li&gt;A good part of the time&lt;/li&gt;
-        ///&lt;li&gt;Most of the time&lt;/li&gt;
-        ///&lt;li&gt; All of the time&lt;/li&gt;
-        ///&lt;/ol&gt;.
+        ///   Looks up a localized string similar to This questionnaire is designed to measure the physical abuse you have experienced in your relationship with your partner. It is not a test, so there are no right or wrong answers. Please answer each item as carefully and as accurately as you can by checking the appropriate box..
         /// </summary>
         public static string PASPHDescription {
             get {

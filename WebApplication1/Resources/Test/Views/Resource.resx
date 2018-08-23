@@ -340,31 +340,13 @@
     <value>Index of Clinical Stress (ICS)</value>
   </data>
   <data name="NPAPSDescription" xml:space="preserve">
-    <value>This questionnaire is designed to measure the non-physical abuse you have delivered upon your partner. It is not a test, so there are no right or wrong answers. Please answer each item as carefully and as accurately as you can by placing a number beside each one as follow:
-&lt;ol&gt;
-&lt;li&gt;Never&lt;/li&gt;
-&lt;li&gt;Very rarely&lt;/li&gt;
-&lt;li&gt;A little of the time&lt;/li&gt;
-&lt;li&gt;Some of the time&lt;/li&gt;
-&lt;li&gt;A good part of the time&lt;/li&gt;
-&lt;li&gt;Very frequently&lt;/li&gt;
-&lt;li&gt;All of the time&lt;/li&gt;
-&lt;/ol&gt;</value>
+    <value>This questionnaire is designed to measure the non-physical abuse you have delivered upon your partner. It is not a test, so there are no right or wrong answers. Please answer each item as carefully and as accurately as you can by checking the appropriate box.</value>
   </data>
   <data name="NPAPSQuestionnaireTitle" xml:space="preserve">
     <value>Non-Physical Abuse of Partner Scale (NPAPS)</value>
   </data>
   <data name="PAPSDescription" xml:space="preserve">
-    <value>This questionnaire is designed to measure the physical abuse you have delivered upon your partner. It is not a test, so there are no right or wrong answers. Please answer each item as carefully and as accurately as you can by placing a number beside each one as follows:
-&lt;ol&gt;
-&lt;li&gt;Never&lt;/li&gt;
-&lt;li&gt;Very rarely&lt;/li&gt;
-&lt;li&gt;A little of the time&lt;/li&gt;
-&lt;li&gt;Some of the time&lt;/li&gt;
-&lt;li&gt;A good part of the time&lt;/li&gt;
-&lt;li&gt;Very frequently&lt;/li&gt;
-&lt;li&gt;All of the time&lt;/li&gt;
-&lt;/ol&gt;</value>
+    <value>This questionnaire is designed to measure the physical abuse you have delivered upon your partner. It is not a test, so there are no right or wrong answers. Please answer each item as carefully and as accurately as you can by checking the appropriate box.</value>
   </data>
   <data name="PAPSQuestionnaireTitle" xml:space="preserve">
     <value>Physical Abuse of Partner Scale (PAPS)</value>
@@ -380,31 +362,13 @@
 Give &lt;strong&gt;your own opinion&lt;/strong&gt; of yourself. Be sure to answer every statement.</value>
   </data>
   <data name="PASNPDescription" xml:space="preserve">
-    <value>This questionnaire is designed to measure the non-physical abuse you have experienced in your relationship with your partner. It is not a test, so there are no right or wrong answers. Please answer each item as carefully and as accurately as you can by placing a number beside each one as follows:
-&lt;ol&gt;
-&lt;li&gt;None of the time&lt;/li&gt;
-&lt;li&gt;Very rarely&lt;/li&gt;
-&lt;li&gt;A little of the time&lt;/li&gt;
-&lt;li&gt;Some of the time&lt;/li&gt;
-&lt;li&gt;A good part of the time&lt;/li&gt;
-&lt;li&gt;Most of the time&lt;/li&gt;
-&lt;li&gt;All of the time&lt;/li&gt;
-&lt;/ol&gt;</value>
+    <value>This questionnaire is designed to measure the non-physical abuse you have experienced in your relationship with your partner. It is not a test, so there are no right or wrong answers. Please answer each item as carefully and as accurately as you can by checking the appropriate box.</value>
   </data>
   <data name="PASNPQuestionnaireTitle" xml:space="preserve">
     <value>Partner Abuse Scale: Non-Physical (PASNP)</value>
   </data>
   <data name="PASPHDescription" xml:space="preserve">
-    <value>This questionnaire is designed to measure the physical abuse you have experienced in your relationship with your partner. It is not a test, so there are no right or wrong answers. Please answer each item as carefully and as accurately as you can by placing a number beside each one as follows:
-&lt;ol&gt;
-&lt;li&gt;None of the time&lt;/li&gt;
-&lt;li&gt;Very rarely&lt;/li&gt;
-&lt;li&gt;A little of the time&lt;/li&gt;
-&lt;li&gt;Some of the time&lt;/li&gt;
-&lt;li&gt;A good part of the time&lt;/li&gt;
-&lt;li&gt;Most of the time&lt;/li&gt;
-&lt;li&gt; All of the time&lt;/li&gt;
-&lt;/ol&gt;</value>
+    <value>This questionnaire is designed to measure the physical abuse you have experienced in your relationship with your partner. It is not a test, so there are no right or wrong answers. Please answer each item as carefully and as accurately as you can by checking the appropriate box.</value>
   </data>
   <data name="PASPHQuestionnaireTitle" xml:space="preserve">
     <value>Partner Abuse Scale: Physical (PASPH)</value>
