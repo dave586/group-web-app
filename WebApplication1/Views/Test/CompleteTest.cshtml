@@ -99,6 +99,10 @@ Resp ID: @Html.DisplayFor(m => m.ResponseID) <br/>*@
 	{
 		@Html.Partial("~/Views/Test/TestPF-RCM.cshtml", Model)
 	}
+	else if (Model.TestID == "22")
+	{
+		@Html.Partial("~/Views/Test/TestDAI-R.cshtml", Model)
+	}
     <div class="row">
         <div class="col-sm-3"></div>
         <div class="col-sm-6">
