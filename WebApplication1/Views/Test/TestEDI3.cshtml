@@ -16,7 +16,9 @@
                     <table class="table">
                         <tbody>
 
-                            <!-- ko foreach: viewModel.Questions -->
+                            <!-- ko foreach: $root.Package -->
+							<!-- ko if: $data.ActivityID == 19 -->
+							<!-- ko foreach: $data.Activities -->
                             <!-- ko if: $data.QuestionType == "SingleChoiceQuestion" -->
                             <!--ko if:$index() % 10 == 0-->
                             <tr>
@@ -25,11 +27,13 @@
                          
                             </tr>
                             <!-- /ko -->
+							<!-- /ko -->
 
                             @Html.Partial("TextField")
 
                             <!-- /ko -->
                             <!-- /ko -->
+							<!-- /ko -->
 
                         </tbody>
                     </table>

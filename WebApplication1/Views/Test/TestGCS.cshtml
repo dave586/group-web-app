@@ -16,9 +16,11 @@
                     <table class="table">
                         <tbody>
 
-                            <!-- ko foreach: viewModel.Questions -->
-                            <!-- ko if: $data.QuestionType == "SingleChoiceQuestion" -->
-                            <!--ko if:$index() % 10 == 0-->
+							<!-- ko foreach: $root.Package -->
+							<!-- ko if: $data.ActivityID == 5 -->
+							<!-- ko foreach: $data.Activities -->
+							<!-- ko if: $data.QuestionType == "SingleChoiceQuestion" -->
+							<!--ko if:$index() % 10 == 0-->
                             <tr>
                                 <th></th>
                                 <th></th>
@@ -31,11 +33,13 @@
                                 <th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_AllOfTheTime</th>
                             </tr>
                             <!-- /ko -->
+							<!-- /ko -->
 
                             @Html.Partial("SingleChoice")
 
                             <!-- /ko -->
                             <!-- /ko -->
+							<!-- /ko -->
 
                         </tbody>
                     </table>

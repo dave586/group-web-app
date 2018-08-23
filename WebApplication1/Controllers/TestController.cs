@@ -65,11 +65,12 @@ namespace WebApplication1.Controllers
 				for (int i = 0; i < ctd.Package.Count(); i++)
 				{
 					ctd.TestID = ctd.Package.ElementAt(i).ActivityID;
+					return View("~/Views/Test/CompleteTest.cshtml", ctd);
 				}
 				//ctd.TestID = "1"; //Change it so TestID is not hard coded
 				//ctd.Questions = GetTestQuestions(ctd.TestID, "en-CA");
-				return View("~/Views/Test/CompleteTest.cshtml", ctd);
-            }
+				return View("~/Views/Shared/Error.cshtml");
+			}
         }
 
         [HttpPost]
