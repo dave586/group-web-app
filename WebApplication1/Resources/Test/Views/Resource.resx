@@ -548,4 +548,10 @@ Give &lt;strong&gt;your own opinion&lt;/strong&gt; of yourself. Be sure to answe
   <data name="Tbl_VeryOften" xml:space="preserve">
     <value>Very Often</value>
   </data>
+  <data name="Tbl_NotTrue" xml:space="preserve">
+    <value>Not True</value>
+  </data>
+  <data name="Tbl_True" xml:space="preserve">
+    <value>True</value>
+  </data>
 </root>

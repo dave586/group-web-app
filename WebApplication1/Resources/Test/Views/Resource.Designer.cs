@@ -1014,6 +1014,15 @@ namespace GroupPackageApp.Resources.Test.Views {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Not True.
+        /// </summary>
+        public static string Tbl_NotTrue {
+            get {
+                return ResourceManager.GetString("Tbl_NotTrue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Occasionally.
         /// </summary>
         public static string Tbl_Occasionally {
@@ -1100,6 +1109,15 @@ namespace GroupPackageApp.Resources.Test.Views {
         public static string Tbl_StronglyDisagree {
             get {
                 return ResourceManager.GetString("Tbl_StronglyDisagree", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to True.
+        /// </summary>
+        public static string Tbl_True {
+            get {
+                return ResourceManager.GetString("Tbl_True", resourceCulture);
             }
         }
         
