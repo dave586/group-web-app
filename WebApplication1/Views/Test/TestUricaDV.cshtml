@@ -14,17 +14,6 @@
             <div class="col-sm-12">
                 <div class="table-responsive">
                     <table class="table">
-                        @* <thead>
-                            <tr>
-                                <th></th>
-                                <th></th>
-                                <th>@Questionnaire.Resources.Test.Views.Resource.Tbl_StronglyDisagree</th>
-                                <th>@Questionnaire.Resources.Test.Views.Resource.Tbl_Disagree</th>
-                                <th>@Questionnaire.Resources.Test.Views.Resource.Tbl_NoOpinion</th>
-                                <th>@Questionnaire.Resources.Test.Views.Resource.Tbl_Agree</th>
-                                <th>@Questionnaire.Resources.Test.Views.Resource.Tbl_StronglyAgree</th>
-                            </tr>
-                            </thead>*@
                         <tbody>
 							<!-- ko foreach: $root.Package -->
 							<!-- ko if: $data.ActivityID == 2 -->
@@ -40,6 +29,7 @@
                                 <th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_Agree</th>
                                 <th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_StronglyAgree</th>
                             </tr>
+
                             <!-- /ko -->
 							<!-- /ko -->
 
@@ -48,6 +38,7 @@
                             <!-- /ko -->
 							<!-- /ko -->
                             <!-- /ko -->
+
                         </tbody>
                     </table>
                 </div>
