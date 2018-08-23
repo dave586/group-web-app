@@ -5,8 +5,8 @@
         <div class="row paragraph">
             <div class="col-sm-2"></div>
             <div class="col-sm-8">
-                @*<h2>@GroupPackageApp.Resources.Test.Views.Resource.</h2>*@
-                @*<p>@Html.Raw(GroupPackageApp.Resources.Test.Views.Resource.)</p>*@
+                <h2>@GroupPackageApp.Resources.Test.Views.Resource.UricaDVQuestionnaireTitle</h2>
+                <p>@Html.Raw(GroupPackageApp.Resources.Test.Views.Resource.UricaDVDescription)</p>
             </div>
             <div class="col-sm-2"></div>
         </div>
@@ -27,29 +27,27 @@
                             </thead>*@
                         <tbody>
                             <!-- ko foreach: $root.Package -->
-                            <!-- ko if: $data.ActivityID == 15 -->
+                            <!-- ko if: $data.ActivityID == 17 -->
                             <!-- ko foreach: $data.Activities -->
                             <!-- ko if: $data.QuestionType == "SingleChoiceQuestion" -->
-                            <!--ko if:$index() % 10 == 0 -->
+                            <!--ko if:$index() % 10 == 0-->
                             <tr>
                                 <th></th>
                                 <th></th>
-                                <th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_NoneOfTheTime</th>
-                                <th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_VeryRarely</th>
-                                <th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_LittleOfTheTime</th>
-                                <th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_SomeOfTheTime</th>
-                                <th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_MostOfTheTime</th>
-                                <th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_GoodPartOfTheTime</th>
-                                <th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_AllOfTheTime</th>
+                                <th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_StronglyDisagree</th>
+                                <th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_Disagree</th>
+                                <th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_NoOpinion</th>
+                                <th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_Agree</th>
+                                <th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_StronglyAgree</th>
                             </tr>
                             <!-- /ko -->
                             <!-- /ko -->
 
                             @Html.Partial("SingleChoice")
-                            <!-- /ko -->
-                            <!-- /ko -->
-                            <!-- /ko -->
 
+                            <!-- /ko -->
+                            <!-- /ko -->
+                            <!-- /ko -->
                         </tbody>
                     </table>
                 </div>

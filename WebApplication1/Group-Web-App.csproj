@@ -1281,6 +1281,8 @@
     <Content Include="Views\Test\TestPASPH.cshtml" />
     <Content Include="Views\Test\TestPASNP.cshtml" />
     <Content Include="Views\Test\TestNPAPS.cshtml" />
+    <Content Include="Views\Test\TestPAPS.cshtml" />
+    <Content Include="Views\Test\TestSES.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
