@@ -377,13 +377,7 @@ Give &lt;strong&gt;your own opinion&lt;/strong&gt; of yourself. Be sure to answe
     <value>PAS</value>
   </data>
   <data name="RSEDescription" xml:space="preserve">
-    <value>This scale is designed to measure self esteem. Answer each question by placing a number beside the item that best describes how much you agree or disagree with each one as follows:
-&lt;ol&gt;
-&lt;li&gt;Strongly Agree&lt;/li&gt;
-&lt;li&gt;Agree&lt;/li&gt;
-&lt;li&gt;Disagree&lt;/li&gt;
-&lt;li&gt;Strongly Disagree&lt;/li&gt;
-&lt;/ol&gt;</value>
+    <value>This scale is designed to measure self esteem. Answer each question by checking the appropriate box that best describes how much you agree or disagree with each one.</value>
   </data>
   <data name="RSEQuestionnaireTitle" xml:space="preserve">
     <value>Rosenberg Self Esteem Scale (RSE)</value>

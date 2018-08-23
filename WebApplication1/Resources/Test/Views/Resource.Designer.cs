@@ -445,13 +445,7 @@ namespace GroupPackageApp.Resources.Test.Views {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This scale is designed to measure self esteem. Answer each question by placing a number beside the item that best describes how much you agree or disagree with each one as follows:
-        ///&lt;ol&gt;
-        ///&lt;li&gt;Strongly Agree&lt;/li&gt;
-        ///&lt;li&gt;Agree&lt;/li&gt;
-        ///&lt;li&gt;Disagree&lt;/li&gt;
-        ///&lt;li&gt;Strongly Disagree&lt;/li&gt;
-        ///&lt;/ol&gt;.
+        ///   Looks up a localized string similar to This scale is designed to measure self esteem. Answer each question by checking the appropriate box that best describes how much you agree or disagree with each one..
         /// </summary>
         public static string RSEDescription {
             get {
