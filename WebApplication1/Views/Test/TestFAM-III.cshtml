@@ -5,8 +5,8 @@
         <div class="row paragraph">
             <div class="col-sm-2"></div>
             <div class="col-sm-8">
-                <h2>@GroupPackageApp.Resources.Test.Views.Resource.UricaDVQuestionnaireTitle</h2>
-                @*<p>@Html.Raw(GroupPackageApp.Resources.Test.Views.Resource.)</p>*@
+                <h2>@GroupPackageApp.Resources.Test.Views.Resource.FAMQuestionnaireTitle</h2>
+                <p>@Html.Raw(GroupPackageApp.Resources.Test.Views.Resource.FAMDescription)</p>
             </div>
             <div class="col-sm-2"></div>
         </div>
@@ -14,21 +14,12 @@
             <div class="col-sm-12">
                 <div class="table-responsive">
                     <table class="table">
-                        @* <thead>
-                            <tr>
-                                <th></th>
-                                <th></th>
-                                <th>@Questionnaire.Resources.Test.Views.Resource.Tbl_StronglyDisagree</th>
-                                <th>@Questionnaire.Resources.Test.Views.Resource.Tbl_Disagree</th>
-                                <th>@Questionnaire.Resources.Test.Views.Resource.Tbl_NoOpinion</th>
-                                <th>@Questionnaire.Resources.Test.Views.Resource.Tbl_Agree</th>
-                                <th>@Questionnaire.Resources.Test.Views.Resource.Tbl_StronglyAgree</th>
-                            </tr>
-                            </thead>*@
                         <tbody>
-                            <!-- ko foreach: viewModel.Questions -->
-                            <!-- ko if: $data.QuestionType == "SingleChoiceQuestion" -->
-                            <!-- ko if:$index()%10 == 0-->
+							<!-- ko foreach: $root.Package -->
+							<!-- ko if: $data.ActivityID == 12 -->
+							<!-- ko foreach: $data.Activities -->
+							<!-- ko if: $data.QuestionType == "SingleChoiceQuestion" -->
+							<!--ko if:$index() % 10 == 0-->
                             <tr>
                                 <th></th>
                                 <th></th>
@@ -38,13 +29,16 @@
                                 <th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_StronglyDisagree</th>
 
                             </tr>
-                            <!-- /ko -->
 
+                            <!-- /ko -->
+							<!-- /ko -->
 
                             @Html.Partial("SingleChoice")
 
                             <!-- /ko -->
+							<!-- /ko -->
                             <!-- /ko -->
+
                         </tbody>
                     </table>
                 </div>
