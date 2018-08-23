@@ -1274,6 +1274,7 @@
     <Content Include="Views\Test\TestEDI3.cshtml" />
     <Content Include="Views\Test\TestISE.cshtml" />
     <Content Include="Views\Test\ResponseComplete.cshtml" />
+    <Content Include="Views\Shared\_finalLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
