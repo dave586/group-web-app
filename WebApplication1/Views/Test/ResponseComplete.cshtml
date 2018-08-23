@@ -1,0 +1,46 @@
+﻿@using System.Web.Optimization
+@model Questionnaire.Models.CompleteTestModel
+
+@{
+    ViewBag.Title = Questionnaire.Resources.Test.Views.Resource.PageTitleResponseComplete;
+    Layout = "~/Views/Shared/_finalLayout.cshtml";
+}
+
+@Html.HiddenFor(m => m.IntakeID)
+@Html.HiddenFor(m => m.ClientID)
+@Html.HiddenFor(m => m.ShowOQChart)
+
+@Html.Hidden("ServiceUrl", Url.Content("~/api/Chart/"))
+@Html.Hidden("TempateUrl", Url.Content("~/ReportViewer/templates/telerikReportViewerTemplate-8.1.14.804.html"))
+
+<div class="row">
+    <div class="col-md-2 col-sm-1"></div>
+    <div class="col-md-8 col-sm-10">
+        <h2>@Questionnaire.Resources.Test.Views.Resource.PageTitleResponseComplete</h2>
+        <p>@Questionnaire.Resources.Test.Views.Resource.PageDescriptionResponseComplete</p>
+    </div>
+    <div class="col-md-2 col-sm-1"></div>
+</div>
+
+<div class="row">
+    <div class="col-md-2 col-sm-1"></div>
+    <div class="col-md-8 col-sm-10">
+        <div class="inner-container">
+            <div id="reportViewer1"></div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="col-md-2 col-sm-1"></div>
+</div>
+
+<div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6">
+        <a class="btn" title="@Questionnaire.Resources.Test.Views.Resource.BtnFinish" href="@Url.Action("Index", "Home")">@Questionnaire.Resources.Test.Views.Resource.BtnFinish</a>
+    </div>
+    <div class="col-sm-3"></div>
+</div>
+
+
+
+@Scripts.Render("~/bundles/ResponseComplete")
