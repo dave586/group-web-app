@@ -472,16 +472,7 @@ Give &lt;strong&gt;your own opinion&lt;/strong&gt; of yourself. Be sure to answe
     <value>Self Efficiency Scale</value>
   </data>
   <data name="ISEDescription" xml:space="preserve">
-    <value>This questionnaire is designed to measure how you see yourself. It is not a test, so there are no right or wrong answers. Please answer each item as carefully and as accurately as you can by placing a number beside each one as follows:
-&lt;ol&gt;
-&lt;li&gt;None of the time&lt;/li&gt;
-&lt;li&gt;Very rarely&lt;/li&gt;
-&lt;li&gt;A little of the time&lt;/li&gt;
-&lt;li&gt;Some of the time&lt;/li&gt;
-&lt;li&gt;A good part of the time&lt;/li&gt;
-&lt;li&gt;Most of the time&lt;/li&gt;
-&lt;li&gt; All of the time&lt;/li&gt;
-&lt;/ol&gt;</value>
+    <value>This questionnaire is designed to measure how you see yourself. It is not a test, so there are no right or wrong answers. Please answer each item as carefully and as accurately as you can by checking the appropriate box.</value>
   </data>
   <data name="ISEQuestionnaireTitle" xml:space="preserve">
     <value>Index of Self-Esteem (ISE)</value>
