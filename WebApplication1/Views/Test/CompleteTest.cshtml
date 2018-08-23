@@ -38,7 +38,8 @@ Resp ID: @Html.DisplayFor(m => m.ResponseID) <br/>*@
 		case 19: @Html.Partial("~/Views/Test/TestEDI3.cshtml", Model);		break;
 		case 20: @Html.Partial("~/Views/Test/TestCSQ-8.cshtml", Model);		break;
 		case 21: @Html.Partial("~/Views/Test/TestPF-RCM.cshtml", Model);	break;
-		case 22: @Html.Partial("~/Views/Test/TestDAI-R.cshtml", Model);		break;
+		case 22: @Html.Partial("~/Views/Test/TestDAI-R.cshtml", Model);     break;
+		case 23: @Html.Partial("~/Views/Test/TestCDI-2.cshtml", Model);		break;
 	}
 
 	<div class="row">
@@ -72,9 +73,9 @@ Resp ID: @Html.DisplayFor(m => m.ResponseID) <br/>*@
 			var allAnswered = true;
 			for (var p = 0; p < this.viewModel.Package.length; p++) {
 				for (var q = 0; q < this.viewModel.Package[p].Activities.length; q++)
-				if(ul.utils.isNullOrEmpty(this.viewModel.Package[p].Activities[q].Answer)) {
-					allAnswered = false;
-					break;
+					if(ul.utils.isNullOrEmpty(this.viewModel.Package[p].Activities[q].Answer)) {
+						allAnswered = false;
+						break;
 					}
 			}
 
@@ -84,7 +85,7 @@ Resp ID: @Html.DisplayFor(m => m.ResponseID) <br/>*@
 			return true;
 		}
 	};
-	
+
 	ko.applyBindings(model.viewModel);
 
     });
