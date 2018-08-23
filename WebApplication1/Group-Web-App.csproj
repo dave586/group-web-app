@@ -1287,6 +1287,7 @@
     <Content Include="Views\Test\TestPF-RCM.cshtml" />
     <Content Include="Views\Test\TestDAI-R.cshtml" />
     <Content Include="Views\Test\TestSDT.cshtml" />
+    <Content Include="Views\Test\TestRSE.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
