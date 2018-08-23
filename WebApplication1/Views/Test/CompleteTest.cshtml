@@ -55,7 +55,7 @@ Resp ID: @Html.DisplayFor(m => m.ResponseID) <br/>*@
 <script type="text/javascript">
 
     $(document).ready(function() {
-        $("#submitTest").click(function () {
+        $("#submitTest").click(function() {
 
 			if(model.testAnswers()) {
                 $("#data").val(JSON.stringify(model.viewModel));
@@ -68,13 +68,14 @@ Resp ID: @Html.DisplayFor(m => m.ResponseID) <br/>*@
 		var model =
 		{
 			viewModel: data,
-            testAnswers:function () {
+            testAnswers: function() {
 			var allAnswered = true;
-			for(var q=0; q < this.viewModel.Questions.length; q++) {
-				if(ul.utils.isNullOrEmpty(this.viewModel.Questions[q].Answer)) {
+			for (var p = 0; p < this.viewModel.Package.length; p++) {
+				for (var q = 0; q < this.viewModel.Package[p].Activities.length; q++)
+				if(ul.utils.isNullOrEmpty(this.viewModel.Package[p].Activities[q].Answer)) {
 					allAnswered = false;
 					break;
-				}
+					}
 			}
 
 			if(!allAnswered) {
@@ -83,7 +84,7 @@ Resp ID: @Html.DisplayFor(m => m.ResponseID) <br/>*@
 			return true;
 		}
 	};
-
+	
 	ko.applyBindings(model.viewModel);
 
     });
