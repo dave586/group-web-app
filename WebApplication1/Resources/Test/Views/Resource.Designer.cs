@@ -1035,6 +1035,15 @@ namespace GroupPackageApp.Resources.Test.Views {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Not Sure.
+        /// </summary>
+        public static string Tbl_NotSure {
+            get {
+                return ResourceManager.GetString("Tbl_NotSure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Not True.
         /// </summary>
         public static string Tbl_NotTrue {

@@ -563,4 +563,7 @@ Give &lt;strong&gt;your own opinion&lt;/strong&gt; of yourself. Be sure to answe
   <data name="Tbl_VeryTrue" xml:space="preserve">
     <value>Very True</value>
   </data>
+  <data name="Tbl_NotSure" xml:space="preserve">
+    <value>Not Sure</value>
+  </data>
 </root>
