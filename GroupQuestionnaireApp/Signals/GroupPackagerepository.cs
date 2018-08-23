@@ -27,20 +27,20 @@ namespace GroupQuestionnaireApp.Signals
 						p.ActivityDisplayName = gp.GroupActivityType.ActivityDisplayName;
 						p.ActivityID = gp.QuestionnaireType;
 
-						if (gp.PackageType == 1)
+						if (gp.PackageType == 1) // Pre-Testing Package
 						{
 							p.Activities = QuestionnaireRepository.GetQuestionnaireQuestions((string)gp.QuestionnaireType, "en-CA");
 							activities.Add(p);
 						}
-						else if (gp.PackageType == 2)
+						else if (gp.PackageType == 2) // Mid-Session
 						{
 
 						}
-						else if (gp.PackageType == 3)
+						else if (gp.PackageType == 3) // Post-Testing Package
 						{
 
 						}
-						else
+						else // Non-Packages
 						{
 
 						}
