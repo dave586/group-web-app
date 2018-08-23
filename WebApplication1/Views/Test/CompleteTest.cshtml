@@ -15,33 +15,89 @@ Resp ID: @Html.DisplayFor(m => m.ResponseID) <br/>*@
 
 @using (Html.BeginForm("SubmitTest", "Test", FormMethod.Post))
 {
-	if (Model.TestID.Equals("1"))
+	if (Model.TestID == "1")
 	{
         @Html.Partial("~/Views/Test/TestOQ.cshtml", Model);
     }
-    else if (Model.TestID.Equals("2"))
+    else if (Model.TestID == "2")
     {
         @Html.Partial("~/Views/Test/TestUricaDV.cshtml", Model)
     }
-    else if (Model.TestID.Equals("3"))
+    else if (Model.TestID == "3")
     {
         @Html.Partial("~/Views/Test/TestPYOQ.cshtml", Model)
     }
-    else if (Model.TestID.Equals("4"))
+    else if (Model.TestID == "4")
     {
         @Html.Partial("~/Views/Test/TestYOQ.cshtml", Model)
     }
-    else if (Model.TestID.Equals("5"))
+    else if (Model.TestID == "5")
     {
         @Html.Partial("~/Views/Test/TestGCS.cshtml", Model)
     }
-    else if (Model.TestID.Equals("6"))
+    else if (Model.TestID == "6")
     {
         @Html.Partial("~/Views/Test/TestICS.cshtml", Model)
+	}
+	else if (Model.TestID == "7")
+	{
+		@Html.Partial("~/Views/Test/TestSDT.cshtml", Model)
+	}
+	else if (Model.TestID == "8")
+	{
+		@Html.Partial("~/Views/Test/TestRSE.cshtml", Model)
+	}
+	else if (Model.TestID == "9")
+	{
+		@Html.Partial("~/Views/Test/TestPAS.cshtml", Model)
+	}
+	else if (Model.TestID == "10")
+	{
+		@Html.Partial("~/Views/Test/TestTSCL-40.cshtml", Model)
+	}
+	else if (Model.TestID == "11")
+	{
+		@Html.Partial("~/Views/Test/TestPreRS-FVP.cshtml", Model)
+	}
+	else if (Model.TestID == "12")
+	{
+		@Html.Partial("~/Views/Test/TestFAM-III.cshtml", Model)
+	}
+	else if (Model.TestID == "13")
+	{
+		@Html.Partial("~/Views/Test/TestPASPH.cshtml", Model)
+	}
+	else if (Model.TestID == "14")
+	{
+		@Html.Partial("~/Views/Test/TestPASNP.cshtml", Model)
+	}
+	else if (Model.TestID == "15")
+	{
+		@Html.Partial("~/Views/Test/TestNPAPS.cshtml", Model)
+	}
+	else if (Model.TestID == "16")
+	{
+		@Html.Partial("~/Views/Test/TestPAPS.cshtml", Model)
+	}
+	else if (Model.TestID == "17")
+	{
+		@Html.Partial("~/Views/Test/TestSES.cshtml", Model)
 	}
 	else if (Model.TestID == "18")
 	{
 		@Html.Partial("~/Views/Test/TestISE.cshtml", Model)
+	}
+	else if (Model.TestID == "19")
+	{
+		@Html.Partial("~/Views/Test/TestEDI3.cshtml", Model)
+	}
+	else if (Model.TestID == "20")
+	{
+		@Html.Partial("~/Views/Test/TestCSQ-8.cshtml", Model)
+	}
+	else if (Model.TestID == "21")
+	{
+		@Html.Partial("~/Views/Test/TestPF-RCM.cshtml", Model)
 	}
     <div class="row">
         <div class="col-sm-3"></div>
