@@ -79,7 +79,7 @@ namespace WebApplication1.Controllers
             {
                 TypeNameHandling = TypeNameHandling.Auto
             });
-            return null;
+            return View("~/Views/Test/ResponseComplete.cshtml");
         }
     }
 }
