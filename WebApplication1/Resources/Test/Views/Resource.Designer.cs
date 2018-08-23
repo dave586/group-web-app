@@ -1014,6 +1014,15 @@ namespace GroupPackageApp.Resources.Test.Views {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Neither agree nor disagree.
+        /// </summary>
+        public static string Tbl_Neither {
+            get {
+                return ResourceManager.GetString("Tbl_Neither", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Never.
         /// </summary>
         public static string Tbl_Never {
