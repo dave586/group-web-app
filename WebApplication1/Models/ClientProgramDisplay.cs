@@ -9,7 +9,7 @@ namespace WebApplication1.Models
 {
     public class ClientProgramDisplay
     {
-        public int programID { get; set; }
+        public int ProgramID { get; set; }
         public IEnumerable<Package> Activities { get; set; }
         public bool RightToLeftLanguage { get; set; }
         public string ClientDisplayName { get; set; }
