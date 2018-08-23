@@ -1,4 +1,5 @@
-﻿@model WebApplication1.Models.ClientTestDisplay
+﻿@using WebApplication1.Models
+@model WebApplication1.Models.ClientTestDisplay
 
 
 <div class="row section">
@@ -27,24 +28,27 @@
                                 </tr>
                             </thead>*@
                         <tbody>
-                            <!-- ko foreach: viewModel.Questions -->
+							<!-- ko foreach: viewModel.Package -->
+                            <!-- ko foreach: viewModel.Activities -->
                             <!-- ko if: $data.QuestionType == "SingleChoiceQuestion" -->
-                            <!--ko if:$index() % 10 == 0 -->
-                            <tr>
-                                <th></th>
-                                <th></th>
-                                <th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_Never</th>
-                                <th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_Rarely</th>
-                                <th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_Sometimes</th>
-                                <th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_Frequently</th>
-                                <th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_AlmostAlways</th>
-                            </tr>
-                            <!-- /ko -->
+								<!--ko if:$index() % 10 == 0 -->
+								<tr>
+									<th></th>
+									<th></th>
+									<th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_Never</th>
+									<th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_Rarely</th>
+									<th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_Sometimes</th>
+									<th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_Frequently</th>
+									<th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_AlmostAlways</th>
+								</tr>
+								<!-- /ko -->
+							
 
                             @Html.Partial("SingleChoice")
 
                             <!-- /ko -->
                             <!-- /ko -->
+							<!-- /ko -->
 
                         </tbody>
                     </table>
