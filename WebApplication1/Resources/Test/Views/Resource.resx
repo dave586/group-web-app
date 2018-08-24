@@ -558,7 +558,7 @@ Give &lt;strong&gt;your own opinion&lt;/strong&gt; of yourself. Be sure to answe
     <value>Mainly True</value>
   </data>
   <data name="Tbl_SlightlyFalse" xml:space="preserve">
-    <value>Slight False</value>
+    <value>Slightly False</value>
   </data>
   <data name="Tbl_VeryTrue" xml:space="preserve">
     <value>Very True</value>

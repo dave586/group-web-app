@@ -1179,7 +1179,7 @@ namespace GroupPackageApp.Resources.Test.Views {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Slight False.
+        ///   Looks up a localized string similar to Slightly False.
         /// </summary>
         public static string Tbl_SlightlyFalse {
             get {
