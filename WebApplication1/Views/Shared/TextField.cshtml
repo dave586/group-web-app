@@ -1,13 +1,14 @@
 ﻿<tr>
     <td class="qnumber" data-bind="text: $data.QuestionNumber"></td>
     <td data-bind="text: $data.QuestionText"></td>
-
-    <!-- ko foreach: $data.Options -->
+</tr>
+<tr>
+    <td></td>
     <td class="answercol">
         <div class="container">
-            <input type="text" data-bind="value: $data.Value, checked: $parent.Answer, attr: { name: $parent.QuestionID, id: $data.Value + $parent.QuestionID } " />
+            <input type="text" data-bind="attr: { name: $parent.QuestionID, id: $data.Value + $parent.QuestionID } " />
             <label data-bind="attr: { for: $data.Value + $parent.QuestionID }"><span></span></label>
         </div>
     </td>
-    <!-- /ko -->
+    
 </tr>

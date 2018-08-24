@@ -5,8 +5,8 @@
         <div class="row paragraph">
             <div class="col-sm-2"></div>
             <div class="col-sm-8">
-                <h2>@GroupPackageApp.Resources.Test.Views.Resource.</h2>
-                <p>@Html.Raw(GroupPackageApp.Resources.Test.Views.Resource.)</p>
+                @*<h2>@GroupPackageApp.Resources.Test.Views.Resource.</h2>
+                <p>@Html.Raw(GroupPackageApp.Resources.Test.Views.Resource.)</p>*@
             </div>
             <div class="col-sm-2"></div>
         </div>
@@ -18,22 +18,13 @@
                             <!-- ko foreach: $root.Package -->
                             <!-- ko if: $data.ActivityID == 42 -->
                             <!-- ko foreach: $data.Activities -->
-                            <!-- ko if: $data.QuestionType == "SingleChoiceQuestion" -->
+                            <!-- ko if: $data.QuestionType == "Text" -->
                             <!--ko if:$index() % 10 == 0-->
-                            <tr>
-                                <th></th>
-                                <th></th>
-                                <th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_Option1</th>
-                                <th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_Option2</th>
-                                <th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_Option3</th>
-                                <th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_Option4</th>
-
-                            </tr>
 
                             <!-- /ko -->
                             <!-- /ko -->
 
-                            @Html.Partial("SingleChoice")
+                            @Html.Partial("TextField")
 
                             <!-- /ko -->
                             <!-- /ko -->

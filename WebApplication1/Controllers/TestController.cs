@@ -40,7 +40,8 @@ namespace WebApplication1.Controllers
 					int.TryParse(selectedProgram, out proID);
 				}
 			}
-            return NextTest(proID);
+
+            return NextTest(proID, this.Request != null ? this.Request.RequestContext : _homeContext);
         }
 
         private IEnumerable<Package> GetPackageActivities (int programID)
@@ -48,12 +49,20 @@ namespace WebApplication1.Controllers
 			return GroupPackageRepository.GetPackageActivities(programID).AsEnumerable();
         }
 
-        private IEnumerable<Question> GetTestQuestions (string questionnaireType, string language)
-        {
-            return QuestionnaireRepository.GetQuestionnaireQuestions(questionnaireType, language).AsEnumerable();
-        }
+		private int GetTestID (ClientTestDisplay ctd)
+		{
+			int testID = 0;
 
-        public ActionResult NextTest(int programID)
+			// Trying to get the individual testID's out of the ctd.Package object and display the appropriate questionnaire 
+			for (int i = 0; i < ctd.Package.Count(); i++)
+			{
+				testID = int.Parse(ctd.Package.ElementAt(i).ActivityID);
+			}
+
+			return testID;
+		}
+
+        public ActionResult NextTest(int programID, RequestContext _requestContext)
         {
             ModelState.Clear();
             using (OQDevSNAPEntities dbContext = new OQDevSNAPEntities())
@@ -61,13 +70,8 @@ namespace WebApplication1.Controllers
                 ClientTestDisplay ctd = new ClientTestDisplay();
 
 				ctd.Package = GetPackageActivities(programID);
+				ctd.TestID = GetTestID(ctd);
 
-				for (int i = 0; i < ctd.Package.Count(); i++)
-				{
-					ctd.TestID = int.Parse(ctd.Package.ElementAt(i).ActivityID);
-				}
-				//ctd.TestID = "1"; //Change it so TestID is not hard coded
-				//ctd.Questions = GetTestQuestions(ctd.TestID, "en-CA");
 				return View("~/Views/Test/CompleteTest.cshtml", ctd);
 			}
         }
@@ -79,6 +83,7 @@ namespace WebApplication1.Controllers
             {
                 TypeNameHandling = TypeNameHandling.Auto
             });
+
             return View("~/Views/Test/ResponseComplete.cshtml");
         }
     }
