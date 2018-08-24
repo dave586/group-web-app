@@ -918,6 +918,24 @@ namespace GroupPackageApp.Resources.Test.Views {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Casual.
+        /// </summary>
+        public static string Tbl_Casual {
+            get {
+                return ResourceManager.GetString("Tbl_Casual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Disability leave.
+        /// </summary>
+        public static string Tbl_DisabilityLeave {
+            get {
+                return ResourceManager.GetString("Tbl_DisabilityLeave", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Disagree.
         /// </summary>
         public static string Tbl_Disagree {
@@ -954,6 +972,24 @@ namespace GroupPackageApp.Resources.Test.Views {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Full-time student.
+        /// </summary>
+        public static string Tbl_FTStudent {
+            get {
+                return ResourceManager.GetString("Tbl_FTStudent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Full-time.
+        /// </summary>
+        public static string Tbl_FullTime {
+            get {
+                return ResourceManager.GetString("Tbl_FullTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to A Good Part of the Time.
         /// </summary>
         public static string Tbl_GoodPartOfTheTime {
@@ -986,6 +1022,24 @@ namespace GroupPackageApp.Resources.Test.Views {
         public static string Tbl_MostOfTheTime {
             get {
                 return ResourceManager.GetString("Tbl_MostOfTheTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to not employed looking for work.
+        /// </summary>
+        public static string Tbl_NE_L {
+            get {
+                return ResourceManager.GetString("Tbl_NE_L", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to not employed not liiking for work.
+        /// </summary>
+        public static string Tbl_NE_NL {
+            get {
+                return ResourceManager.GetString("Tbl_NE_NL", resourceCulture);
             }
         }
         
@@ -1098,11 +1152,29 @@ namespace GroupPackageApp.Resources.Test.Views {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Part-time.
+        /// </summary>
+        public static string Tbl_PartTime {
+            get {
+                return ResourceManager.GetString("Tbl_PartTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Rarely.
         /// </summary>
         public static string Tbl_Rarely {
             get {
                 return ResourceManager.GetString("Tbl_Rarely", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Retired.
+        /// </summary>
+        public static string Tbl_Retired {
+            get {
+                return ResourceManager.GetString("Tbl_Retired", resourceCulture);
             }
         }
         
@@ -1148,6 +1220,15 @@ namespace GroupPackageApp.Resources.Test.Views {
         public static string Tbl_StronglyDisagree {
             get {
                 return ResourceManager.GetString("Tbl_StronglyDisagree", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text.
+        /// </summary>
+        public static string Tbl_Text {
+            get {
+                return ResourceManager.GetString("Tbl_Text", resourceCulture);
             }
         }
         

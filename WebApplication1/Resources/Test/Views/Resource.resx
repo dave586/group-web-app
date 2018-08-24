@@ -566,4 +566,31 @@ Give &lt;strong&gt;your own opinion&lt;/strong&gt; of yourself. Be sure to answe
   <data name="Tbl_NotSure" xml:space="preserve">
     <value>Not Sure</value>
   </data>
+  <data name="Tbl_Casual" xml:space="preserve">
+    <value>Casual</value>
+  </data>
+  <data name="Tbl_DisabilityLeave" xml:space="preserve">
+    <value>Disability leave</value>
+  </data>
+  <data name="Tbl_FTStudent" xml:space="preserve">
+    <value>Full-time student</value>
+  </data>
+  <data name="Tbl_FullTime" xml:space="preserve">
+    <value>Full-time</value>
+  </data>
+  <data name="Tbl_NE_L" xml:space="preserve">
+    <value>not employed looking for work</value>
+  </data>
+  <data name="Tbl_NE_NL" xml:space="preserve">
+    <value>not employed not liiking for work</value>
+  </data>
+  <data name="Tbl_PartTime" xml:space="preserve">
+    <value>Part-time</value>
+  </data>
+  <data name="Tbl_Retired" xml:space="preserve">
+    <value>Retired</value>
+  </data>
+  <data name="Tbl_Text" xml:space="preserve">
+    <value>Text</value>
+  </data>
 </root>

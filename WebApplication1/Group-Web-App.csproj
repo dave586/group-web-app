@@ -1294,6 +1294,9 @@
     <Content Include="Views\Test\TestCDI-2.cshtml" />
     <Content Include="Views\Test\TestPES.cshtml" />
     <Content Include="Views\Test\TestDemo-OED.cshtml" />
+    <Content Include="Views\Test\TestCOD_Exit.cshtml" />
+    <Content Include="Views\Test\TestPF-RCW.cshtml" />
+    <Content Include="Views\Test\TestPF-WAS.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
