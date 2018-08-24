@@ -322,7 +322,7 @@
     <value>Yes</value>
   </data>
   <data name="FAMDescription" xml:space="preserve">
-    <value>In this section, you will find 42 statements about the relationship between yourself and another person. Read each statement carefully and decide how well the statement describes your relationship with this person. Make your response by choosing one of the provided answers ("SA", "A", "D", or "SD"). Choose only one response for each item. Mark an answer for every statement, even if you are not completely sure of your answer.</value>
+    <value>In this section, you will find 42 statements about the relationship between yourself and another person. Read each statement carefully and decide how well the statement describes your relationship with this person. Make your response by choosing one of the provided answers. Choose only one response for each item. Mark an answer for every statement, even if you are not completely sure of your answer.</value>
   </data>
   <data name="FAMQuestionnaireTitle" xml:space="preserve">
     <value>FAM - III: Dyadic Relationship Scale</value>

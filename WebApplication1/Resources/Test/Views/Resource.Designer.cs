@@ -190,7 +190,7 @@ namespace GroupPackageApp.Resources.Test.Views {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to In this section, you will find 42 statements about the relationship between yourself and another person. Read each statement carefully and decide how well the statement describes your relationship with this person. Make your response by choosing one of the provided answers (&quot;SA&quot;, &quot;A&quot;, &quot;D&quot;, or &quot;SD&quot;). Choose only one response for each item. Mark an answer for every statement, even if you are not completely sure of your answer..
+        ///   Looks up a localized string similar to In this section, you will find 42 statements about the relationship between yourself and another person. Read each statement carefully and decide how well the statement describes your relationship with this person. Make your response by choosing one of the provided answers. Choose only one response for each item. Mark an answer for every statement, even if you are not completely sure of your answer..
         /// </summary>
         public static string FAMDescription {
             get {
