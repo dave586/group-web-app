@@ -22,10 +22,8 @@ namespace WebApplication1.Controllers
         {
             _dbContext = new OQDevSNAPEntities();
         }
-        public ActionResult Index(string subval)
+        public ActionResult Index()
         {
-
-            Response.Write(subval);
             return View();
         }
 
