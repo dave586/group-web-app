@@ -1,0 +1,59 @@
+﻿@model WebApplication1.Models.ClientTestDisplay
+
+<div class="row section">
+    <div class="col-sm-12">
+        <div class="row paragraph">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+                <h2>@GroupPackageApp.Resources.Test.Views.Resource.</h2>
+                <p>@Html.Raw(GroupPackageApp.Resources.Test.Views.Resource.)</p>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="table-responsive">
+                    <table class="table">
+                        <tbody>
+                            <!-- ko foreach: $root.Package -->
+                            <!-- ko if: $data.ActivityID == 40 -->
+                            <!-- ko foreach: $data.Activities -->
+                            <!-- ko if: $data.QuestionType == "SingleChoiceQuestion" -->
+                            <!--ko if:$index() % 10 == 0-->
+                            <tr>
+                                <th></th>
+                                <th></th>
+                                <th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_FullTime</th>
+                                <th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_PartTime</th>
+                                <th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_Casual</th>
+                                <th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_Retired</th>
+                                <th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_DisabilityLeave</th>
+                                <th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_FTStudent</th>
+                                <th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_NE_L/th>
+                                <th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_NE_NL</th>
+
+                                <th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_Text</th>
+                                <th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_Text</th>
+                                <th>@GroupPackageApp.Resources.Test.Views.Resource.Tbl_Text</th>
+
+
+                            </tr>
+
+                            <!-- /ko -->
+                            <!-- /ko -->
+
+                            @Html.Partial("SingleChoice")
+
+                            <!-- /ko -->
+                            <!-- /ko -->
+                            <!-- /ko -->
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
